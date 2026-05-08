@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Responsible AI with GitHub Copilot — GH-300 Module 1 | AI Architect Mastery</title>
+  <meta name="description" content="Module 1 of the GH-300 study guide: risks, limitations, and the six principles of responsible AI for GitHub Copilot — fairness, reliability, privacy, inclusiveness, transparency, accountability." />
+
+  <link rel="canonical" href="https://aiarchitectmastery.com/gh-300/responsible-ai.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#15182A" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Responsible AI with GitHub Copilot — GH-300 Module 1" />
+  <meta property="og:description" content="Risks, limitations, and the six principles of responsible AI for GitHub Copilot. Module 1 of the free AI Architect Mastery GH-300 study guide." />
+  <meta property="og:url" content="https://aiarchitectmastery.com/gh-300/responsible-ai.html" />
+  <meta property="og:image" content="https://aiarchitectmastery.com/assets/images/logo.png" />
+  <meta property="og:site_name" content="AI Architect Mastery" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Responsible AI with GitHub Copilot — GH-300 Module 1" />
+  <meta name="twitter:description" content="Risks, limitations, and the six principles of responsible AI for GitHub Copilot. Free GH-300 study guide module." />
+  <meta name="twitter:image" content="https://aiarchitectmastery.com/assets/images/logo.png" />
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AI Architect Mastery", "item": "https://aiarchitectmastery.com/" },
+      { "@type": "ListItem", "position": 2, "name": "GH-300 Study Guide", "item": "https://aiarchitectmastery.com/gh-300/" },
+      { "@type": "ListItem", "position": 3, "name": "M01 — Responsible AI", "item": "https://aiarchitectmastery.com/gh-300/responsible-ai.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Responsible AI with GitHub Copilot",
+    "description": "Risks, limitations, and the six principles of responsible AI for GitHub Copilot.",
+    "author": { "@type": "Organization", "name": "AI Architect Mastery" },
+    "publisher": { "@type": "Organization", "name": "AI Architect Mastery", "logo": { "@type": "ImageObject", "url": "https://aiarchitectmastery.com/assets/images/logo.png" } },
+    "mainEntityOfPage": "https://aiarchitectmastery.com/gh-300/responsible-ai.html",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../" class="brand" aria-label="AI Architect Mastery — home">
+        <img src="../assets/images/logo.png" alt="AI Architect Mastery logo" class="brand-logo" />
+        <span class="brand-text">AI Architect Mastery<sup>™</sup></span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../#methodology">Methodology</a></li>
+          <li><a href="../#courses">Courses</a></li>
+          <li><a href="./">GH-300 Docs</a></li>
+          <li><a href="../#instructor">Instructor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="docs-article">
+    <div class="container">
+
+      <p class="breadcrumb">
+        <a href="../">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="./">GH-300 Study Guide</a><span class="breadcrumb-sep">›</span>
+        M01 — Responsible AI
+      </p>
+
+      <h1>Module 1 — Responsible AI with GitHub Copilot</h1>
+
+      <div class="module-meta">
+        <span><strong>Exam weight:</strong> 15–20%</span>
+        <span><strong>Study time:</strong> 45–60 minutes</span>
+        <span><strong>Lessons:</strong> Risks &amp; limitations · Ethical use · Practice</span>
+      </div>
+
+      <p class="callout callout-tip">
+        <strong>Exam tactic.</strong> Roughly one in five GH-300 questions tests responsible AI. The concepts are conceptually clean — careful study here secures easy points on exam day.
+      </p>
+
+      <h2>L01 — Risks and limitations of generative AI</h2>
+
+      <h3>Why is responsible AI on the certification exam?</h3>
+      <p>
+        GitHub Copilot is a generative AI tool. It is powerful, but it is not infallible. The GH-300 exam tests whether you understand both the benefits and the risks of Copilot — and whether you can act responsibly. Responsible AI is not just ethics in theory; it is the practical skill of recognizing when AI output is trustworthy and when it requires critical review.
+      </p>
+
+      <h3>Risks of generative AI</h3>
+      <p><strong>Hallucinations.</strong> Generative AI can produce information that looks plausible but is wrong. GitHub Copilot can suggest code that looks correct but contains logic errors, calls non-existent APIs, or imports libraries that do not exist.</p>
+      <ul>
+        <li><em>Risk:</em> the developer accepts incorrect code without verifying it.</li>
+        <li><em>Mitigation:</em> all AI-generated code must be tested and validated before use.</li>
+      </ul>
+
+      <p><strong>Bias.</strong> Copilot is trained on a large body of public code. The training data can contain biased, outdated, or low-quality code.</p>
+      <ul>
+        <li><em>Risk:</em> Copilot may repeat poor practices or vulnerabilities present in the training data.</li>
+        <li><em>Mitigation:</em> always run code reviews; do not trust suggestions blindly.</li>
+      </ul>
+
+      <p><strong>Security risks.</strong> Copilot can suggest code containing security vulnerabilities such as SQL injection, XSS, or insufficient input validation.</p>
+      <ul>
+        <li><em>Risk:</em> vulnerable code reaches production.</li>
+        <li><em>Mitigation:</em> Copilot's built-in security warnings plus code review and SAST tools.</li>
+      </ul>
+
+      <p><strong>Copyright risks.</strong> Copilot can produce code that resembles or is identical to code in its training data.</p>
+      <ul>
+        <li><em>Risk:</em> licensing problems if the suggestion was copied from an open source project.</li>
+        <li><em>Mitigation:</em> enable Duplication Detection (suggestions matching public code).</li>
+      </ul>
+
+      <h3>Limitations of generative AI</h3>
+      <p>Limitations are different from risks — they are technical characteristics of how the AI works, not bugs.</p>
+      <ul>
+        <li><strong>Context window.</strong> Copilot only sees a limited slice of code at a time; it cannot understand the entire codebase. It may suggest solutions that are locally sensible but globally inconsistent with the project's architecture.</li>
+        <li><strong>Training data cutoff.</strong> The model has a knowledge cutoff date. It does not know about new libraries, API updates, or security patches released after that date.</li>
+        <li><strong>Non-determinism.</strong> The same prompt can produce different answers on different runs. Each suggestion must be evaluated individually.</li>
+        <li><strong>Generation, not understanding.</strong> Copilot generates code from statistical patterns, not semantic understanding. Its grasp of code is the same as a language model's grasp of text — pattern-based, not meaningful.</li>
+      </ul>
+
+      <h3>Harms and mitigation strategies</h3>
+      <table>
+        <thead><tr><th>Harm type</th><th>Description</th><th>Mitigation</th></tr></thead>
+        <tbody>
+          <tr><td>Code defects</td><td>Incorrect or non-working code</td><td>Testing, validation, code review</td></tr>
+          <tr><td>Security vulnerabilities</td><td>SQL injection, XSS, missing validation</td><td>Security warnings, SAST tools</td></tr>
+          <tr><td>Licensing issues</td><td>Code resembles licensed source</td><td>Duplication Detection, license review</td></tr>
+          <tr><td>Privacy risks</td><td>Sensitive data ends up in Copilot's context</td><td>Content Exclusions, privacy settings</td></tr>
+          <tr><td>Biased or low-quality code</td><td>Training data problems repeat in output</td><td>Code review policy, coding standards</td></tr>
+        </tbody>
+      </table>
+
+      <h2>L02 — Ethical AI use and the six responsible AI principles</h2>
+
+      <p>Ethics in AI tooling is not a philosophical question — it is a professional skill. As a developer, you are accountable for the code you ship, regardless of who or what wrote it. Microsoft and GitHub commit to six principles of responsible AI that the GH-300 exam expects you to recognize.</p>
+
+      <h3>Fairness</h3>
+      <p>AI systems must not discriminate against people or groups. Training data can contain historical bias that reflects in AI output.</p>
+
+      <h3>Reliability &amp; safety</h3>
+      <p>AI systems must work consistently and safely, even in unexpected situations. The official material distinguishes two ideas:</p>
+      <ul>
+        <li><strong>Safety</strong> = minimizing unintended harm — physical, emotional, and financial harm to people and society.</li>
+        <li><strong>Reliability</strong> = the system performs repeatably, as intended, without unexpected variance or failures.</li>
+      </ul>
+      <p>Copilot suggestions can be unreliable — the developer carries the responsibility of validation.</p>
+
+      <h3>Privacy &amp; security</h3>
+      <p>AI systems must not compromise user privacy or organizational security. When using Copilot, take care that sensitive data does not enter the context.</p>
+
+      <h3>Inclusiveness</h3>
+      <p>AI systems must be accessible and fair to everyone:</p>
+      <ul>
+        <li>Works well for diverse user groups without disadvantaging any group.</li>
+        <li>Accessible regardless of physical or cognitive ability (screen readers, captions, voice control).</li>
+        <li>Available regardless of language, geography, or infrastructure constraints.</li>
+        <li>Built and deployed with diverse teams contributing to the process.</li>
+      </ul>
+
+      <h3>Transparency</h3>
+      <p>AI behavior should be understandable. The Copilot user must know how it works, what data it uses, and what its limitations are.</p>
+
+      <h3>Accountability</h3>
+      <p>People are accountable for AI output. "Copilot wrote it" does not remove the developer's responsibility for the code that ships.</p>
+
+      <h3>Ethical use in practice</h3>
+      <p><strong>When NOT to use Copilot:</strong></p>
+      <ul>
+        <li>When the context contains sensitive data (PII, passwords, API keys).</li>
+        <li>When working on code that must not leave the organization.
+          <ul>
+            <li>This is especially relevant on <strong>Copilot Free and Pro</strong> tiers (individual subscriptions), where prompts may by default be used to improve the model — unless the user has opted out in settings.</li>
+            <li><strong>Copilot Business and Enterprise</strong> do not store code or use it for training — but the code still passes through Microsoft's Azure servers. This is covered in detail in M06 — Privacy &amp; Safeguards.</li>
+          </ul>
+        </li>
+        <li>When you need a deterministic, auditable output (e.g. regulated industries).</li>
+      </ul>
+
+      <p><strong>When Copilot use requires extra caution:</strong></p>
+      <ul>
+        <li>Security-sensitive code (authentication, authorization, cryptography).</li>
+        <li>Business-critical logic where errors are expensive.</li>
+        <li>Refactoring legacy code where Copilot lacks full context.</li>
+      </ul>
+
+      <h3>Validating AI output</h3>
+      <p>Validation is the heart of responsible AI use. The exam asks why and how you validate AI-generated code:</p>
+      <ol>
+        <li><strong>Read the code carefully</strong> — do not accept automatically.</li>
+        <li><strong>Test it</strong> — write or generate tests for every component the AI produces.</li>
+        <li><strong>Code review</strong> — use a colleague or Copilot Code Review. Tools like SonarQube add additional confidence in code quality.</li>
+        <li><strong>Security check</strong> — run SAST tools.</li>
+        <li><strong>Validate the logic</strong> — confirm the code does what it should do.</li>
+      </ol>
+
+      <h2>Exam-ready checklist (M01)</h2>
+      <ul class="checklist">
+        <li>Generative AI can hallucinate — all output must be validated.</li>
+        <li>Copilot can repeat security problems present in training data.</li>
+        <li>The context window limits Copilot's visibility into the codebase.</li>
+        <li>The training cutoff means Copilot does not know the latest updates.</li>
+        <li>The six principles of responsible AI: fairness, reliability &amp; safety, privacy &amp; security, inclusiveness, transparency, accountability.</li>
+        <li>The developer is always accountable for the code that ships.</li>
+      </ul>
+
+      <h2>Common mistakes on the exam</h2>
+      <ul>
+        <li><strong>Mistake:</strong> assuming Copilot validates correctness automatically. <em>Truth:</em> validation is always the developer's responsibility.</li>
+        <li><strong>Mistake:</strong> confusing "limitation" and "risk." <em>Truth:</em> limitations are technical characteristics (context window); risks are potential harms (security vulnerabilities).</li>
+        <li><strong>Mistake:</strong> assuming responsible AI is only the company's or GitHub's concern. <em>Truth:</em> every developer is accountable for their own usage.</li>
+      </ul>
+
+      <h2>Official source documents</h2>
+      <ul>
+        <li><a href="https://learn.microsoft.com/training/modules/responsible-ai-with-github-copilot/" rel="noopener">Responsible AI with GitHub Copilot — Microsoft Learn</a></li>
+        <li><a href="https://github.com/trust-center" rel="noopener">GitHub Trust Center</a></li>
+        <li><a href="https://aka.ms/GH300-StudyGuide" rel="noopener">GH-300 Study Guide — official</a></li>
+      </ul>
+
+      <nav class="module-nav" aria-label="Module navigation">
+        <a href="./" class="prev">
+          <span class="label">← Back</span>
+          <span class="title">All modules</span>
+        </a>
+        <a href="copilot-features.html" class="next">
+          <span class="label">Next module →</span>
+          <span class="title">M02 — GitHub Copilot Features</span>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> AI Architect Mastery™ — All Rights Reserved</p>
+      <p class="footer-meta">
+        <a href="../">Back to AI Architect Mastery home</a> ·
+        Sister brand of <a href="https://dataintegrationmastery.com/" rel="noopener">Data Integration Mastery™</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

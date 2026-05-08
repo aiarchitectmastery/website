@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GitHub Copilot Features — GH-300 Module 2 (IDE, CLI, Agent Mode, MCP) | AI Architect Mastery</title>
+  <meta name="description" content="Module 2 of the GH-300 study guide: GitHub Copilot in the IDE, CLI, Agent Mode vs. Plan Mode vs. Ask, MCP, Code Review, Spaces, Spark, cloud agent, memory, and organization governance." />
+
+  <link rel="canonical" href="https://aiarchitectmastery.com/gh-300/copilot-features.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#15182A" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="GitHub Copilot Features — GH-300 Module 2" />
+  <meta property="og:description" content="The largest GH-300 exam domain. Copilot in the IDE, CLI, Agent Mode, Plan Mode, MCP, Code Review, Spaces, Spark, cloud agent, memory, and org governance." />
+  <meta property="og:url" content="https://aiarchitectmastery.com/gh-300/copilot-features.html" />
+  <meta property="og:image" content="https://aiarchitectmastery.com/assets/images/logo.png" />
+  <meta property="og:site_name" content="AI Architect Mastery" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GitHub Copilot Features — GH-300 Module 2" />
+  <meta name="twitter:description" content="The largest GH-300 exam domain — IDE, CLI, Agent Mode, Plan Mode, MCP, Code Review, Spaces, Spark, governance." />
+  <meta name="twitter:image" content="https://aiarchitectmastery.com/assets/images/logo.png" />
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AI Architect Mastery", "item": "https://aiarchitectmastery.com/" },
+      { "@type": "ListItem", "position": 2, "name": "GH-300 Study Guide", "item": "https://aiarchitectmastery.com/gh-300/" },
+      { "@type": "ListItem", "position": 3, "name": "M02 — Copilot Features", "item": "https://aiarchitectmastery.com/gh-300/copilot-features.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../" class="brand"><img src="../assets/images/logo.png" alt="AI Architect Mastery logo" class="brand-logo" /><span class="brand-text">AI Architect Mastery<sup>™</sup></span></a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../#methodology">Methodology</a></li>
+          <li><a href="../#courses">Courses</a></li>
+          <li><a href="./">GH-300 Docs</a></li>
+          <li><a href="../#instructor">Instructor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="docs-article">
+    <div class="container">
+
+      <p class="breadcrumb"><a href="../">Home</a><span class="breadcrumb-sep">›</span><a href="./">GH-300 Study Guide</a><span class="breadcrumb-sep">›</span>M02 — Copilot Features</p>
+
+      <h1>Module 2 — GitHub Copilot Features</h1>
+
+      <div class="module-meta">
+        <span><strong>Exam weight:</strong> 25–30%</span>
+        <span><strong>Study time:</strong> 75–90 minutes</span>
+        <span><strong>Lessons:</strong> IDE · CLI · Agent / Plan / MCP · Code Review &amp; more · Org governance</span>
+      </div>
+
+      <p class="callout callout-tip">
+        <strong>Exam tactic.</strong> This is the largest single domain on GH-300 — roughly one in four exam questions comes from here. Spend the most study time on this module.
+      </p>
+
+      <h2>L01 — Copilot in the IDE</h2>
+
+      <h3>Officially supported IDEs</h3>
+      <ul>
+        <li><strong>Visual Studio Code</strong> (most fully supported)</li>
+        <li>Visual Studio</li>
+        <li>JetBrains IDEs (IntelliJ, PyCharm, etc.)</li>
+        <li>Eclipse</li>
+        <li>Vim / Neovim (inline suggestions only)</li>
+        <li>Xcode (inline suggestions only)</li>
+        <li>Azure Data Studio (inline suggestions only)</li>
+      </ul>
+
+      <h3>Inline suggestions</h3>
+      <p>Inline suggestions are Copilot's foundational feature. As you type, Copilot proposes a continuation in grey text.</p>
+      <table>
+        <thead><tr><th>Action</th><th>Shortcut (VS Code)</th></tr></thead>
+        <tbody>
+          <tr><td>Accept suggestion</td><td><code>Tab</code></td></tr>
+          <tr><td>Dismiss suggestion</td><td><code>Esc</code></td></tr>
+          <tr><td>Next suggestion</td><td><code>Alt+]</code> / <code>Option+]</code></td></tr>
+          <tr><td>Previous suggestion</td><td><code>Alt+[</code> / <code>Option+[</code></td></tr>
+          <tr><td>Open all suggestions</td><td><code>Ctrl+Enter</code></td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Next Edit Suggestions</strong> works in VS Code, Xcode and Eclipse — Copilot predicts the next likely edit location and offers a completion there. Accept with <code>Tab</code> like any other suggestion.</p>
+
+      <h3>Content Exclusions (not <code>.copilotignore</code>)</h3>
+      <p>Content Exclusions define which files or folders are kept out of Copilot's context. The official mechanism is configured at repository or organization level:</p>
+      <ul>
+        <li><strong>Repository:</strong> Settings → Copilot → Content exclusions</li>
+        <li><strong>Organization:</strong> Organization Settings → Copilot → Content exclusions</li>
+      </ul>
+
+      <p class="callout callout-warn"><strong>Exam note.</strong> The term <code>.copilotignore</code> appears in unofficial usage, but GitHub's official term and mechanism is <strong>Content Exclusions</strong> in settings. Content Exclusions stop automatic context collection — they do not stop a user from manually pasting content into a chat message.</p>
+
+      <p class="callout callout-warn"><strong>Plan limitation.</strong> Content Exclusions are available only on <strong>Copilot Business and Enterprise</strong>. Free, Student, Pro and Pro+ users cannot configure file exclusions.</p>
+
+      <h3>Copilot Chat in the IDE</h3>
+      <p>Slash commands (VS Code):</p>
+      <table>
+        <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><code>/explain</code></td><td>Explain selected code or the file</td></tr>
+          <tr><td><code>/fix</code></td><td>Suggest a fix for selected code or an error</td></tr>
+          <tr><td><code>/tests</code></td><td>Generate tests for selected code</td></tr>
+          <tr><td><code>/doc</code></td><td>Generate documentation for selected code</td></tr>
+          <tr><td><code>/new</code></td><td>Create a new file or project</td></tr>
+          <tr><td><code>/clear</code></td><td>Start a new chat session</td></tr>
+        </tbody>
+      </table>
+
+      <p>Chat participants (<code>@</code>): <code>@workspace</code>, <code>@vscode</code>, <code>@terminal</code>, <code>@github</code>. File and selection references with <code>#</code>: <code>#file:path/to/file.ts</code>, <code>#selection</code>.</p>
+
+      <h2>L02 — GitHub Copilot CLI</h2>
+
+      <p>GitHub Copilot CLI is a standalone AI agent in the terminal. It is not just a command suggester — it can read and write files, run shell commands, perform Git operations, and interact with GitHub.com (PRs, issues, Actions workflows) directly from the command line.</p>
+
+      <p class="callout callout-warn"><strong>Preview status.</strong> Copilot CLI is currently in preview. Syntax and installation may change. Always follow the official installation guide.</p>
+
+      <h3>Two usage modes</h3>
+      <p><strong>Interactive</strong> — start with the bare command:</p>
+      <pre><code>copilot</code></pre>
+      <ul>
+        <li>Opens a chat session where you iterate with Copilot.</li>
+        <li>Two sub-modes: <strong>Ask/Execute</strong> (default) and <strong>Plan Mode</strong> (toggle with <code>Shift+Tab</code>).</li>
+      </ul>
+
+      <p><strong>Programmatic</strong> — pass the prompt directly:</p>
+      <pre><code>copilot -p "Show me this week's commits and summarize them" --allow-tool='shell(git)'</code></pre>
+      <ul>
+        <li>Runs the task and exits.</li>
+        <li>Useful for automation and scripts. Supports piping: <code>./generate-options.sh | copilot</code>.</li>
+      </ul>
+
+      <h3>Tool approval and security</h3>
+      <table>
+        <thead><tr><th>Option</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td><code>--allow-all-tools</code></td><td>Allow every tool without prompting</td></tr>
+          <tr><td><code>--allow-tool='shell(git)'</code></td><td>Allow only git commands without prompting</td></tr>
+          <tr><td><code>--deny-tool='shell(rm)'</code></td><td>Block <code>rm</code> entirely</td></tr>
+        </tbody>
+      </table>
+      <p class="callout callout-warn"><strong>Security.</strong> <code>--allow-all-tools</code> grants Copilot the same file and shell access as your user. Use with care — especially in automation.</p>
+
+      <h3>CLI vs. IDE — when to use which</h3>
+      <table>
+        <thead><tr><th>Situation</th><th>Recommended tool</th></tr></thead>
+        <tbody>
+          <tr><td>Actively writing code</td><td>IDE (inline + Chat)</td></tr>
+          <tr><td>Agent in the terminal without an IDE</td><td>CLI (interactive)</td></tr>
+          <tr><td>Automation or scripting</td><td>CLI (programmatic, <code>-p</code>)</td></tr>
+          <tr><td>Plan before executing</td><td>CLI Plan Mode (<code>Shift+Tab</code>)</td></tr>
+          <tr><td>Reviewing code in a PR</td><td>IDE or GitHub.com (Code Review)</td></tr>
+          <tr><td>Org administration</td><td>GitHub.com</td></tr>
+        </tbody>
+      </table>
+
+      <h2>L03 — Agent Mode, Plan Mode, and MCP</h2>
+
+      <h3>Agent Mode</h3>
+      <p>Agent Mode runs Copilot autonomously through multi-step development tasks. Unlike regular Chat, Agent Mode can:</p>
+      <ul>
+        <li>Read and write multiple files.</li>
+        <li>Run terminal commands.</li>
+        <li>Iterate and fix errors on its own.</li>
+        <li>Use external tools through MCP integrations.</li>
+      </ul>
+      <p><strong>Agent sessions</strong> hold state and context for the duration of the task. <strong>Sub-agents</strong> let the main agent delegate parts of large tasks to specialized smaller agents to optimize context usage.</p>
+
+      <h3>Chat modes — Ask, Plan, Agent</h3>
+      <table>
+        <thead><tr><th>Feature</th><th>Ask</th><th>Plan</th><th>Agent</th></tr></thead>
+        <tbody>
+          <tr><td>File edits</td><td>No (manual)</td><td>Yes (after approval)</td><td>Yes (autonomous)</td></tr>
+          <tr><td>Autonomy</td><td>None — human-driven</td><td>Low — plan first</td><td>High — runs on its own</td></tr>
+          <tr><td>Terminal access</td><td>No</td><td>No</td><td>Yes</td></tr>
+          <tr><td>Best for</td><td>Questions, snippets</td><td>Complex tasks before execution</td><td>Multi-file tasks, iteration</td></tr>
+        </tbody>
+      </table>
+
+      <p class="callout callout-warn"><strong>Exam note.</strong> Older GH-300 materials may reference <strong>Edit Mode</strong> as a separate mode. In current Copilot UI (VS Code), Edit Mode is no longer a distinct selectable mode — its behavior has been folded into Agent Mode. If an exam question still distinguishes them, remember: Edit Mode = scoped, user picks files, diff view; Agent Mode = autonomous, Copilot picks files, can run terminal commands.</p>
+
+      <h3>MCP — Model Context Protocol</h3>
+      <p>MCP is an open standard that lets GitHub Copilot integrate with external tools and services:</p>
+      <ul>
+        <li>Copilot can fetch data from external sources (databases, APIs, documentation services).</li>
+        <li>Copilot can use specialized tools (test frameworks, CI/CD pipelines).</li>
+        <li>Extended context from outside project knowledge.</li>
+      </ul>
+      <p>For the exam, remember: MCP is the mechanism that enables external integrations in Agent Mode.</p>
+
+      <h2>L04 — Code Review, Spaces, Spark, PR summaries, cloud agent, memory</h2>
+
+      <h3>Copilot Code Review</h3>
+      <p>Automated code review on GitHub pull requests. Configured at the organization level (Settings → Copilot → Code Review). Review standards can be defined in instructions files (<code>.github/copilot-instructions.md</code>).</p>
+
+      <h3>Copilot Spaces and GitHub Spark</h3>
+      <p><strong>Copilot Spaces</strong> organize relevant context (code, documentation, specifications) into a curated knowledge surface that Copilot draws on for a specific task. Spaces is a context-management tool, not a shared team workspace.</p>
+      <p><strong>GitHub Spark</strong> <em>(public preview)</em> builds and deploys full-stack apps from natural language. Available only on <strong>Pro+ and Enterprise</strong> plans.</p>
+
+      <h3>Pull Request Summaries</h3>
+      <p>Copilot generates a natural-language summary of PR changes. <strong>Plan limitation:</strong> not available on Free — Student plan and above.</p>
+
+      <h3>Instructions files and prompt files</h3>
+      <ul>
+        <li><code>.github/copilot-instructions.md</code> — organization or project-wide instructions.</li>
+        <li>Project-specific instructions files at the repository root.</li>
+        <li>Prompt files store and reuse frequently used prompts to keep team usage consistent.</li>
+      </ul>
+
+      <h3>Copilot cloud agent vs. Agent Mode in the IDE</h3>
+      <table>
+        <thead><tr><th>Feature</th><th>Agent Mode (IDE)</th><th>Copilot cloud agent (GitHub)</th></tr></thead>
+        <tbody>
+          <tr><td>Where it runs</td><td>Local IDE</td><td>GitHub.com (cloud)</td></tr>
+          <tr><td>Tasks</td><td>Local code edits</td><td>Issue → branch → PR end-to-end</td></tr>
+          <tr><td>Trigger</td><td>Developer in the IDE</td><td>Issue assignment or request on GitHub</td></tr>
+          <tr><td>Output</td><td>Local code change</td><td>Pull Request for review</td></tr>
+        </tbody>
+      </table>
+      <p class="callout callout-warn"><strong>Exam note.</strong> Copilot cloud agent is not the same as Agent Mode in the IDE. Cloud agent runs autonomously on GitHub; Agent Mode runs locally under developer control.</p>
+
+      <h3>Copilot Memory and Copilot in GitHub Desktop</h3>
+      <p><strong>Copilot Memory</strong> <em>(public preview)</em> lets Copilot infer and store useful repository facts automatically. Cloud agent and Code Review use this memory to improve quality on that repo over time.</p>
+      <p><strong>Copilot in GitHub Desktop</strong> generates commit messages and PR descriptions automatically based on your changes.</p>
+
+      <h3>Feature decision table</h3>
+      <table>
+        <thead><tr><th>Situation</th><th>Feature</th></tr></thead>
+        <tbody>
+          <tr><td>Automated PR review</td><td>Copilot Code Review</td></tr>
+          <tr><td>Curated team context</td><td>Copilot Spaces</td></tr>
+          <tr><td>Quick prototype or demo app</td><td>GitHub Spark</td></tr>
+          <tr><td>PR description takes too long</td><td>PR Summary</td></tr>
+          <tr><td>Consistent team behavior</td><td>Instructions + prompt files</td></tr>
+          <tr><td>Delegate implementation on GitHub</td><td>Copilot cloud agent</td></tr>
+          <tr><td>Repo memory for the agent</td><td>Copilot Memory</td></tr>
+          <tr><td>Auto commit messages</td><td>Copilot in GitHub Desktop</td></tr>
+        </tbody>
+      </table>
+
+      <h2>L05 — Organization governance</h2>
+
+      <h3>Org-level policies</h3>
+      <p>GitHub.com → Organization Settings → Copilot:</p>
+      <table>
+        <thead><tr><th>Setting</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Copilot Business / Enterprise activation</td><td>Enable Copilot for the organization</td></tr>
+          <tr><td>Access control</td><td>Choose who gets a seat</td></tr>
+          <tr><td>IDE availability</td><td>Restrict or allow specific IDEs</td></tr>
+          <tr><td>Copilot Chat</td><td>Enable / disable</td></tr>
+          <tr><td>Copilot Code Review</td><td>Configure review policies</td></tr>
+          <tr><td>Content exclusions</td><td>Org-level file exclusions</td></tr>
+          <tr><td>Suggestions for training</td><td>Allow / block use of data for model training</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Audit log events</h3>
+      <p class="callout callout-warn"><strong>Plan limitation.</strong> Audit logs are available on <strong>Pro+, Business and Enterprise</strong>. Free, Student and Pro do not get Copilot audit logs.</p>
+      <table>
+        <thead><tr><th>Event</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>copilot.create_api_key</code></td><td>API key created</td></tr>
+          <tr><td><code>copilot.revoke_api_key</code></td><td>API key revoked</td></tr>
+          <tr><td><code>copilot.enable_copilot</code></td><td>Copilot enabled for the org</td></tr>
+          <tr><td><code>copilot.disable_copilot</code></td><td>Copilot disabled</td></tr>
+          <tr><td><code>copilot.add_member</code></td><td>User added to a Copilot subscription</td></tr>
+          <tr><td><code>copilot.remove_member</code></td><td>User removed from a Copilot subscription</td></tr>
+        </tbody>
+      </table>
+
+      <h3>REST API for seat management</h3>
+<pre><code>GET    /orgs/{org}/copilot/billing                  - billing info
+GET    /orgs/{org}/copilot/billing/seats            - per-seat info
+POST   /orgs/{org}/copilot/billing/selected_users   - add users
+DELETE /orgs/{org}/copilot/billing/selected_users   - remove users</code></pre>
+
+      <h2>Exam-ready checklist (M02)</h2>
+      <ul class="checklist">
+        <li>IDE: inline (Tab/Esc/Alt+]), Chat slash commands, @-participants, #-references, Plan Mode, Content Exclusions.</li>
+        <li>CLI: terminal agent, interactive vs. programmatic (<code>-p</code>), tool approval flags.</li>
+        <li>Agent Mode is autonomous, multi-file, terminal-capable, supports sub-agents.</li>
+        <li>Plan Mode = plan first, developer approves before code is written.</li>
+        <li>MCP enables external integrations in Agent Mode.</li>
+        <li>Code Review on PRs, configurable with instructions files.</li>
+        <li>Cloud agent (GitHub) ≠ Agent Mode (IDE). Cloud agent goes issue → branch → PR.</li>
+        <li>Copilot Memory persists repository-level facts for cloud agent and Code Review.</li>
+        <li>Org governance: policies, audit log (Pro+/Business/Enterprise), REST API for seats.</li>
+      </ul>
+
+      <h2>Official source documents</h2>
+      <ul>
+        <li><a href="https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features" rel="noopener">GitHub Copilot features</a></li>
+        <li><a href="https://docs.github.com/copilot/using-github-copilot" rel="noopener">Using GitHub Copilot in your IDE</a></li>
+        <li><a href="https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide" rel="noopener">Copilot Chat modes (Ask, Agent, Plan)</a></li>
+        <li><a href="https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli" rel="noopener">GitHub Copilot CLI</a></li>
+        <li><a href="https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli" rel="noopener">Set up Copilot CLI</a></li>
+        <li><a href="https://docs.github.com/en/copilot/using-github-copilot/coding-agent" rel="noopener">Copilot cloud agent</a></li>
+        <li><a href="https://docs.github.com/en/copilot/concepts/agents/about-third-party-agents" rel="noopener">About third-party agents</a></li>
+        <li><a href="https://docs.github.com/en/copilot/concepts/agents/copilot-memory" rel="noopener">Agentic memory for GitHub Copilot</a></li>
+        <li><a href="https://docs.github.com/copilot/managing-copilot/configuring-and-auditing-content-exclusion" rel="noopener">Configuring content exclusions</a></li>
+        <li><a href="https://docs.github.com/copilot/about-github-copilot/plans-for-github-copilot" rel="noopener">GitHub Copilot plans</a></li>
+        <li><a href="https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization" rel="noopener">GitHub Copilot for Organizations</a></li>
+      </ul>
+
+      <nav class="module-nav">
+        <a href="responsible-ai.html" class="prev">
+          <span class="label">← Previous</span>
+          <span class="title">M01 — Responsible AI</span>
+        </a>
+        <a href="data-and-architecture.html" class="next">
+          <span class="label">Next module →</span>
+          <span class="title">M03 — Data and Architecture</span>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> AI Architect Mastery™ — All Rights Reserved</p>
+      <p class="footer-meta"><a href="../">Back to AI Architect Mastery home</a> · Sister brand of <a href="https://dataintegrationmastery.com/" rel="noopener">Data Integration Mastery™</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

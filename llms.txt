@@ -1,0 +1,36 @@
+# AI Architect Mastery (AAM)
+
+> AI Architect Mastery (AAM) teaches the **AI Driven Development Methodology** — also known as *structured Vibe Coding* — a production-grade way to build software with GitHub Copilot agents. The methodology follows a four-phase loop: PRD → PLAN → TASK → IMPLEMENTATION, with the human acting as architect and AI agents as builders.
+
+AAM is built for experienced developers, software architects, and engineering leaders who want to move from ad hoc AI prompting to a repeatable, agent-driven development practice. Courses are delivered on Udemy and supported by free written documentation on this site.
+
+Primary public term: **AI Driven Development Methodology** (or *AI Driven Development*).
+Branded / named method: **Vibe Coding** (retained in Udemy course names and as a recognizable label for the same methodology).
+
+## Methodology
+
+- [Methodology overview](https://aiarchitectmastery.com/#methodology): The four-phase AI driven development loop — PRD, PLAN, TASK, IMPLEMENTATION — and how each phase maps to GitHub Copilot agent modes.
+
+## Courses
+
+- [Introduction to Vibe Coding](https://aiarchitectmastery.com/#courses): Free entry course. Conceptual orientation to the AI Driven Development Methodology and the agent-driven workflow.
+- [Mastering Vibe Coding with GitHub Copilot](https://aiarchitectmastery.com/#courses): Core paid course. Full methodology with GitHub Copilot agent modes, real project workflow, PRD → PLAN → TASK → IMPLEMENTATION.
+- [GitHub Copilot Certification (GH-300) Preparation](https://aiarchitectmastery.com/gh-300/): Certification prep course covering responsible AI, Copilot features, data and architecture, prompt engineering, developer productivity, and privacy and safeguards.
+
+## GH-300 Certification Documentation
+
+- [GH-300 hub](https://aiarchitectmastery.com/gh-300/): Free English documentation for the GitHub Copilot GH-300 certification, organized by exam domain.
+- [Responsible AI](https://aiarchitectmastery.com/gh-300/responsible-ai.html): Principles of responsible AI in the context of GitHub Copilot.
+- [Copilot features](https://aiarchitectmastery.com/gh-300/copilot-features.html): GitHub Copilot product surface, chat, agents, and editor integrations.
+- [Data and architecture](https://aiarchitectmastery.com/gh-300/data-and-architecture.html): How Copilot handles data, model routing, and enterprise architecture.
+- [Prompt engineering](https://aiarchitectmastery.com/gh-300/prompt-engineering.html): Prompt patterns and techniques for production-grade AI driven development.
+- [Developer productivity](https://aiarchitectmastery.com/gh-300/developer-productivity.html): Measuring and improving developer productivity with GitHub Copilot.
+- [Privacy and safeguards](https://aiarchitectmastery.com/gh-300/privacy-and-safeguards.html): Privacy controls, content exclusions, and enterprise safeguards.
+
+## About
+
+- [Instructor — Ari Vilkman](https://aiarchitectmastery.com/#instructor): Course author, software architect, and creator of the AI Driven Development Methodology / Vibe Coding curriculum.
+
+## Optional
+
+- [YouTube channel](https://www.youtube.com/@AIArchitectMastery): Video walkthroughs of the AI Driven Development Methodology in practice.

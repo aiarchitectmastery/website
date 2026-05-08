@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI Architect Mastery™ — AI Driven Development Methodology &amp; GitHub Copilot Certification</title>
+  <meta name="description" content="AI Architect Mastery (AAM) is the education platform for experienced developers learning the AI Driven Development Methodology — also known as structured Vibe Coding — and preparing for GitHub Copilot certification (GH-300)." />
+
+  <link rel="canonical" href="https://aiarchitectmastery.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#15182A" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI Architect Mastery™ — AI Driven Development Methodology" />
+  <meta property="og:description" content="From ad hoc AI usage to a structured AI Driven Development Methodology (a.k.a. Vibe Coding). Courses and GitHub Copilot certification (GH-300) prep for experienced developers." />
+  <meta property="og:url" content="https://aiarchitectmastery.com/" />
+  <meta property="og:image" content="https://aiarchitectmastery.com/assets/images/logo.png" />
+  <meta property="og:site_name" content="AI Architect Mastery" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Architect Mastery™ — AI Driven Development Methodology" />
+  <meta name="twitter:description" content="AI Driven Development Methodology (a.k.a. Vibe Coding) and GitHub Copilot certification prep for experienced developers." />
+  <meta name="twitter:image" content="https://aiarchitectmastery.com/assets/images/logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AI Architect Mastery",
+    "url": "https://aiarchitectmastery.com/",
+    "logo": "https://aiarchitectmastery.com/assets/images/logo.png",
+    "description": "Education platform for experienced developers — the AI Driven Development Methodology (also known as Vibe Coding) and AI agent orchestration mastery.",
+    "founder": {
+      "@type": "Person",
+      "name": "Ari Vilkman"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/arivilkman/",
+      "https://www.youtube.com/@AiArchitectMastery",
+      "https://www.instagram.com/ai_architect_ari",
+      "https://dataintegrationmastery.com/"
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: Course (GH-300 Certification Prep) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "GitHub Copilot Certification (GH-300) Preparation",
+    "description": "A structured preparation course for the official GitHub Copilot GH-300 certification exam. Covers responsible AI, Copilot features, data and architecture, prompt design, productivity, and privacy — aligned to the January 2026 study guide.",
+    "provider": {
+      "@type": "Organization",
+      "name": "AI Architect Mastery",
+      "url": "https://aiarchitectmastery.com/"
+    },
+    "inLanguage": "en",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.udemy.com/course/github-copilot-gh-300-certification-preparation-2026/",
+      "availability": "https://schema.org/PreOrder"
+    }
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the AI Driven Development Methodology?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The AI Driven Development Methodology — also known as structured Vibe Coding — is a repeatable, four-phase workflow for building production-quality software with AI coding agents: PRD (capture intent), PLAN (structured implementation plan), TASK (scoped agent work), IMPLEMENTATION (review and harden code). The human stays the architect; AI agents become the builders. It is the core methodology taught by AI Architect Mastery (AAM)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is AI Architect Mastery (AAM)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI Architect Mastery (AAM) is an education platform for experienced developers, software architects, and engineering leaders. It teaches the AI Driven Development Methodology (a.k.a. Vibe Coding), GitHub Copilot agent orchestration, and prepares developers for the official GitHub Copilot GH-300 certification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is AAM for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AAM is for experienced developers (3–15+ years) who already use GitHub Copilot or ChatGPT and want a repeatable, production-grade method for AI assisted development. It is not for absolute beginners, no-code advocates, or developers chasing prompt tricks instead of a methodology."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does AAM differ from random AI prompting or 'vibe coding' tutorials?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AAM treats AI driven development as a structured engineering practice — not prompt tricks. The PRD → PLAN → TASK → IMPLEMENTATION lifecycle keeps the human in architectural control at every step, holds AI generated code to production-quality standards, and uses multiple specialized GitHub Copilot agents with clean role separation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the GitHub Copilot GH-300 certification?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GH-300 is GitHub's official certification exam validating a developer's ability to use GitHub Copilot responsibly and effectively across IDE, CLI, and GitHub.com. It covers six exam domains: responsible AI, Copilot features, data and architecture, prompt engineering, developer productivity, and privacy and safeguards. AAM offers a free GH-300 study guide and a dedicated certification preparation course."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the AAM GH-300 study guide free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The full six-module GH-300 study guide on aiarchitectmastery.com is free, English, and aligned to the official January 2026 GitHub Copilot study guide. The paid Udemy preparation course adds video lessons, exercises, cheat sheets, and exam-ready summaries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is AAM related to Data Integration Mastery (DIM)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AAM is the sister brand of Data Integration Mastery (DIM). DIM teaches what to build — integration architecture and patterns. AAM teaches how to build it with AI agents, using the AI Driven Development Methodology. The two brands share an instructor (Ari Vilkman) and a common visual identity."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) — GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8SXT2JQ2D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T8SXT2JQ2D');
+  </script>
+
+  <!--
+    Analytics placeholders — lisää GDPR-bannerin jälkeen:
+    - Google Ads:    AW-XXXXXXXXXX
+    - Meta Pixel:    XXXXXXXXXXXXXXX
+  -->
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1831412');
+  </script>
+  <!-- End MailerLite Universal -->
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="AI Architect Mastery — home">
+        <img src="assets/images/logo.png" alt="AI Architect Mastery logo" class="brand-logo" />
+        <span class="brand-text">AI Architect Mastery<sup>™</sup></span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#methodology">Methodology</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="gh-300/">GH-300 Study Guide</a></li>
+          <li><a href="#instructor">Instructor</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section id="top" class="section section-hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title">
+          AI Architect Mastery<sup>™</sup>
+        </h1>
+        <p class="hero-tagline">From Developer to AI Architect</p>
+        <p class="hero-lead">
+          The <strong>AI Driven Development Methodology</strong> for experienced developers — a structured way to
+          orchestrate GitHub Copilot agents, ship production-quality software, and prepare for the GitHub Copilot certification.
+          Also known as <em>structured Vibe Coding</em>.
+        </p>
+        <div class="hero-cta">
+          <a href="#courses" class="btn btn-primary">Explore Courses</a>
+          <a href="#methodology" class="btn btn-ghost">See the Methodology</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTRO VIDEO ============ -->
+    <section id="intro-video" class="section">
+      <div class="container">
+        <h2 class="section-title">Watch the 3-Minute Introduction</h2>
+        <p class="section-sub">
+          A short walk-through of the AI Driven Development Methodology — what it is, why it matters,
+          and how it changes the way experienced developers build software with AI.
+        </p>
+        <div class="video-wrap" id="introVideo">
+          <!-- Lazy YouTube facade -->
+          <button type="button" class="video-facade" data-video-id="DyWXodHX5w4" aria-label="Play AI Architect Mastery introduction video">
+            <span class="video-facade-thumb" aria-hidden="true"></span>
+            <span class="video-facade-play" aria-hidden="true">▶</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ METHODOLOGY ============ -->
+    <section id="methodology" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">The AI Driven Development Methodology</h2>
+        <p class="section-sub">
+          AAM's AI Driven Development Methodology — also known as <em>structured Vibe Coding</em> — is not random
+          prompting. It is a structured method for building production-quality software with AI agents.
+          The human stays the architect. The AI becomes the builder.
+        </p>
+
+        <ol class="method-flow" aria-label="Four phase AI driven development lifecycle">
+          <li class="method-step">
+            <span class="method-step-num">01</span>
+            <h3>PRD</h3>
+            <p>Capture intent, scope, and constraints — a product requirements document the AI can reason about.</p>
+          </li>
+          <li class="method-step">
+            <span class="method-step-num">02</span>
+            <h3>PLAN</h3>
+            <p>Break the PRD into a structured implementation plan with explicit checkpoints.</p>
+          </li>
+          <li class="method-step">
+            <span class="method-step-num">03</span>
+            <h3>TASK</h3>
+            <p>Direct AI agents through scoped, reviewable tasks — one responsibility per agent.</p>
+          </li>
+          <li class="method-step">
+            <span class="method-step-num">04</span>
+            <h3>IMPLEMENTATION</h3>
+            <p>Generate, review, and harden production code with human approval at every gate.</p>
+          </li>
+        </ol>
+
+        <ul class="value-grid">
+          <li>
+            <h4>Methodology, not magic</h4>
+            <p>A repeatable workflow — not prompt tricks or AI hype.</p>
+          </li>
+          <li>
+            <h4>Human as architect</h4>
+            <p>Architectural control stays in human hands, always.</p>
+          </li>
+          <li>
+            <h4>Production quality</h4>
+            <p>AI generated code held to the same standards as human code.</p>
+          </li>
+          <li>
+            <h4>Agent orchestration</h4>
+            <p>Multiple specialized agents, strict role separation, clean context.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ COURSES ============ -->
+    <section id="courses" class="section">
+      <div class="container">
+        <h2 class="section-title">Courses</h2>
+        <p class="section-sub">
+          A structured learning path from your first agent driven workflow to a recognized GitHub Copilot certification.
+        </p>
+
+        <!-- Featured: GH-300 -->
+        <article class="course-card course-card-featured">
+          <div class="course-tag">Featured · Certification Prep</div>
+          <h3>GitHub Copilot Certification (GH-300) — Preparation</h3>
+          <p class="course-lead">
+            A complete, structured preparation package for the official GitHub Copilot
+            <strong>GH-300 certification</strong> exam — aligned to the January 2026 study guide.
+          </p>
+          <ul class="course-bullets">
+            <li><strong>Responsible AI</strong> — risks, limitations, and ethical use of generative AI</li>
+            <li><strong>Copilot features</strong> — IDE, CLI, browser, agent mode, plan mode, MCP</li>
+            <li><strong>Data &amp; architecture</strong> — data flow, suggestion lifecycle, LLM limitations</li>
+            <li><strong>Prompt design &amp; context</strong> — zero-shot, few-shot, advanced prompting</li>
+            <li><strong>Productivity</strong> — privacy, content exclusions, organizational settings</li>
+            <li>Cheat sheets, exercises, and exam-ready summaries for every domain</li>
+          </ul>
+          <p class="course-meta">
+            <span>Format: video + written materials</span>
+            <span>Language: English</span>
+            <span>Status: launching soon on Udemy</span>
+          </p>
+          <p class="callout callout-tip" style="margin-top: 1.4em;">
+            <strong>Free study guide available now.</strong>
+            Six modules covering every GH-300 exam domain — open-access English documentation,
+            aligned to the official January 2026 study guide. Read while you wait for the course.
+          </p>
+          <div class="course-cta">
+            <a href="gh-300/" class="btn btn-primary" data-track="cta-gh300-docs">Read the Free Study Guide →</a>
+            <a href="#contact" class="btn btn-ghost" data-track="cta-gh300-notify">Get Notified at Launch</a>
+          </div>
+        </article>
+
+        <!-- Pipeline -->
+        <h3 class="subsection-title">More in the AAM Path</h3>
+        <div class="course-grid">
+          <article class="course-card">
+            <div class="course-tag">Entry</div>
+            <h4>Introduction to Vibe Coding</h4>
+            <p>Conceptual orientation to the structured AI driven development method. The gateway course.</p>
+            <p class="course-status">Coming soon</p>
+          </article>
+          <article class="course-card">
+            <div class="course-tag">Core</div>
+            <h4>Mastering Vibe Coding with GitHub Copilot</h4>
+            <p>Full methodology end-to-end: PRD → PLAN → TASK → IMPLEMENTATION with Copilot agents.</p>
+            <p class="course-status">Coming soon</p>
+          </article>
+          <article class="course-card">
+            <div class="course-tag">Advanced</div>
+            <h4>Vibe Coding for Integration Projects</h4>
+            <p>Domain-specific application of vibe coding — bridges with the DIM integration ecosystem.</p>
+            <p class="course-status">Planned</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO IT IS FOR ============ -->
+    <section id="audience" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Who AAM Is For</h2>
+        <div class="two-col">
+          <div>
+            <h3>You are an experienced developer who…</h3>
+            <ul class="check-list">
+              <li>Has 3–15+ years of software development behind you</li>
+              <li>Already uses GitHub Copilot or ChatGPT — but suspects you are barely scratching the surface</li>
+              <li>Wants a <strong>repeatable method</strong> for getting production-quality output from AI tools</li>
+              <li>Refuses to lose architectural control to autocomplete</li>
+              <li>Wants to lead AI-first development in your team — not just keep up</li>
+            </ul>
+          </div>
+          <div>
+            <h3>AAM is not for…</h3>
+            <ul class="x-list">
+              <li>Absolute beginners looking for "code without coding"</li>
+              <li>AI hype enthusiasts chasing 5-minute app demos</li>
+              <li>No-code / low-code advocates</li>
+              <li>People searching for prompt tricks instead of a methodology</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSTRUCTOR ============ -->
+    <section id="instructor" class="section">
+      <div class="container instructor-inner">
+        <div class="instructor-photo">
+          <img src="assets/images/instructor-ari.jpg" alt="Ari Vilkman — AI Architect and instructor" />
+        </div>
+        <div class="instructor-text">
+          <h2 class="section-title">Your Instructor: Ari Vilkman</h2>
+          <p class="instructor-role">AI Architect. Integration Architect. Educator.</p>
+          <p>
+            With over 25 years in IT and hundreds of real-world projects, I have learned that great software
+            is built when human intent and machine execution meet through a clear structure. That structure is
+            what AI Architect Mastery teaches: a methodology for orchestrating AI coding agents the way you
+            would orchestrate a skilled team — with PRDs, plans, tasks, and human checkpoints.
+          </p>
+          <p>
+            AAM is the sister brand of <a href="https://dataintegrationmastery.com/" rel="noopener">Data Integration Mastery™</a>:
+            DIM teaches <em>what</em> to build (integration architecture), AAM teaches <em>how</em> to build it
+            with AI agents.
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/arivilkman/" rel="noopener" class="btn btn-ghost btn-small">Connect on LinkedIn</a>
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / SOCIAL ============ -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Stay in the Loop</h2>
+        <p class="section-sub">
+          AI Architect Mastery is launching its first courses on Udemy. Follow along — or reach out directly.
+        </p>
+
+        <ul class="loop-benefits">
+          <li>The latest on AI agents and GitHub Copilot — curated, no noise</li>
+          <li>Practical tips you can apply in your daily development work</li>
+          <li>Early access and offers you won't find anywhere else</li>
+        </ul>
+
+        <div class="mailerlite-wrap">
+          <div class="ml-embedded" data-form="TX2e4b"></div>
+        </div>
+
+        <ul class="social-list" aria-label="Social and contact links">
+          <li>
+            <a href="https://www.linkedin.com/in/arivilkman/" rel="noopener" data-track="social-linkedin">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@AiArchitectMastery" rel="noopener" data-track="social-youtube">YouTube</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ai_architect_ari" rel="noopener" data-track="social-instagram">Instagram</a>
+          </li>
+          <li>
+            <a href="mailto:info@aiarchitectmastery.com" data-track="contact-email">info@aiarchitectmastery.com</a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> AI Architect Mastery™ — All Rights Reserved</p>
+      <p class="footer-meta">
+        Sister brand of <a href="https://dataintegrationmastery.com/" rel="noopener">Data Integration Mastery™</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Engineering and Context for GitHub Copilot | GH-300 Module 4</title>
+  <meta name="description" content="Module 4 of the GH-300 study guide: the anatomy of an effective Copilot prompt — Role + Task + Context + Format — plus zero-shot, few-shot, chain-of-thought, role prompting, and context-window management." />
+  <link rel="canonical" href="https://aiarchitectmastery.com/gh-300/prompt-engineering.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#15182A" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Prompt Engineering and Context — GH-300 Module 4" />
+  <meta property="og:description" content="The anatomy of an effective GitHub Copilot prompt and the prompt-engineering techniques tested on GH-300." />
+  <meta property="og:url" content="https://aiarchitectmastery.com/gh-300/prompt-engineering.html" />
+  <meta property="og:image" content="https://aiarchitectmastery.com/assets/images/logo.png" />
+  <meta property="og:site_name" content="AI Architect Mastery" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prompt Engineering and Context — GH-300 Module 4" />
+  <meta name="twitter:description" content="The anatomy of an effective GitHub Copilot prompt and the prompt-engineering techniques tested on GH-300." />
+  <meta name="twitter:image" content="https://aiarchitectmastery.com/assets/images/logo.png" />
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"AI Architect Mastery","item":"https://aiarchitectmastery.com/"},
+    {"@type":"ListItem","position":2,"name":"GH-300 Study Guide","item":"https://aiarchitectmastery.com/gh-300/"},
+    {"@type":"ListItem","position":3,"name":"M04 — Prompt Engineering","item":"https://aiarchitectmastery.com/gh-300/prompt-engineering.html"}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../" class="brand"><img src="../assets/images/logo.png" alt="AI Architect Mastery logo" class="brand-logo" /><span class="brand-text">AI Architect Mastery<sup>™</sup></span></a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../#methodology">Methodology</a></li>
+          <li><a href="../#courses">Courses</a></li>
+          <li><a href="./">GH-300 Docs</a></li>
+          <li><a href="../#instructor">Instructor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="docs-article">
+    <div class="container">
+
+      <p class="breadcrumb"><a href="../">Home</a><span class="breadcrumb-sep">›</span><a href="./">GH-300 Study Guide</a><span class="breadcrumb-sep">›</span>M04 — Prompt Engineering</p>
+
+      <h1>Module 4 — Prompt Engineering and Context Management</h1>
+
+      <div class="module-meta">
+        <span><strong>Exam weight:</strong> 10–15%</span>
+        <span><strong>Study time:</strong> 45–60 minutes</span>
+        <span><strong>Lessons:</strong> Effective prompts · Zero-shot &amp; few-shot · Principles &amp; flow</span>
+      </div>
+
+      <p class="callout callout-tip"><strong>Exam tactic.</strong> Prompt engineering is hard to teach without practice. The exam usually frames it as recognition: "Which of the following is a good example of few-shot prompting?" — Use Copilot actively while studying.</p>
+
+      <h2>L01 — Effective prompt structure and context</h2>
+
+      <h3>The four parts of an effective prompt</h3>
+      <ul>
+        <li><strong>Role.</strong> Tell Copilot what role to take. <em>"Act as an experienced Java developer specializing in security..."</em></li>
+        <li><strong>Task.</strong> Describe clearly what you want. <em>"Write unit tests for this method..."</em></li>
+        <li><strong>Context.</strong> Provide background. <em>"This service runs on Spring Boot 3.2 and Java 21..."</em></li>
+        <li><strong>Format.</strong> Specify the output shape. <em>"Reply in JSON format..."</em></li>
+      </ul>
+
+      <h3>How Copilot collects context</h3>
+      <p><strong>Automatic context</strong>: active file, code around the cursor, open files (limited), imports, and adjacent comments — especially the comment directly above the cursor.</p>
+      <p><strong>Manual context</strong> (<code>#</code> references): <code>#file:src/api/UserController.java</code>, <code>#selection</code>, <code>#codebase</code>.</p>
+
+      <h3>Context optimization</h3>
+      <p><strong>Add context:</strong></p>
+      <ul>
+        <li>Open relevant files in the IDE before starting.</li>
+        <li>Add references with <code>#</code>.</li>
+        <li>Write clear comments right before the code you want generated.</li>
+        <li>Name variables and functions descriptively — they are context too.</li>
+      </ul>
+      <p><strong>Restrict context (privacy):</strong></p>
+      <ul>
+        <li>Close sensitive files when not needed.</li>
+        <li>Use Content Exclusions at org or repo level.</li>
+        <li>Check what is open before pasting sensitive data into Chat.</li>
+      </ul>
+
+      <h3>Anatomy in one example</h3>
+<pre><code>ROLE + TASK + CONTEXT + FORMAT = effective prompt
+
+Weak:   "Write a test"
+Better: "Write JUnit 5 unit tests for UserService.createUser().
+         Test successful creation, duplicate email, and missing required field.
+         Use Mockito to mock UserRepository."</code></pre>
+
+      <h2>L02 — Zero-shot, few-shot, and advanced prompting</h2>
+
+      <h3>Zero-shot prompting</h3>
+      <p>Instructions without examples. Use it for simple, well-described tasks.</p>
+<pre><code>// Zero-shot: instruction only, no examples
+// Generate an email validation method using RFC 5322.
+// Return true if valid, otherwise false.</code></pre>
+
+      <h3>Few-shot prompting</h3>
+      <p>Instructions with examples that guide style and format. Use when style consistency matters.</p>
+<pre><code>// Few-shot: examples guide the style
+// Examples of our existing validators:
+// validateEmail(email)  - RFC 5322, throws ValidationException
+// validatePhone(phone)  - international format, throws ValidationException
+//
+// Now generate in the same style:
+// validatePostalCode(postalCode) - Finnish postcode (5 digits)</code></pre>
+
+      <h3>Chain-of-thought and role prompting</h3>
+      <p><strong>Chain-of-thought</strong>: ask Copilot to think step by step.</p>
+<pre><code>// Analyze this algorithm step by step:
+// 1. Explain what it does
+// 2. Identify performance issues
+// 3. Suggest improvements</code></pre>
+
+      <p><strong>Role prompting</strong>: assign a domain role.</p>
+<pre><code>// Act as a security auditor. Review this code
+// and identify every OWASP Top 10 vulnerability. Be critical.</code></pre>
+
+      <h3>Technique selection</h3>
+      <table>
+        <thead><tr><th>Technique</th><th>When to use</th><th>Typical use case</th></tr></thead>
+        <tbody>
+          <tr><td>Zero-shot</td><td>Simple, clear tasks</td><td>Function generation, explanation</td></tr>
+          <tr><td>Few-shot</td><td>Style or format matters</td><td>Consistent code patterns</td></tr>
+          <tr><td>Chain-of-thought</td><td>Complex problems</td><td>Algorithm analysis, debugging</td></tr>
+          <tr><td>Role prompting</td><td>Need expert framing</td><td>Security review, code review</td></tr>
+        </tbody>
+      </table>
+
+      <h2>L03 — Principles and process flow</h2>
+
+      <h3>Principles</h3>
+      <ul>
+        <li><strong>Specificity.</strong> Vague prompt → vague result. <em>Bad: "improve this code." Good: "refactor to stream API and reduce cyclomatic complexity below 5."</em></li>
+        <li><strong>Context.</strong> Copilot does not know your business rules — state them.</li>
+        <li><strong>Iteration.</strong> The first answer is rarely the best. Refine.</li>
+        <li><strong>Clarity.</strong> Break complex requests into smaller pieces.</li>
+      </ul>
+
+      <h3>Prompt processing flow</h3>
+<pre><code>User input
+    ↓
+Context assembly (open files, cursor, history)
+    ↓
+Prompt prioritization (most relevant context first)
+    ↓
+Tokenization (fills the context window)
+    ↓
+LLM inference
+    ↓
+Response</code></pre>
+      <ul>
+        <li>When the context window fills, older chat history is dropped.</li>
+        <li>Code closest to the cursor gets the most weight.</li>
+        <li>Clear comments right before the code are extremely effective.</li>
+      </ul>
+
+      <h3>When to clear chat history</h3>
+      <ul>
+        <li>Starting a completely new task.</li>
+        <li>The previous task is complete and the new one is unrelated.</li>
+        <li>Copilot starts mixing contexts from different tasks.</li>
+      </ul>
+      <p>In VS Code: open a new chat or run "Clear Chat".</p>
+
+      <h2>Exam-ready checklist (M04)</h2>
+      <ul class="checklist">
+        <li>Good prompt = Role + Task + Context + Format.</li>
+        <li>Zero-shot: no examples; few-shot: examples for style.</li>
+        <li>Chain-of-thought: think step by step; role prompting: assign expertise.</li>
+        <li>Context is collected automatically and steered with <code>#</code> references.</li>
+        <li>Iterate, but reset chat at the start of a new task.</li>
+      </ul>
+
+      <h2>Official source documents</h2>
+      <ul>
+        <li><a href="https://docs.github.com/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat" rel="noopener">Prompt engineering for GitHub Copilot Chat</a></li>
+        <li><a href="https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot" rel="noopener">Best practices for using GitHub Copilot</a></li>
+        <li><a href="https://aka.ms/GH300-StudyGuide" rel="noopener">GH-300 Study Guide</a></li>
+      </ul>
+
+      <nav class="module-nav">
+        <a href="data-and-architecture.html" class="prev"><span class="label">← Previous</span><span class="title">M03 — Data and Architecture</span></a>
+        <a href="developer-productivity.html" class="next"><span class="label">Next module →</span><span class="title">M05 — Developer Productivity</span></a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> AI Architect Mastery™ — All Rights Reserved</p>
+      <p class="footer-meta"><a href="../">Back to AI Architect Mastery home</a> · Sister brand of <a href="https://dataintegrationmastery.com/" rel="noopener">Data Integration Mastery™</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
