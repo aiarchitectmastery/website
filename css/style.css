@@ -425,6 +425,21 @@ code {
   font-size: 1.1rem; margin: -0.4em 0 1em;
 }
 
+/* ---------- Small promo video ---------- */
+.video-wrap-small {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.video-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5em;
+}
+
 /* ---------- MailerLite embed ---------- */
 
 .loop-benefits {
@@ -442,6 +457,12 @@ code {
 .mailerlite-wrap {
   max-width: 480px;
   margin: 0 0 2em;
+}
+.mailerlite-wrap .ml-embedded,
+.mailerlite-wrap .ml-form-embedWrapper,
+.mailerlite-wrap .ml-form-embedBody {
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 /* ---------- Social / contact ---------- */
