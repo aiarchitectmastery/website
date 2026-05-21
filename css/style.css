@@ -741,3 +741,44 @@ code {
 .toc a { color: var(--color-text); text-decoration: none; }
 .toc a:hover { color: var(--color-heading); text-decoration: underline; }
 
+/* ---------- Course promo banner ---------- */
+
+.course-promo {
+  background: linear-gradient(135deg, rgba(90, 107, 138, 0.14) 0%, rgba(165, 90, 130, 0.10) 100%);
+  border: 1px solid rgba(199, 123, 165, 0.4);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  margin: 2.4em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.course-promo .promo-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-bright);
+  margin-bottom: 4px;
+}
+.course-promo h4 {
+  margin: 0 0 0.3em;
+  font-size: 1.08rem;
+  color: var(--color-text-strong);
+}
+.course-promo p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+.promo-text { flex: 1; }
+.promo-action { flex-shrink: 0; display: flex; align-items: center; }
+
+@media (min-width: 600px) {
+  .course-promo {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+}
