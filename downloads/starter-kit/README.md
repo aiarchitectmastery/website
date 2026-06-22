@@ -54,10 +54,10 @@ The result: consistent output quality, architectural control, and a repeatable w
 
 ## What's next
 
-This kit covers the core three phases. The full methodology — with real Java projects, agent mode walkthroughs, and GitHub Copilot configuration — is taught in:
+This kit covers the core three phases. For guidance on using these templates and more advanced scenarios, visit:
 
-- **Mastering AI Driven Development** — [View on Udemy →](https://www.udemy.com)
-- **GitHub Copilot GH-300 Certification Prep** — [View on Udemy →](https://www.udemy.com)
+- **[Agent Journey: Milestone 1](https://aiarchitectmastery.com/get-started/)** — Start your AI Driven Development practice
+- **[GitHub Copilot GH-300 Certification Prep](https://c008.aiarchitectmastery.com/)** — Full methodology, real projects, and certification prep on Udemy
 
 ---
 
