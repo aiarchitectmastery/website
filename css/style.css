@@ -662,6 +662,58 @@ code {
 }
 .callout-tip strong { color: var(--color-brand-bright); }
 
+/* ---------- Testimonial screenshots (course card) ---------- */
+
+.testimonial-screenshots {
+  margin: 1.8em 0 1.4em;
+}
+.testimonial-heading {
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 1em;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .testimonial-grid { grid-template-columns: 1fr; }
+}
+.testimonial-figure {
+  margin: 0;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.30);
+}
+.testimonial-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.testimonial-figure figcaption {
+  padding: 10px 14px;
+  background: rgba(199, 123, 165, 0.10);
+  border-top: 1px solid rgba(199, 123, 165, 0.22);
+}
+.testimonial-quote {
+  display: block;
+  font-style: italic;
+  color: var(--color-text-strong);
+  font-size: 0.93rem;
+  margin-bottom: 4px;
+}
+.testimonial-detail {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
 .docs-article pre {
   background: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.06);
