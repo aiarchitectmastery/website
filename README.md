@@ -77,16 +77,3 @@ Kaksi tapaa:
 - Aktivoi `.github/workflows/deploy.yml` ja muuta `path: "."` →
   `path: "./gh-pages"`
 
-## TODO ennen julkaisua
-
-- [ ] Päivitä intro-videon YouTube-ID (`data-video-id` index.html:ssä)
-- [ ] Lisää Ari:n valokuva: `assets/images/instructor-ari.jpg` ja korvaa
-  `.instructor-photo`-paikkamerkki kuvalla
-- [ ] Lisää lopulliset Udemy-linkit GH-300-kortin CTA-painikkeisiin
-- [ ] Wire MailerLite-lomake yhteystieto-osioon
-- [ ] Lisää AAM:n omat sosiaalisen median linkit (LinkedIn-yritys,
-  YouTube, Instagram) kun kanavat on luotu
-- [ ] Lisää GDPR cookie-banneri ennen GA4 / Google Ads / Meta Pixel
-  -tagien aktivointia
-- [ ] Korvaa `robots.txt` `Disallow:`-rivi sallivaksi kun domain on live
-- [ ] Validoi structured data Googlen Rich Results -työkalulla
