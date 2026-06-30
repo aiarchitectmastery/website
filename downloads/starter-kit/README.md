@@ -57,7 +57,7 @@ The result: consistent output quality, architectural control, and a repeatable w
 This kit covers the core three phases. For guidance on using these templates and more advanced scenarios, visit:
 
 - **[Agent Journey: Milestone 1](https://aiarchitectmastery.com/get-started/)** — Start your AI Driven Development practice
-- **[GitHub Copilot GH-300 Certification Prep](https://c008.aiarchitectmastery.com/)** — Full methodology, real projects, and certification prep on Udemy
+- **[GitHub Copilot GH-300 Certification Prep](https://www.udemy.com/course/github-copilot-gh-300-certification-prep/?referralCode=C70D949BE0C796967050)** — Full methodology, real projects, and certification prep on Udemy
 
 ---
 
