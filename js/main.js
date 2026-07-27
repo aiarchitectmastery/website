@@ -4,7 +4,7 @@
    - Smooth scroll offset for sticky header
    - YouTube facade (lazy load player on click)
    - Footer year
-   - Outbound link click tracking hook (placeholder for GA4)
+    - GA4 conversion and outbound link tracking
 */
 
 (function () {
@@ -35,6 +35,12 @@
     btn.addEventListener('click', function () {
       const id = btn.getAttribute('data-video-id');
       if (!id) return;
+      if (btn.getAttribute('data-track') === 'video-play-intro' && typeof window.gtag === 'function') {
+        window.gtag('event', 'video_play_intro', {
+          video_id: id,
+          video_title: 'AI Driven Development Methodology introduction'
+        });
+      }
       const iframe = document.createElement('iframe');
       iframe.className = 'video-iframe';
       iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0');
@@ -46,16 +52,39 @@
     });
   });
 
-  // ----- Outbound / CTA tracking hook -----
-  // Wire to GA4 / Meta Pixel after the GDPR consent banner is implemented.
-  // For now, log to console only so we can verify event names during development.
+  // ----- Outbound / CTA tracking -----
   document.addEventListener('click', function (e) {
     const target = e.target.closest('[data-track], a[href^="mailto:"], a[href^="http"]:not([href*="aiarchitectmastery.com"])');
     if (!target) return;
-    const name = target.getAttribute('data-track') ||
-      (target.getAttribute('href').startsWith('mailto:') ? 'contact-email' : 'outbound-link');
-    // window.gtag && window.gtag('event', name, { link_url: target.href });
-    // window.fbq && window.fbq('trackCustom', name);
-    if (window.console) console.debug('[track]', name, target.href || '');
+    const trackId = target.getAttribute('data-track');
+    if (target.classList.contains('video-facade') && trackId === 'video-play-intro') return;
+    const href = target.getAttribute('href') || '';
+    const isUdemy = href.includes('udemy.com');
+    const isMailto = href.startsWith('mailto:');
+    let name = trackId || (isMailto ? 'contact-email' : 'outbound-link');
+    const params = { link_url: target.href || '' };
+
+    if (isUdemy) {
+      name = 'udemy_course_click';
+      params.cta_id = trackId || 'unknown';
+    }
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, params);
+    }
+    if (window.console) console.debug('[track]', name, params);
   });
+
+  // ----- MailerLite lead tracking -----
+  // The embedded form is injected dynamically. Capturing submit events at the
+  // document level also works when MailerLite inserts the form after page load.
+  document.addEventListener('submit', function (e) {
+    const form = e.target.closest('.ml-embedded form');
+    if (!form || typeof window.gtag !== 'function') return;
+    window.gtag('event', 'generate_lead', {
+      method: 'mailerlite',
+      form_id: '4TDpWG'
+    });
+    if (window.console) console.debug('[track]', 'generate_lead', { method: 'mailerlite', form_id: '4TDpWG' });
+  }, true);
 })();
