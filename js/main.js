@@ -76,15 +76,40 @@
   });
 
   // ----- MailerLite lead tracking -----
-  // The embedded form is injected dynamically. Capturing submit events at the
-  // document level also works when MailerLite inserts the form after page load.
-  document.addEventListener('submit', function (e) {
-    const form = e.target.closest('.ml-embedded form');
-    if (!form || typeof window.gtag !== 'function') return;
-    window.gtag('event', 'generate_lead', {
-      method: 'mailerlite',
-      form_id: '4TDpWG'
-    });
+  // MailerLite renders this callback for the embedded form after a successful
+  // subscription. A DOM observer is also used because MailerLite loads
+  // asynchronously and can define its callback after this script runs.
+  let mailerLiteLeadTracked = false;
+  function trackMailerLiteLead() {
+    if (mailerLiteLeadTracked) return;
+    mailerLiteLeadTracked = true;
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'generate_lead', {
+        method: 'mailerlite',
+        form_id: '4TDpWG'
+      });
+    }
     if (window.console) console.debug('[track]', 'generate_lead', { method: 'mailerlite', form_id: '4TDpWG' });
-  }, true);
+  }
+
+  const mailerLiteSuccess = window.ml_webform_success_41342389;
+  window.ml_webform_success_41342389 = function () {
+    if (typeof mailerLiteSuccess === 'function') {
+      mailerLiteSuccess.apply(this, arguments);
+    }
+    trackMailerLiteLead();
+  };
+
+  const mailerLiteObserver = new MutationObserver(function () {
+    const success = document.querySelector('.ml-subscribe-form-41342389 .ml-form-successBody');
+    if (!success || window.getComputedStyle(success).display === 'none') return;
+    trackMailerLiteLead();
+    mailerLiteObserver.disconnect();
+  });
+  mailerLiteObserver.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class', 'style'],
+    childList: true,
+    subtree: true
+  });
 })();
