@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Agent Journey: Milestone 1 — Get Started with AI Workflow Templates | AI Architect Mastery</title>
-  <meta name="description" content="Start your AI Driven Development journey. Download three ready-to-use templates (PRD, PLAN, TASK) and begin orchestrating GitHub Copilot agents in your projects." />
+  <meta name="description" content="Start your AI Driven Development journey. Download four ready-to-use resources (PRD, PLAN, TASK, IMPLEMENTATION) and begin orchestrating GitHub Copilot agents in your projects." />
 
   <link rel="canonical" href="https://aiarchitectmastery.com/get-started/" />
   <meta name="robots" content="index, follow" />
@@ -14,7 +14,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Agent Journey: Milestone 1 — Workflow Starter Kit" />
-  <meta property="og:description" content="Download the AI Driven Development Methodology starter kit — three templates to begin orchestrating GitHub Copilot agents." />
+  <meta property="og:description" content="Download the AI Driven Development Methodology starter kit — four resources covering PRD, PLAN, TASK, and IMPLEMENTATION." />
   <meta property="og:url" content="https://aiarchitectmastery.com/get-started/" />
   <meta property="og:image" content="https://aiarchitectmastery.com/assets/images/ai-architect-mastery-canva.jpg" />
   <meta property="og:site_name" content="AI Architect Mastery" />
@@ -22,7 +22,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Agent Journey: Milestone 1 — Workflow Starter Kit" />
-  <meta name="twitter:description" content="Three ready-to-use templates to begin the AI Driven Development Methodology." />
+  <meta name="twitter:description" content="Four ready-to-use resources covering all phases of the AI Driven Development Methodology." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../assets/images/logo.png" />
@@ -115,7 +115,7 @@
         <h1>Agent Journey: Milestone 1</h1>
         <p class="lead">
           <strong>Start your AI Driven Development practice today.</strong>
-          Three ready-to-use templates to begin orchestrating GitHub Copilot agents and shipping structured, high-quality code.
+          Four ready-to-use resources to begin orchestrating GitHub Copilot agents and shipping structured, high-quality code.
         </p>
       </div>
     </section>
@@ -129,30 +129,36 @@
           The <strong>AI Driven Development Methodology</strong> is structured, repeatable, and aligned with how professional teams work. Instead of reactive prompting, you'll define <strong>intent</strong> (PRD), structure <strong>work</strong> (PLAN), and assign <strong>tasks</strong> (TASK prompts) to GitHub Copilot agents.
         </p>
 
-        <h3>The Three Phases</h3>
+        <h3>The Four Phases</h3>
         <ol style="padding-left: 1.4em; margin: 1.6em 0;">
           <li><strong>PRD (Product Requirements Document)</strong> — Define what you want to build. Scope, constraints, success criteria. This is what the AI agent will reason about.</li>
           <li><strong>PLAN (Implementation Plan)</strong> — Break the PRD into structured steps. What builds first? What depends on what? This is your architectural map.</li>
           <li><strong>TASK (Agent Task Prompt)</strong> — Give the agent one precise instruction per task. Include context, constraints, and verification rules. This is how you maintain control.</li>
+          <li><strong>IMPLEMENTATION (Human Review)</strong> — Before anything merges, verify the output actually satisfies the TASK, tests pass, conventions are followed, and security and edge cases were considered. Use the included checklist file to work through it.</li>
         </ol>
 
         <p style="margin-top: 2em; font-style: italic; color: var(--color-text-muted);">
           The human stays the architect. The AI becomes the builder. Never merge code without human review.
         </p>
 
+        <p class="callout callout-tip" style="margin-top: 1em;">
+          This Starter Kit now includes all four phases — PRD, PLAN, and TASK templates plus an <code>IMPLEMENTATION-checklist.md</code> for the human review gate. See how the review works on the <a href="/methodology/implementation.html">IMPLEMENTATION phase page</a>.
+        </p>
+
         <h2 style="margin-top: 2.2em;">How to Start</h2>
         <ol style="padding-left: 1.4em; margin: 1.6em 0;">
-          <li><strong>Download the Starter Kit</strong> (three templates, 100% free)</li>
+          <li><strong>Download the Starter Kit</strong> (four resources, 100% free)</li>
           <li><strong>Copy the templates</strong> into your project repository root</li>
           <li><strong>Fill in the PRD</strong> for your current feature or project</li>
           <li><strong>Ask Copilot to generate a PLAN</strong> — feed it the PRD and let it structure the work</li>
           <li><strong>Use TASK prompts</strong> to execute each step — one task, one approval, at a time</li>
+          <li><strong>Review before merging</strong> — work through <code>IMPLEMENTATION-checklist.md</code>: tests pass, conventions followed, security and edge cases checked</li>
         </ol>
 
         <div style="background: var(--color-card-bg); border: 1px solid var(--color-card-border); border-radius: var(--radius); padding: 28px; margin: 2.2em 0;">
           <h3 style="margin-top: 0;">Download the Starter Kit</h3>
           <p style="margin: 0.8em 0 1.6em;">
-            Three markdown templates, ready to use. Works in any language, any framework, any project.
+            Four ready-to-use resources. Works in any language, any framework, any project.
           </p>
           <p style="margin-bottom: 0;">
             <a href="/downloads/starter-kit.zip" class="btn btn-primary btn-large" data-track="m1-download-kit">Download Starter Kit (ZIP)</a>
@@ -165,6 +171,7 @@
             <li><code>PRD-template.md</code> — Template for capturing product intent, scope, and constraints</li>
             <li><code>PLAN-template.md</code> — Template for structuring the implementation workflow</li>
             <li><code>TASK-prompt-template.md</code> — Template for precise, context-rich agent instructions</li>
+            <li><code>IMPLEMENTATION-checklist.md</code> — Human review checklist: scope, tests, conventions, security (see the <a href="/methodology/implementation.html">IMPLEMENTATION phase page</a>)</li>
           </ul>
         </div>
 
@@ -177,7 +184,7 @@
           <li>Send the PRD to Copilot and ask: <em>"Generate an implementation plan based on this PRD"</em></li>
           <li>Structure the output using <strong>PLAN-template.md</strong> — maybe 5 tasks: setup dependencies, create token service, write middleware, implement refresh, add tests</li>
           <li>For each task, use <strong>TASK-prompt-template.md</strong> to give Copilot one focused instruction with full context</li>
-          <li>Review and approve each generated code block before moving to the next task</li>
+          <li>Before merging each task, work through <strong>IMPLEMENTATION-checklist.md</strong> — tests pass, conventions followed, security checked</li>
         </ol>
 
         <h2 style="margin-top: 2.2em;">Why This Works</h2>
