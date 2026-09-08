@@ -38,7 +38,7 @@ gh-pages/
 
 ## Brändi & ilme
 
-- **Fontit:** Roboto Slab (otsikot) + Lato (leipäteksti) — `/docs/rules/shared-visual-theme.md`
+- **Fontit:** Roboto Slab (otsikot) + Lato (leipäteksti) — `/docs/agent-workflow/rules/shared-visual-theme.md`
 - **Värit:** Jaetut brändivärit (`#A55A82` heading, `#5A6B8A` accent) sovitettu
   tumman taustan päälle — heading nostettu `#C77BA5`:ksi WCAG AA:n täyttämiseksi
 - **Taustakuva:** `assets/images/backgrounds/kangas-8.jpg` (sama kangas kuin
