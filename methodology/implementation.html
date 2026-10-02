@@ -31,7 +31,7 @@
       <span class="eyebrow">Core phase 04 / 04</span>
       <h1>IMPLEMENTATION: build, verify and decide</h1>
       <p class="lead">IMPLEMENTATION combines bounded agent execution with review, tests, evidence and a human decision about whether the change is acceptable. The agent's output is a draft, not a delivery; generating code is only part of the phase.</p>
-      <p>This is the fourth Core phase of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. It takes an authorized <a href="task.html">TASK</a> and checks the result against its scope and the underlying PRD.</p>
+      <p>This is the fourth Core phase of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>. It takes an authorized <a href="task.html">TASK</a> and checks the result against its scope and the underlying PRD.</p>
       <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§3, 4.4 · Owner: AI Architect Mastery</p>
       <iframe class="methodology-video"
         src="https://www.youtube-nocookie.com/embed/NuDzn_Osu7c"
@@ -46,7 +46,7 @@
       <ul><li>Does the actual change satisfy the TASK and stay within its scope?</li><li>Do tests and other evidence demonstrate the required behavior?</li><li>Does the result follow project conventions and architectural direction?</li><li>Have security, performance, relevant edge cases and regressions been evaluated?</li><li>Which claims remain unverified, and what risks or limitations must the human consider?</li></ul>
       <h2>Inputs, output and responsibility</h2>
       <p><strong>Input:</strong> an authorized TASK and its selected context. <strong>Output:</strong> a reviewed change, verification evidence and a human verdict. <strong>Owner:</strong> the agent executes within scope; the human owns evidence evaluation and acceptance.</p>
-      <p>A <a href="implementation-checkpoint.html">Human Checkpoint</a> can result in ACCEPT, REVISE, REJECT, REASSIGN or RETURN. Acceptance supports progression but does not automatically authorize release or deployment.</p>
+      <p>A <a href="implementation-checkpoint.html">Human Checkpoint</a> can result in ACCEPT, REVISE, REJECT, REASSIGN or RETURN. <a href="implementation-checkpoint.html#human-judgment">Human Judgment</a> evaluates the evidence behind that decision. Checkpoints are meaningful decision boundaries, not approval of every micro-action; acceptance does not automatically authorize release or deployment.</p>
       <section class="example">
         <h2>Constructed example: review the whole export claim</h2>
         <p>The handler now calls the authorization helper. The reviewer inspects the diff, checks owner success and non-owner denial, and verifies that the original export format still holds. A confident summary or one successful request is insufficient evidence for that complete claim.</p>
@@ -60,6 +60,6 @@
       <nav class="next" aria-label="Core workflow navigation"><a href="task.html">← 03 · TASK</a><a href="implementation-checkpoint.html">Next: the human checkpoint →</a><a href="./#core">Core overview</a></nav>
     </article>
   </main>
-  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p><p>Terminology note: Structured Vibe Coding has been used as an alternative term for this approach.</p></footer>
 </body>
 </html>

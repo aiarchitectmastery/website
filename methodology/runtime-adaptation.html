@@ -30,9 +30,10 @@
     <article>
       <h1>Runtime adaptation without methodology drift</h1>
       <p class="lead">Runtime adaptation expresses the same AAM responsibilities, work products and acceptance logic through an agent environment's native conventions. A runtime owns concrete execution behavior; an adapter is the boundary that preserves semantic intent while mapping it to native mechanisms.</p>
-      <p>This adaptation supports AI Architect Mastery's vendor-neutral <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. It changes the operational expression, not the PRD → PLAN → TASK → IMPLEMENTATION Core.</p>
+      <p>This adaptation belongs to the <a href="./#workflow">supporting framework</a> of AI Architect Mastery's vendor-neutral <a href="./">AI Driven Development Methodology</a>. It changes the operational expression, not the PRD → PLAN → TASK → IMPLEMENTATION Core.</p>
       <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§5.3, 8 · Owner: AI Architect Mastery · Scope: conceptual, no vendor capability claims</p>
       <h2>What stays stable and what can vary?</h2>
+      <p><strong>AAM defines WHAT; runtime / adapter defines HOW.</strong> AAM defines the responsibilities, work products and acceptance logic that must be preserved. The runtime and adaptation boundary determine how those requirements are expressed and executed through native mechanisms.</p>
       <p>Intent, responsibility, scope, acceptance criteria and human accountability remain stable. Instruction loading, role configuration, permissions, tool syntax and execution behavior can vary. Adaptation is therefore more than renaming configuration files.</p>
       <h2>How to evaluate a mapping</h2>
       <ol><li>Identify the semantic requirement: for example, a read-only review role.</li><li>Identify the runtime's actual native mechanism and configuration.</li><li>Verify support in the named environment: present, partial, permission-dependent or unavailable.</li><li>Record gaps and adjust the bounded assignment without weakening acceptance.</li><li>Use <a href="native-runtime-execution.html">native execution evidence</a> to establish what actually worked.</li></ol>
@@ -42,12 +43,12 @@
       </section>
       <h2>Defined model versus available product</h2>
       <dl><dt>Defined</dt><dd>A concept and its semantic boundary are part of AAM's methodology.</dd><dt>Reference design</dt><dd>A documented structure illustrates the intended model.</dd><dt>Verified implementation</dt><dd>A named, versioned environment demonstrates reproducible behavior.</dd><dt>Planned product capability</dt><dd>A future target, not something a user can assume is available.</dd></dl>
-      <p>The <code>.aam/</code> reference harness does not prove that an installer, adapter generator, extension or plugin is released. This page makes no such availability claim and does not claim feature parity between vendors.</p>
+      <p>No specific directory layout is mandatory for the methodology. A reference harness design does not prove that an installer, adapter generator, extension or plugin is released. This page makes no such availability claim and does not claim feature parity between vendors.</p>
       <h2>Related concepts</h2>
       <ul class="related"><li><a href="context-and-harness.html">Agent Harness</a> describes the operational environment being adapted.</li><li><a href="agent-model.html">Agent Model</a> separates semantic roles and capabilities from tool objects.</li><li><a href="native-runtime-execution.html">Native runtime execution</a> explains what must be verified after adaptation.</li><li><a href="wider-process-context.html">Wider process context</a> separates the Core from surrounding engineering activities.</li></ul>
       <nav class="next" aria-label="Suggested next reading"><a href="native-runtime-execution.html">Next: verify execution in the native runtime →</a></nav>
     </article>
   </main>
-  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p><p>Terminology note: Structured Vibe Coding has been used as an alternative term for this approach.</p></footer>
 </body>
 </html>

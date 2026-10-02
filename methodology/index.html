@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Driven Development Methodology | AAM Reference Guide</title>
-  <meta name="description" content="Explore the AI Driven Development Methodology: human-led PRD, PLAN, TASK and IMPLEMENTATION, bounded agent work, evidence and controlled iteration in practice.">
+  <title>AI Driven Development Methodology | AAM Methodology Map</title>
+  <meta name="description" content="Understand the AI Driven Development Methodology: human responsibility, Core workflow, evidence and controlled iteration, with a map to deeper reference pages.">
   <link rel="canonical" href="https://aiarchitectmastery.com/methodology/">
   <link rel="stylesheet" href="methodology.css">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AI Architect Mastery">
-  <meta property="og:title" content="AI Driven Development Methodology | AAM Reference Guide">
-  <meta property="og:description" content="Human as Architect, AI as Builder. Explore the Core workflow, bounded delegation, evidence and controlled iteration.">
+  <meta property="og:title" content="AI Driven Development Methodology | AAM Methodology Map">
+  <meta property="og:description" content="Understand the human-led model, see how its parts relate and explore the deeper reference.">
   <meta property="og:url" content="https://aiarchitectmastery.com/methodology/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="AI Driven Development Methodology | AAM Reference Guide">
-  <meta name="twitter:description" content="A human-led reference for intent, bounded agent work, evidence and acceptance.">
+  <meta name="twitter:title" content="AI Driven Development Methodology | AAM Methodology Map">
+  <meta name="twitter:description" content="Responsibility, operating model and Core workflow, supported by human judgment and evidence.">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {"@type": "Organization", "@id": "https://aiarchitectmastery.com/methodology/#organization", "name": "AI Architect Mastery"},
-      {"@type": "WebPage", "@id": "https://aiarchitectmastery.com/methodology/", "name": "AI Driven Development Methodology", "description": "A human-led, vendor-neutral operating model for building production-quality software with AI agents.", "inLanguage": "en", "dateModified": "2026-10-02", "publisher": {"@id": "https://aiarchitectmastery.com/methodology/#organization"}, "about": {"@type": "Thing", "@id": "https://aiarchitectmastery.com/methodology/#method", "name": "AI Driven Development Methodology", "alternateName": "Structured Vibe Coding"}},
+      {"@type": "WebPage", "@id": "https://aiarchitectmastery.com/methodology/", "name": "AI Driven Development Methodology", "description": "A human-led, vendor-neutral operating model for building production-quality software with AI agents.", "inLanguage": "en", "dateModified": "2026-10-02", "publisher": {"@id": "https://aiarchitectmastery.com/methodology/#organization"}, "about": {"@type": "Thing", "@id": "https://aiarchitectmastery.com/methodology/#method", "name": "AI Driven Development Methodology"}},
       {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Methodology", "item": "https://aiarchitectmastery.com/methodology/"}
       ]}
@@ -38,113 +38,157 @@
   </header>
   <main id="main" tabindex="-1">
     <nav class="breadcrumb" aria-label="Breadcrumb"><span aria-current="page">Methodology</span></nav>
-    <span class="eyebrow">Public methodology reference</span>
-    <h1>AI Driven Development Methodology</h1>
-    <p class="lead">The AI Driven Development Methodology is AI Architect Mastery's human-led, vendor-neutral operating model for building production-quality software with AI agents. Its canonical workflow is <strong>PRD → PLAN → TASK → IMPLEMENTATION</strong>. The human remains the architect; AI agents act as bounded builders.</p>
-    <p><strong>Structured Vibe Coding</strong> is AAM's secondary name for this same method, not a competing workflow. This reference is for developers and architects who want explicit intent, reviewable delegation and evidence rather than ad hoc prompting.</p>
-    <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology, master definition v1.1 · Editorial owner: AI Architect Mastery</p>
+    <span class="eyebrow">Understand → Explore → Go deeper</span>
+    <h1 id="method">AI Driven Development Methodology</h1>
+    <p class="lead">The AI Driven Development Methodology is AI Architect Mastery's human-led, vendor-neutral operating model for building production-quality software with AI agents. The human owns intent, architecture and acceptance; AI performs bounded work. Its canonical Core is <strong>PRD → PLAN → TASK → IMPLEMENTATION</strong>.</p>
+    <p>Instead of treating generated output as finished work, make intent explicit, delegate within limits and decide using evidence. This map explains the model first, then shows where to examine its supporting concepts.</p>
+    <nav class="next" aria-label="Explore this methodology map"><a href="#levels">Understand the three levels</a><a href="#human-control">See how control works</a><a href="#concept-map">Go deeper</a></nav>
 
     <section aria-labelledby="levels">
-      <h2 id="levels">Three views of one operating model</h2>
-      <dl>
-        <dt>1. Responsibility: Human as Architect → AI as Builder</dt>
-        <dd>The human owns intent, boundaries and acceptance. The <a href="human-led-model.html">human-led model</a> explains what is delegated and what remains human-owned.</dd>
-        <dt>2. Decision model: DEFINE → DELEGATE → BUILD → VERIFY</dt>
-        <dd>The <a href="define-delegate-build-verify.html">four-action decision model</a> makes the method memorable without renaming or replacing the Core phases.</dd>
-        <dt>3. Artifacts and evidence: idea → PRD → PLAN → TASK → IMPLEMENTATION → evidence</dt>
-        <dd>The <a href="#core">Core workflow</a> makes intent and execution inspectable. Lowercase <em>idea</em> and <em>evidence</em> are boundary concepts, not extra mandatory phases.</dd>
-      </dl>
+      <h2 id="levels">Three levels of the same methodology</h2>
+      <section class="model-level" aria-labelledby="responsibility-model">
+        <span class="eyebrow">Level 1 · Responsibility Model</span>
+        <h3 id="responsibility-model">Human as Architect → AI as Builder</h3>
+        <p>The human owns intent, direction, architecture, delegation, boundaries, evidence evaluation and the final decision. AI agents perform delegated work within that direction. Delegating execution never delegates accountability.</p>
+        <p><a href="human-led-model.html">Explore the responsibility model</a></p>
+      </section>
+      <section class="model-level" aria-labelledby="operating-model">
+        <span class="eyebrow">Level 2 · Operating Model</span>
+        <h3 id="operating-model">DEFINE → DELEGATE → BUILD → VERIFY</h3>
+        <p>Clarify the intended result, authorize bounded work, build within scope, then evaluate what was produced. These are the actions through which the human directs agent work, <strong>not four workflow phases or a replacement for the Core</strong>.</p>
+        <p><a href="define-delegate-build-verify.html">Explore the operating model</a></p>
+      </section>
+      <section class="model-level" aria-labelledby="core">
+        <span class="eyebrow">Level 3 · Core Workflow</span>
+        <h3 id="core">idea → PRD → PLAN → TASK → IMPLEMENTATION → evidence</h3>
+        <p>The canonical Core is <strong>PRD → PLAN → TASK → IMPLEMENTATION</strong>. Lowercase <em>idea</em> and <em>evidence</em> are boundary concepts, not extra Core phases.</p>
+        <ol class="flow">
+          <li><a href="prd.html">01 · PRD<span>Define intent, scope, constraints and acceptance criteria.</span></a></li>
+          <li><a href="plan.html">02 · PLAN<span>Turn approved intent into a reviewable approach.</span></a></li>
+          <li><a href="task.html">03 · TASK<span>Delegate one bounded, authorized assignment.</span></a></li>
+          <li><a href="implementation.html">04 · IMPLEMENTATION<span>Build, review, test and make a human decision.</span></a></li>
+        </ol>
+        <p>Review and testing belong inside IMPLEMENTATION. They are not delayed until a separate phase after the Core.</p>
+      </section>
     </section>
 
-    <section aria-labelledby="core">
-      <h2 id="core">The four-phase Core workflow</h2>
-      <p>Each phase has a distinct job. AI may propose artifacts and perform work; the Human Architect reviews the decisions that authorize progression.</p>
-      <ol class="flow">
-        <li><a href="prd.html">01 · PRD<span>Capture intent and acceptance criteria</span></a></li>
-        <li><a href="plan.html">02 · PLAN<span>Structure dependency-aware work</span></a></li>
-        <li><a href="task.html">03 · TASK<span>Delegate one bounded Work Item</span></a></li>
-        <li><a href="implementation.html">04 · IMPLEMENTATION<span>Build, verify and decide</span></a></li>
-      </ol>
-      <p>Review and testing belong inside IMPLEMENTATION. <a href="controlled-iteration.html">Controlled iteration</a> returns work to PRD, PLAN or TASK when evidence shows an earlier decision needs correction.</p>
+    <section aria-labelledby="human-control">
+      <h2 id="human-control">Evidence, Human Judgment and Human Checkpoints</h2>
+      <p><strong>Agent claim ≠ Evidence.</strong> An agent can report success. Evidence is observable information, such as a reviewed change or a test result, that supports or contradicts that claim.</p>
+      <p><strong>Human Judgment</strong> is the evaluation of that evidence against intent, constraints and remaining risks. A <strong>Human Checkpoint</strong> is a meaningful decision point: ACCEPT, REVISE, REJECT, REASSIGN or RETURN. It does not require the human to approve every agent micro-action.</p>
+      <p><a href="human-led-model.html#human-governance">Human Governance</a> connects these responsibilities: define <a href="task-handoff.html">delegation</a> and <a href="autonomy-boundaries.html">autonomy boundaries</a> before work, evaluate <a href="bugs-and-evidence.html">evidence</a> and apply <a href="implementation-checkpoint.html#human-judgment">Human Judgment</a> at a <a href="implementation-checkpoint.html">checkpoint</a>.</p>
+    </section>
+
+    <section aria-labelledby="iteration">
+      <h2 id="iteration">Controlled Iteration: correct the earlier decision</h2>
+      <p>When implementation evidence reveals a wrong assumption, the human chooses where the work belongs: PRD for missing intent, PLAN for an inadequate approach or TASK for an insufficient assignment. Correcting code alone cannot resolve an undefined requirement.</p>
+      <p class="callout"><strong>Evidence → Human Judgment → return to PRD / PLAN / TASK → refresh dependent work → revalidate.</strong><br>This is a controlled return within the methodology, not another mandatory workflow phase.</p>
+      <p><a href="controlled-iteration.html">Explore Controlled Iteration</a> and <a href="refresh-and-revalidate.html">what must be refreshed and revalidated</a>. A known defect within valid scope can be corrected without returning to an earlier decision.</p>
+    </section>
+
+    <section aria-labelledby="workflow">
+      <h2 id="workflow">Supporting framework: AAM Agent Workflow</h2>
+      <p><strong>Agent Workflow operationalizes this methodology; it is not a second methodology.</strong> The following supporting views describe how responsibilities become bounded work. They sit beneath the three-level model, not alongside it as alternative workflows.</p>
+      <dl class="framework-map">
+        <dt>Human Governance</dt><dd>Human-owned delegation, boundaries, evidence evaluation and acceptance across the workflow.</dd>
+        <dt>Agent Model</dt><dd>The actor, responsibility and abilities needed for delegated work.</dd>
+        <dt>Agent Harness</dt><dd>The operational environment that provides context and constrains execution.</dd>
+        <dt>Work Model</dt><dd>Work Products record decisions and outputs; Work Items carry actionable assignments.</dd>
+        <dt>Runtime / Adapter</dt><dd>Native mechanisms express the model in a particular execution environment.</dd>
+        <dt>Controlled Iteration</dt><dd>Human-directed return, refresh and revalidation when an earlier decision needs correction.</dd>
+      </dl>
+      <p><strong>AAM defines WHAT; runtime / adapter defines HOW.</strong> Responsibilities, work products and acceptance remain stable while tools and permissions vary. <a href="runtime-adaptation.html">Runtime adaptation</a> does not imply equal capabilities or an available AAM adapter, installer or plugin.</p>
+    </section>
+
+    <section aria-labelledby="wider-context">
+      <h2 id="wider-context">Wider Process Context</h2>
+      <p>Before the Core, <strong>idea → blueprint → optional prototype → PRD</strong> can help clarify uncertainty. After implementation, <strong>evidence → human checkpoint → release</strong> connects acceptance to the wider delivery process.</p>
+      <p>These activities do not add mandatory Core phases, move verification outside IMPLEMENTATION or authorize automatic release. <a href="wider-process-context.html">Explore the wider process context</a>.</p>
     </section>
 
     <section aria-labelledby="concept-map">
-      <h2 id="concept-map">Explore the methodology in six reading groups</h2>
-      <p>These groups organize the reference; they are not six new workflow phases or the three views above. Each linked concept has one canonical home.</p>
+      <h2 id="concept-map">Explore the Methodology</h2>
+      <p>Follow this progression from responsibility to application, or open the group you need. These are reading groups, not additional workflow phases. Each concept keeps one canonical home.</p>
       <div class="grid">
         <section class="card">
           <h3>1. Establish the human-led model</h3>
-          <p>Understand accountability, the decision model and the environment for delegated work.</p>
-          <ul><li><a href="human-led-model.html">Human as Architect, AI as Builder</a></li><li><a href="define-delegate-build-verify.html">DEFINE, DELEGATE, BUILD, VERIFY</a></li><li><a href="context-and-harness.html">Selected context and the Agent Harness</a></li></ul>
+          <p>Start with responsibility and the operating model; selected context supports both.</p>
+          <details><summary>Explore responsibility and context</summary><ul>
+            <li><a href="human-led-model.html">Human as Architect, AI as Builder</a></li>
+            <li><a href="define-delegate-build-verify.html">DEFINE → DELEGATE → BUILD → VERIFY</a></li>
+            <li><a href="context-and-harness.html">Agent Workflow → selected context and Agent Harness</a></li>
+            <li><a href="next-bounded-change.html#inspect-before-assigning">Inspect the current behavior before assigning work</a></li>
+          </ul></details>
         </section>
         <section class="card">
           <h3>2. Define intent and plan the change</h3>
-          <p>Make requirements testable and the implementation approach reviewable.</p>
-          <ul><li><a href="prd.html">PRD: capture intent</a></li><li><a href="acceptance-criteria.html">Acceptance criteria</a></li><li><a href="plan.html">PLAN: structure the work</a></li><li><a href="plan-review.html">Review a plan before delegation</a></li></ul>
+          <p>The Core makes requirements testable and the approach reviewable before delegation.</p>
+          <details><summary>Explore PRD and PLAN</summary><ul>
+            <li><a href="prd.html">PRD: capture intent</a></li><li><a href="acceptance-criteria.html">PRD → acceptance criteria</a></li>
+            <li><a href="plan.html">PLAN: structure the work</a></li><li><a href="plan-review.html">PLAN → plan review</a></li>
+          </ul></details>
         </section>
         <section class="card">
           <h3>3. Delegate bounded agent work</h3>
-          <p>Give one responsibility the context, permissions and verification it needs.</p>
-          <ul><li><a href="agent-model.html">Agent, Role, Skill, Capability and Tool</a></li><li><a href="task.html">TASK: bounded known work</a></li><li><a href="work-items.html">Work Products and Work Items</a></li><li><a href="autonomy-boundaries.html">Autonomy boundaries</a></li><li><a href="task-handoff.html">Reliable task handoff</a></li></ul>
+          <p>TASK connects Agent Workflow's worker and work models to human-owned limits.</p>
+          <details><summary>Explore delegation and work models</summary><ul>
+            <li><a href="agent-model.html">Agent Workflow → Agent Model</a></li>
+            <li><a href="task.html">TASK: known, defined work</a></li>
+            <li><a href="work-items.html">Work Model → Work Products and Work Items</a></li>
+            <li><a href="autonomy-boundaries.html">Human Governance → autonomy boundaries</a></li>
+            <li><a href="task-handoff.html">Delegation → task handoff</a></li>
+          </ul></details>
         </section>
         <section class="card">
           <h3>4. Build, verify and decide</h3>
-          <p>Inspect the actual change and accept or return it using evidence.</p>
-          <ul><li><a href="implementation.html">IMPLEMENTATION: build and verify</a></li><li><a href="bugs-and-evidence.html">Bugs and state-aware evidence</a></li><li><a href="scoped-correction.html">Scoped BUG correction</a></li><li><a href="implementation-checkpoint.html">The human implementation checkpoint</a></li></ul>
+          <p>IMPLEMENTATION combines execution with evidence and human control, not code generation alone.</p>
+          <details><summary>Explore evidence and human decisions</summary><ul>
+            <li><a href="implementation.html">IMPLEMENTATION: build and verify</a></li>
+            <li><a href="bugs-and-evidence.html">Verification → evidence and observed failures</a></li>
+            <li><a href="scoped-correction.html">Established BUG → scoped correction</a></li>
+            <li><a href="implementation-checkpoint.html">Human Control → Human Checkpoints</a></li>
+            <li><a href="implementation-checkpoint.html#human-judgment">Human Judgment → evaluate evidence and decide</a></li>
+          </ul></details>
         </section>
         <section class="card">
           <h3>5. Diagnose uncertainty and return</h3>
-          <p>Distinguish known work, defects and uncertain assumptions before choosing a correction.</p>
-          <ul><li><a href="controlled-iteration.html">Controlled iteration and return decisions</a></li><li><a href="work-types.html">TASK, BUG and PROB</a></li><li><a href="refresh-and-revalidate.html">Refresh dependencies and revalidate the claim</a></li></ul>
+          <p>Controlled Iteration distinguishes known work, defects and uncertainty before changing earlier decisions.</p>
+          <details><summary>Explore Work Types and return decisions</summary><ul>
+            <li><a href="work-types.html">Work Types → TASK / BUG / PROB</a></li>
+            <li><a href="controlled-iteration.html">Controlled Iteration → return to PRD / PLAN / TASK</a></li>
+            <li><a href="refresh-and-revalidate.html">After return → refresh and revalidate</a></li>
+          </ul></details>
         </section>
         <section class="card">
           <h3>6. Adapt and apply</h3>
-          <p>Keep methodology semantics stable while tools, permissions and execution environments vary.</p>
-          <ul><li><a href="runtime-adaptation.html">Runtime adaptation</a></li><li><a href="native-runtime-execution.html">Verify native runtime execution</a></li><li><a href="wider-process-context.html">Wider process context</a></li><li><a href="next-bounded-change.html">Choose your next bounded change</a></li></ul>
+          <p>Runtime / Adapter changes native execution, not the methodology or its acceptance logic.</p>
+          <details><summary>Explore runtime and wider context</summary><ul>
+            <li><a href="runtime-adaptation.html">Runtime / Adapter → runtime adaptation</a></li>
+            <li><a href="native-runtime-execution.html">Adaptation → verify native runtime execution</a></li>
+            <li><a href="wider-process-context.html">Wider Process Context → before the Core and after acceptance</a></li>
+            <li><a href="next-bounded-change.html">Apply the model to your next bounded change</a></li>
+          </ul></details>
         </section>
       </div>
     </section>
 
-    <section aria-labelledby="workflow">
-      <h2 id="workflow">How AAM Agent Workflow relates to the method</h2>
-      <p><strong>AAM Agent Workflow</strong> operationalizes the methodology through stages, agents, work products, handoffs and checkpoints. It is not a second methodology. The <a href="agent-model.html">Agent Model</a> describes responsibilities and abilities; <a href="work-items.html">Work Items</a> describe actionable work; the <a href="context-and-harness.html">Agent Harness</a> supplies the operating environment.</p>
-      <p><a href="runtime-adaptation.html">Runtime adaptation</a> expresses those semantics through native conventions. A defined concept or reference structure is not evidence of a released installer, adapter, extension or plugin.</p>
-    </section>
-
-    <section class="example" aria-labelledby="example">
-      <h2 id="example">Constructed example: a bounded export change</h2>
-      <p>A team wants an existing export to reject unauthorized access. The PRD defines who may export and what must remain unchanged. The PLAN sequences authorization and regression checks. A TASK delegates the scoped correction. IMPLEMENTATION reviews the diff and tests both allowed and denied requests.</p>
-      <p>If the team discovers that ownership of shared records was never defined, the human returns to the PRD instead of asking the agent to invent a policy. This is an illustration, not a reported project outcome.</p>
-    </section>
-
-    <section aria-labelledby="terminology">
-      <h2 id="terminology">Terminology and canonical homes</h2>
-      <p>This registry fixes where terms are defined. Follow the canonical home for scope, relationships, examples and limitations.</p>
+    <details id="terminology" class="terminology">
+      <summary>Reference terminology and canonical homes</summary>
       <dl>
-        <dt><a href="./">AI Driven Development Methodology / Structured Vibe Coding</a></dt><dd>AAM's operating model and its secondary name; this overview is their shared canonical home.</dd>
-        <dt><a href="#workflow">AAM Agent Workflow</a></dt><dd>The operational view of the methodology, defined above; not a claim of product availability.</dd>
-        <dt><a href="human-led-model.html">Human Architect / AI Builder</a></dt><dd>The responsibility model, not a transfer of accountability to AI.</dd>
-        <dt><a href="define-delegate-build-verify.html">DEFINE / DELEGATE / BUILD / VERIFY</a></dt><dd>The memorable decision model; the artifact Core retains its own names.</dd>
-        <dt><a href="prd.html">PRD</a> / <a href="plan.html">PLAN</a> / <a href="task.html">TASK</a> / <a href="implementation.html">IMPLEMENTATION</a></dt><dd>The four canonical Core phases and their distinct work products or decisions.</dd>
-        <dt><a href="agent-model.html">Agent / Role / Skill / Capability / Tool</a></dt><dd>The conceptual Agent Model; tool availability does not prove capability.</dd>
-        <dt><a href="context-and-harness.html">Selected context / Agent Harness</a></dt><dd>Relevant knowledge and the operational environment that provides or constrains agent work.</dd>
-        <dt><a href="work-items.html">Work Product / Work Item</a></dt><dd>A workflow artifact and its actionable subset.</dd>
-        <dt><a href="work-types.html">Work Type: TASK / BUG / PROB</a></dt><dd>Sibling classifications for known work, established failure and uncertainty. TASK's full definition remains on its Core page.</dd>
-        <dt><a href="acceptance-criteria.html">Acceptance criteria</a></dt><dd>Observable expectations against which the human evaluates a result.</dd>
-        <dt><a href="autonomy-boundaries.html">Autonomy boundary</a></dt><dd>The permitted independent decisions and conditions that require returning control.</dd>
-        <dt><a href="bugs-and-evidence.html">Evidence</a></dt><dd>The observable basis for a decision, tied to the state that was actually checked.</dd>
-        <dt><a href="implementation-checkpoint.html">Human Checkpoint</a></dt><dd>The evidence-backed ACCEPT, REVISE, REJECT, REASSIGN or RETURN decision.</dd>
-        <dt><a href="controlled-iteration.html">Controlled iteration / Return</a></dt><dd>A human-directed correction of an earlier PRD, PLAN or TASK decision.</dd>
-        <dt><a href="refresh-and-revalidate.html">Refresh and revalidate</a></dt><dd>Update dependent work and restore evidence after an earlier decision changes.</dd>
-        <dt><a href="runtime-adaptation.html">Runtime / Adapter</a></dt><dd>The execution environment and the semantic adaptation boundary, not guaranteed feature parity.</dd>
+        <dt><a href="#method">AI Driven Development Methodology</a></dt><dd>The primary name for the complete human-led operating model.</dd>
+        <dt><a href="#workflow">AAM Agent Workflow</a></dt><dd>The working model that operationalizes the methodology, not a second methodology or a released-product claim.</dd>
+        <dt><a href="human-led-model.html#human-governance">Human Governance / Human Control</a></dt><dd>Human-owned direction, delegation, boundaries and acceptance across all Core phases.</dd>
+        <dt><a href="agent-model.html">Agent / Role / Skill / Capability / Tool</a></dt><dd>The Agent Model; tool availability alone does not prove capability.</dd>
+        <dt><a href="context-and-harness.html">Selected context / Agent Harness</a></dt><dd>Relevant knowledge and the operational environment for delegated work.</dd>
+        <dt><a href="work-items.html">Work Model: Work Product / Work Item</a></dt><dd>Workflow artifacts and their actionable subset; Work Type classifies the assignment.</dd>
+        <dt><a href="work-types.html">TASK / BUG / PROB</a></dt><dd>Known work, established failure and uncertainty. TASK's full definition remains on its Core page.</dd>
+        <dt><a href="implementation-checkpoint.html#human-judgment">Human Judgment</a></dt><dd>Human evaluation of evidence against intent, constraints and risks to decide what happens next.</dd>
+        <dt><a href="runtime-adaptation.html">Runtime / Adapter</a></dt><dd>The environment and adaptation boundary that realize AAM semantics through native mechanisms.</dd>
       </dl>
-    </section>
-    <aside class="callout">
-      <h2>An independent public reference</h2>
-      <p>Each concept page provides its definition, relationships, a bounded example and limitations. Start with the overview or link directly to the concept you need; no enrollment, download or particular agent runtime is required.</p>
-    </aside>
-    <nav class="next" aria-label="Suggested next reading"><a href="human-led-model.html">Start with human responsibility →</a><a href="next-bounded-change.html">Apply the method to one change →</a></nav>
+    </details>
+    <p class="meta">Terminology note: “Structured Vibe Coding” has been used as an alternative term for this approach. The primary term is AI Driven Development Methodology.</p>
+    <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1; public presentation revised following editorial review · Owner: AI Architect Mastery</p>
   </main>
-  <footer><p>AI Architect Mastery · Methodology reference · Source baseline v1.1</p><p><a href="sitemap.xml">Methodology XML sitemap</a> · No site analytics are loaded. Core pages include YouTube video players.</p></footer>
+  <footer><p>AI Architect Mastery · Methodology reference</p><p><a href="sitemap.xml">Methodology XML sitemap</a> · No site analytics are loaded. Core pages include YouTube video players.</p></footer>
 </body>
 </html>

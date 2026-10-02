@@ -57,6 +57,12 @@ article { max-width: 51rem; margin: auto; }
 .eyebrow { font-size: .875rem; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; }
 .lead { font-size: 1.2rem; max-width: 65ch; }
 .meta { font-size: .9rem; }
+.model-level { border-left: 3px solid var(--color-brand); padding-left: 1.25rem; margin: 1.5rem 0; }
+.model-level h3 { margin-top: .5rem; }
+.framework-map { border-left: 3px solid var(--color-border); padding-left: 1.25rem; }
+summary { min-height: 44px; padding-block: .5rem; cursor: pointer; font-weight: 700; }
+details[open] > summary { margin-bottom: .75rem; }
+.terminology { margin-top: 2rem; border-top: 1px solid var(--color-border); padding-top: 1rem; }
 .methodology-video {
   display: block;
   width: 100%;

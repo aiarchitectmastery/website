@@ -30,11 +30,12 @@
     <article>
       <h1>Human as Architect, AI as Builder</h1>
       <p class="lead">Human as Architect, AI as Builder means the human owns intent, constraints, delegation boundaries and acceptance, while AI agents research, propose, build and test within that direction. Delegating execution does not delegate accountability.</p>
-      <p>This is the responsibility view of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. It applies across PRD → PLAN → TASK → IMPLEMENTATION, not only during code review.</p>
+      <p>This is Level 1, the Responsibility Model of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>. It applies across PRD → PLAN → TASK → IMPLEMENTATION, not only during code review.</p>
       <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§2–3 · Owner: AI Architect Mastery</p>
       <h2>Why keep responsibility explicit?</h2>
       <p>An agent can produce a coherent result without knowing which trade-offs a team is authorized to make. Explicit responsibility prevents a plausible implementation from silently becoming the product definition or architecture decision.</p>
-      <h2>How the responsibility model works</h2>
+      <h2 id="human-governance">Human Governance: responsibility across the workflow</h2>
+      <p>Human Governance is the human-owned direction and control of agent work: intent, architecture, delegation, boundaries, evidence evaluation and acceptance. It applies the responsibility model across the Core rather than adding a governance phase or requiring approval of every edit.</p>
       <ul>
         <li><strong>The human defines:</strong> intended outcomes, non-goals, constraints and observable acceptance criteria.</li>
         <li><strong>The human delegates:</strong> one responsibility with selected context, permissions and a stop boundary.</li>
@@ -42,6 +43,7 @@
         <li><strong>The human decides:</strong> whether the work is acceptable, needs revision, should be reassigned or must return to an earlier artifact.</li>
       </ul>
       <p>The Human Architect is a responsibility, not necessarily a job title. A developer may hold it for a small change while consulting other owners for security or domain decisions.</p>
+      <p><a href="task-handoff.html">Delegation</a> authorizes bounded work; <a href="implementation-checkpoint.html#human-judgment">Human Judgment</a> evaluates its evidence and determines what happens next. The <a href="./#workflow">supporting framework</a> provides the working models through which these responsibilities are exercised.</p>
       <section class="example">
         <h2>Constructed decision: who chooses the policy?</h2>
         <p>An agent implementing an export endpoint finds two possible access policies. It can compare their implications, but it must not select a new business policy outside its assignment. The human clarifies the PRD, then authorizes the resulting bounded work.</p>
@@ -50,13 +52,13 @@
       <p>Human leadership does not require approval for every microscopic action. An <a href="autonomy-boundaries.html">autonomy boundary</a> defines which decisions may proceed independently and which require a stop. The checkpoint remains a meaningful decision boundary rather than a rubber stamp.</p>
       <h2>Related concepts</h2>
       <ul class="related">
-        <li><a href="define-delegate-build-verify.html">DEFINE → DELEGATE → BUILD → VERIFY</a> translates responsibility into the memorable decision model.</li>
+        <li><a href="define-delegate-build-verify.html">DEFINE → DELEGATE → BUILD → VERIFY</a> translates responsibility into the Operating Model.</li>
         <li><a href="context-and-harness.html">Selected context and Agent Harness</a> explain the environment in which the agent can act.</li>
         <li><a href="implementation-checkpoint.html">Human implementation checkpoint</a> applies this responsibility to acceptance evidence.</li>
       </ul>
-      <nav class="next" aria-label="Suggested next reading"><a href="define-delegate-build-verify.html">Next: the decision model →</a></nav>
+      <nav class="next" aria-label="Suggested next reading"><a href="define-delegate-build-verify.html">Next: the Operating Model →</a></nav>
     </article>
   </main>
-  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p><p>Terminology note: Structured Vibe Coding has been used as an alternative term for this approach.</p></footer>
 </body>
 </html>
