@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan Review in AI Driven Development | AAM Checkpoints</title>
+  <meta name="description" content="Review an AI Driven Development plan before delegation: check requirement coverage, dependency order, scope, completion conditions and human checkpoints.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/plan-review.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Plan Review in AI Driven Development | AAM Checkpoints">
+  <meta property="og:description" content="Catch missing constraints and weak completion conditions before delegating work.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/plan-review.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Review a PLAN Before Delegating Work">
+  <meta name="twitter:description" content="Inspect the proposed approach, not just the plausibility of its task list.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Review a PLAN before delegating work","description":"Check requirement coverage, dependencies and completion conditions before TASK handoff.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/plan-review.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"PLAN","item":"https://aiarchitectmastery.com/methodology/plan.html"},{"@type":"ListItem","position":3,"name":"Plan review","item":"https://aiarchitectmastery.com/methodology/plan-review.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><a href="plan.html">PLAN</a><span aria-hidden="true">/</span><span aria-current="page">Plan review</span></nav>
+    <article>
+      <h1>Review a PLAN before delegating work</h1>
+      <p class="lead">Plan review is the human evaluation of a proposed implementation approach before it becomes delegated work. It catches missing constraints, scope drift, dependency mistakes and weak completion conditions while those decisions are still inexpensive to change.</p>
+      <p>This review belongs to the <a href="plan.html">PLAN</a> phase of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. An agent may propose the plan; the human authorizes progression into TASKs.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§3–4 · Owner: AI Architect Mastery</p>
+      <h2>What the review must establish</h2>
+      <ul><li><strong>Coverage:</strong> the steps address the approved PRD and its acceptance criteria.</li><li><strong>Order:</strong> dependencies are explicit; a step does not rely on an unapproved contract.</li><li><strong>Scope:</strong> unrelated refactoring or behavior changes are not hidden inside the approach.</li><li><strong>Completion:</strong> each step has an observable end condition and a verification path.</li><li><strong>Checkpoints:</strong> architectural or high-risk decisions are inspected before downstream work relies on them.</li></ul>
+      <h2>How the decision becomes durable</h2>
+      <p>Review against the actual PRD and repository constraints, record accepted changes to the plan, and resolve material assumptions before handing off work. Approval applies to that approach and scope, not to any future expansion an agent might suggest.</p>
+      <section class="example">
+        <h2>Constructed decision: reject a broad rewrite</h2>
+        <p>The PRD asks for one export authorization correction. The proposed PLAN replaces the entire access-control layer first. Unless the requirement and architecture justify that dependency, the human revises the plan toward the existing helper and bounded regression checks.</p>
+      </section>
+      <h2>Limits of planning</h2>
+      <p>A reviewed plan reduces preventable mistakes but cannot predict every implementation finding. If evidence invalidates the approach, <a href="controlled-iteration.html">return to PLAN</a> deliberately. Do not treat approval as a reason to continue with a disproven assumption.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="acceptance-criteria.html">Acceptance criteria</a> are the basis for checking coverage.</li><li><a href="task-handoff.html">Task handoff</a> turns one approved step into authorized work.</li><li><a href="refresh-and-revalidate.html">Refresh and revalidate</a> updates dependent work after a reviewed decision changes.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="task.html">Next: delegate one bounded TASK →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

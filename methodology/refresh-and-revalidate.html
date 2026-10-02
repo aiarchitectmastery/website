@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refresh and Revalidate in AI Driven Development | AAM</title>
+  <meta name="description" content="After an AI Driven Development return, refresh dependent plans, assignments and context, then revalidate the requirement, clarified behavior and regressions.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/refresh-and-revalidate.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Refresh and Revalidate in AI Driven Development | AAM">
+  <meta property="og:description" content="Changing one artifact is not enough when downstream work still uses its old assumptions.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/refresh-and-revalidate.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Refresh Dependencies and Revalidate the Claim">
+  <meta name="twitter:description" content="Update affected work and restore evidence after an earlier decision changes.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Refresh dependencies and revalidate the claim","description":"After a return, update affected work and restore evidence for the complete requirement.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/refresh-and-revalidate.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"Controlled iteration","item":"https://aiarchitectmastery.com/methodology/controlled-iteration.html"},{"@type":"ListItem","position":3,"name":"Refresh and revalidate","item":"https://aiarchitectmastery.com/methodology/refresh-and-revalidate.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><a href="controlled-iteration.html">Controlled iteration</a><span aria-hidden="true">/</span><span aria-current="page">Refresh and revalidate</span></nav>
+    <article>
+      <h1>Refresh dependencies and revalidate the claim</h1>
+      <p class="lead">After an earlier decision changes, dependent plans, assignments, context and verification must be refreshed. Revalidation then checks the resulting claim: the original intent, clarified requirement, relevant invariants and affected regression behavior, not merely the most recent local fix.</p>
+      <p>This closes the <a href="controlled-iteration.html">controlled iteration</a> loop in AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§3, 6 · Owner: AI Architect Mastery</p>
+      <h2>Why downstream artifacts matter</h2>
+      <p>A corrected PRD does not automatically update a TASK or an agent's context. A test can still assert the old requirement. Without an explicit refresh, implementation may faithfully execute superseded instructions and produce misleading evidence.</p>
+      <h2>How to close the loop</h2>
+      <ol><li>Identify the changed decision and which previous assumptions no longer apply.</li><li>Review affected PLAN steps, TASK scope, acceptance criteria and verification.</li><li>Mark superseded instructions clearly and provide current context at handoff.</li><li>Execute the revised bounded work under renewed human authorization.</li><li>Check clarified behavior and relevant regressions against the current implementation state.</li><li>Present new evidence and remaining limitations at the human checkpoint.</li></ol>
+      <section class="example">
+        <h2>Constructed example: clarified ownership</h2>
+        <p>The PRD now states how shared-record ownership works. The PLAN must include the affected authorization path, the TASK must reference the clarified policy, and tests must cover both shared and ordinary records. A local shared-record test does not replace the original owner and non-owner checks.</p>
+      </section>
+      <h2>Revalidate the claim, not everything indiscriminately</h2>
+      <p>Choose verification based on the changed decision and its dependencies. A narrow assignment error may not invalidate the whole project, while a shared authorization change may require broader regression checks. State what was covered and what remains unverified rather than equating test volume with confidence.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="task-handoff.html">Task handoff</a> carries the refreshed assignment.</li><li><a href="bugs-and-evidence.html">State-aware evidence</a> ties results to the implementation actually checked.</li><li><a href="implementation-checkpoint.html">Implementation checkpoint</a> decides whether the updated evidence is sufficient.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="implementation-checkpoint.html">Next: review the updated evidence →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

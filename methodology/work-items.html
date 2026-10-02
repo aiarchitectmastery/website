@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work Items in AI Driven Development | AAM Work Products</title>
+  <meta name="description" content="Understand Work Items in AI Driven Development: actionable artifacts that carry scope, context, outputs and verification across work, bugs and uncertainty.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/work-items.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Work Items in AI Driven Development | AAM Work Products">
+  <meta property="og:description" content="An actionable unit of work is broader than a coding task alone.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/work-items.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Work Products and Work Items">
+  <meta name="twitter:description" content="Separate a workflow artifact, an actionable item and its Work Type.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Work Products and Work Items","description":"An actionable Work Product carries scope, context, outputs and verification.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/work-items.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"Work Items","item":"https://aiarchitectmastery.com/methodology/work-items.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><span aria-current="page">Work Items</span></nav>
+    <article>
+      <h1>Work Products and Work Items</h1>
+      <p class="lead">A Work Product is an artifact produced through the workflow. A Work Item is an actionable Work Product: a bounded unit of development work that carries scope, context, expected outputs and verification. It is broader than a coding task alone.</p>
+      <p>These are work-product concepts in <a href="./#workflow">AAM Agent Workflow</a>, within AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §6 · Owner: AI Architect Mastery</p>
+      <h2>Artifact, action and classification</h2>
+      <p>A PRD or PLAN is a Work Product. An assigned investigation or correction is actionable and therefore a Work Item. Its <a href="work-types.html">Work Type</a> describes the situation: TASK for known work, BUG for an established failure or PROB for uncertainty.</p>
+      <p>These types are siblings. BUG and PROB are not additional mandatory phases appended to PRD → PLAN → TASK → IMPLEMENTATION.</p>
+      <h2>How to define an actionable item</h2>
+      <ul><li>Link the approved intent or the finding that requires attention.</li><li>State the question or change within scope and the expected output.</li><li>Provide relevant context and the responsible role.</li><li>Set permissions, autonomy boundaries and stop conditions.</li><li>Specify verification and the human decision the output should support.</li></ul>
+      <section class="example">
+        <h2>Constructed example: investigate before changing code</h2>
+        <p>Exports behave inconsistently for shared records, but the intended ownership policy is unclear. An investigation can be a PROB Work Item whose output is evidence and a return recommendation. It does not authorize the agent to invent a policy or rewrite the export path.</p>
+      </section>
+      <h2>Storage does not determine semantics</h2>
+      <p>A practical <code>tasks/</code> directory may contain TASK, BUG and PROB records. The folder name does not turn every item into known work. The actionable boundary and classification should remain explicit wherever the artifact is stored.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="task.html">TASK</a> is the canonical home for known, defined work.</li><li><a href="work-types.html">TASK, BUG and PROB</a> classify Work Items by the nature of the work.</li><li><a href="agent-model.html">Agent Model</a> describes the worker and responsibility, not the work artifact.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="work-types.html">Next: choose the appropriate Work Type →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

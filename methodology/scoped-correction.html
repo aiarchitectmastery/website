@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scoped Bug Correction in AI Driven Development | AAM</title>
+  <meta name="description" content="Keep bug correction in AI Driven Development tied to a known requirement, limit the change and revalidate the fix without expanding the task opportunistically.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/scoped-correction.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Scoped Bug Correction in AI Driven Development | AAM">
+  <meta property="og:description" content="Correct the established failure and prove the fix without unapproved scope expansion.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/scoped-correction.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scoped BUG Correction">
+  <meta name="twitter:description" content="Fix the cause within the authorized boundary, then revalidate the claim.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Scoped correction of an established BUG","description":"Tie correction to the established requirement and revalidate the resulting change.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/scoped-correction.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"IMPLEMENTATION","item":"https://aiarchitectmastery.com/methodology/implementation.html"},{"@type":"ListItem","position":3,"name":"Scoped correction","item":"https://aiarchitectmastery.com/methodology/scoped-correction.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><a href="implementation.html">IMPLEMENTATION</a><span aria-hidden="true">/</span><span aria-current="page">Scoped correction</span></nav>
+    <article>
+      <h1>Scoped correction of an established BUG</h1>
+      <p class="lead">A scoped BUG correction restores behavior that violates an established requirement, stays within the authorized change boundary and proves the fix through revalidation. It is not permission to redesign adjacent functionality or quietly change what the requirement means.</p>
+      <p>This is a correction practice within <a href="implementation.html">IMPLEMENTATION</a> in AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. The <a href="work-types.html">BUG Work Type</a> presupposes an established expectation.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§4, 6 · Owner: AI Architect Mastery</p>
+      <h2>How a correction stays reviewable</h2>
+      <ol><li>State the expected behavior and capture the failure evidence.</li><li>Identify the cause and confirm that its correction fits the approved scope.</li><li>Change the relevant implementation and regression checks.</li><li>Recheck the original failure, the required successful behavior and affected invariants.</li><li>Present the diff, results and limitations for a human decision.</li></ol>
+      <h2>Why scope matters even for a small defect</h2>
+      <p>A seemingly convenient refactor can change contracts that the current tests never exercised. Keeping the correction tied to the requirement makes it possible to distinguish the fix from new design decisions. Bounded does not mean superficial: fix the cause, not only the visible symptom.</p>
+      <section class="example">
+        <h2>Constructed correction: a missing authorization check</h2>
+        <p>The established rule permits only owners to export. The handler omits the existing authorization helper. The correction applies that helper and verifies owner success, non-owner denial and unchanged output format. It does not introduce a new sharing policy.</p>
+      </section>
+      <h2>When to stop correcting and return</h2>
+      <p>If the helper cannot express the requirement, or the expected policy is itself uncertain, report that finding rather than expanding the fix. A human may <a href="controlled-iteration.html">return to PLAN or PRD</a>. The original BUG can remain recorded while a related PROB captures the uncertainty.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="bugs-and-evidence.html">Bugs and evidence</a> establishes the observed failure.</li><li><a href="refresh-and-revalidate.html">Refresh and revalidate</a> checks the complete claim after correction.</li><li><a href="implementation-checkpoint.html">Implementation checkpoint</a> determines whether the corrected result is acceptable.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="implementation-checkpoint.html">Next: evaluate the correction at a checkpoint →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

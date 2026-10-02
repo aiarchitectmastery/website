@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autonomy Boundaries for AI Driven Development | AAM Guide</title>
+  <meta name="description" content="Set autonomy boundaries for AI Driven Development: define what an agent may decide, change limits and when it must stop, escalate or return control to a human.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/autonomy-boundaries.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Autonomy Boundaries for AI Driven Development | AAM Guide">
+  <meta property="og:description" content="Define independent decisions and stop conditions before execution.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/autonomy-boundaries.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Autonomy Boundaries for Agent Work">
+  <meta name="twitter:description" content="Bounded autonomy means knowing when to continue and when to return control.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Autonomy boundaries for agent work","description":"Define what an agent may decide and when it must return control.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/autonomy-boundaries.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"TASK","item":"https://aiarchitectmastery.com/methodology/task.html"},{"@type":"ListItem","position":3,"name":"Autonomy boundaries","item":"https://aiarchitectmastery.com/methodology/autonomy-boundaries.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><a href="task.html">TASK</a><span aria-hidden="true">/</span><span aria-current="page">Autonomy boundaries</span></nav>
+    <article>
+      <h1>Autonomy boundaries for agent work</h1>
+      <p class="lead">An autonomy boundary defines what an agent may decide and execute independently, and when it must stop, ask, escalate or return control to the human. It makes delegation explicit rather than treating tool access as unlimited authority.</p>
+      <p>The boundary is part of a <a href="task.html">TASK</a> or other Work Item in AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. The human remains responsible for setting and reviewing it.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §3 · Owner: AI Architect Mastery</p>
+      <h2>Why scope alone is not enough</h2>
+      <p>A file list states where changes may occur, but not which decisions are permitted. An agent working in one file might still alter an interface, weaken authorization or introduce a new dependency. Boundaries cover decisions, permissions and escalation as well as paths.</p>
+      <h2>How to state a useful boundary</h2>
+      <ul><li>Specify allowed changes and decisions within the approved requirement.</li><li>Identify protected contracts, data and unrelated behavior.</li><li>Identify permitted tools and execution environments.</li><li>Require a stop when an assumption, permission or dependency invalidates the assignment.</li><li>Specify what the agent should report when it cannot continue safely.</li></ul>
+      <section class="example">
+        <h2>Constructed boundary: preserve the interface</h2>
+        <p>"Update the export authorization handler and its tests using the existing helper. Do not change the public response format or ownership policy. Stop if the helper cannot express the approved rule, and report the conflicting requirement with evidence."</p>
+        <p>This permits implementation decisions inside the correction while reserving architectural and policy changes for the human.</p>
+      </section>
+      <h2>Instructions and enforcement are different</h2>
+      <p>A written boundary expresses the assignment; the <a href="context-and-harness.html">Agent Harness</a> and runtime determine which permissions can actually be enforced. Verify that environment rather than assuming prose alone prevents an unauthorized action.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="human-led-model.html">Human-led model</a> explains why accountability stays human-owned.</li><li><a href="task-handoff.html">Task handoff</a> communicates the boundary at authorization.</li><li><a href="controlled-iteration.html">Controlled iteration</a> handles findings that invalidate the assignment.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="task-handoff.html">Next: make the handoff explicit →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

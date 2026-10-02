@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Model for AI Driven Development | Roles and Tools</title>
+  <meta name="description" content="Explore the Agent Model for AI Driven Development: distinguish Agent, Role, Skill, Capability and Tool without assuming runtimes implement the same hierarchy.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/agent-model.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Agent Model for AI Driven Development | Roles and Tools">
+  <meta property="og:description" content="Separate responsibility, reusable procedures, capability and concrete tools.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/agent-model.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The AAM Agent Model">
+  <meta name="twitter:description" content="Tool availability alone does not prove an agent's capability.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Agent, Role, Skill, Capability and Tool","description":"AAM's conceptual Agent Model for bounded delegated work.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/agent-model.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"Agent Model","item":"https://aiarchitectmastery.com/methodology/agent-model.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><span aria-current="page">Agent Model</span></nav>
+    <article>
+      <h1>Agent, Role, Skill, Capability and Tool</h1>
+      <p class="lead">The Agent Model separates who performs work, the responsibility they hold, the procedure they use, what they can accomplish and the concrete tools used to do it. Agent → Role → Skill → Capability → Tool is a conceptual sequence, not a fixed runtime object hierarchy.</p>
+      <p>This model is part of <a href="./#workflow">AAM Agent Workflow</a>, which operationalizes AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §5.1 · Owner: AI Architect Mastery</p>
+      <h2>Five distinct concepts</h2>
+      <dl><dt>Agent</dt><dd>An AI actor performing bounded delegated development work.</dd><dt>Role</dt><dd>A responsibility boundary: purpose, inputs, outputs and decisions outside its scope.</dd><dt>Skill</dt><dd>A reusable procedure for performing a type of work.</dd><dt>Capability</dt><dd>What an agent can accomplish through available skills when the environment supports it.</dd><dt>Tool</dt><dd>A concrete mechanism used to exercise a capability.</dd></dl>
+      <h2>Why this distinction matters</h2>
+      <p>Assigning a role does not grant permissions. Installing a tool does not establish that an agent can use it correctly. Capability depends on the procedure, configuration, permissions, context and evidence of the intended outcome.</p>
+      <h2>How to use the model when delegating</h2>
+      <p>Start with the responsibility needed for a <a href="work-items.html">Work Item</a>. Identify the procedure and expected output. Confirm the concrete tools and permissions in the <a href="context-and-harness.html">Agent Harness</a>, then specify evidence that demonstrates the work rather than merely tool invocation.</p>
+      <section class="example">
+        <h2>Constructed example: a review assignment</h2>
+        <p>An agent has a reviewer role and a procedure for comparing a diff with acceptance criteria. A diff viewer is one tool. The capability to verify behavior still depends on access to suitable tests and their environment. If execution is unavailable, the agent can provide a static review but must state that runtime behavior remains unverified.</p>
+      </section>
+      <h2>Do not assume vendor parity</h2>
+      <p>A runtime may represent these concepts differently or not expose a named object for each one. Preserve the semantics without inventing native features. A role label is not a substitute for testing what the environment actually permits.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="task.html">TASK</a> assigns one bounded responsibility.</li><li><a href="autonomy-boundaries.html">Autonomy boundaries</a> define which decisions remain outside that responsibility.</li><li><a href="runtime-adaptation.html">Runtime adaptation</a> maps semantics to native conventions.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="work-items.html">Next: distinguish the work from the worker →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

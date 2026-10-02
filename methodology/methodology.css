@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@700&display=swap");
+
+:root {
+  --font-heading: "Roboto Slab", Georgia, serif;
+  --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
+  --color-brand: #5a6b8a;
+  --color-heading: #a55a82;
+  --color-highlight: #fff9c4;
+  --color-body-text: #3a506b;
+  --color-link: #5a6b8a;
+  --color-button-text: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-page-bg: #6d6d7a;
+  --color-border: #d9dfe7;
+  --color-surface: #f3f5f8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1.5rem; }
+body {
+  margin: 0;
+  color: var(--color-body-text);
+  background: var(--color-page-bg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+a { color: var(--color-link); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: .15em; }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--color-body-text);
+  outline-offset: 4px;
+}
+h1, h2, h3 {
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin: .65rem 0 1.25rem; }
+h2 { font-size: 1.65rem; margin: 2.5rem 0 1rem; }
+h3 { font-size: 1.25rem; }
+p, ul, ol, dl { margin: 0 0 1.2rem; }
+li + li { margin-top: .45rem; }
+header, main, footer { max-width: 76rem; margin: auto; background: var(--color-card-bg); }
+header, footer { padding: 1.25rem clamp(1.25rem, 4vw, 4rem); }
+header { border-bottom: 1px solid var(--color-border); }
+.brand { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.2rem; font-weight: 700; text-decoration: none; }
+.site-nav, .breadcrumb, .next { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.site-nav { margin-top: .75rem; }
+.site-nav a, .breadcrumb a, .next a { display: inline-flex; min-height: 44px; align-items: center; }
+.site-nav [aria-current="page"] { font-weight: 700; text-decoration-thickness: .15em; }
+main { padding: 1.5rem clamp(1.25rem, 4vw, 4rem) 4rem; min-height: 60vh; }
+article { max-width: 51rem; margin: auto; }
+.breadcrumb { font-size: .95rem; align-items: center; margin-bottom: 1.5rem; }
+.eyebrow { font-size: .875rem; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; }
+.lead { font-size: 1.2rem; max-width: 65ch; }
+.meta { font-size: .9rem; }
+.methodology-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: .5rem;
+  margin: 1.5rem 0;
+  background: var(--color-surface);
+}
+.callout, .example { padding: 1.4rem; margin: 1.5rem 0; border-left: 4px solid var(--color-brand); }
+.callout { background: var(--color-highlight); }
+.example { background: var(--color-surface); }
+.callout h2, .example h2 { margin-top: 0; }
+.callout p:last-child, .example p:last-child { margin-bottom: 0; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+.card { border: 1px solid var(--color-border); border-radius: .5rem; padding: 1.25rem; }
+.card h2, .card h3 { margin-top: 0; }
+.card ul { padding-left: 1.25rem; }
+.card li a, .related a, dt a { display: inline-block; padding-block: .5rem; }
+.flow { display: flex; flex-wrap: wrap; gap: .75rem; padding: 0; list-style: none; }
+.flow li { margin: 0; flex: 1 1 10rem; }
+.flow a { display: block; border: 1px solid var(--color-border); border-radius: .4rem; padding: .9rem 1rem; font-weight: 700; }
+.flow span { display: block; font-size: .9rem; font-weight: 400; }
+.next { border-top: 1px solid var(--color-border); margin-top: 2rem; padding-top: 1rem; }
+dt { font-weight: 700; }
+dd { margin: 0 0 1rem; }
+code { font-size: .95em; }
+footer { border-top: 1px solid var(--color-border); font-size: .9rem; }
+footer p { margin: .4rem 0; }
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -10rem;
+  z-index: 10;
+  background: var(--color-card-bg);
+  padding: .75rem 1rem;
+}
+.skip-link:focus { top: 1rem; }
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card { padding: 1.5rem; }
+}
+@media print {
+  body { background: var(--color-card-bg); }
+  header, footer, .skip-link, .site-nav, .next, .methodology-video { display: none; }
+  main { padding: 0; }
+  .grid { display: block; }
+  .card { break-inside: avoid; margin-bottom: 1rem; }
+}

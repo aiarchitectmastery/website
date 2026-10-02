@@ -1,184 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>PLAN — Turn Intent Into a Structured Implementation Plan | AI Architect Mastery</title>
-  <meta name="description" content="Phase 2 of the AI Driven Development Methodology: the PLAN. Break a PRD into a structured implementation plan with explicit checkpoints before any agent starts building." />
-
-  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/plan.html" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#15182A" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="PLAN — Turn Intent Into a Structured Implementation Plan" />
-  <meta property="og:description" content="Phase 2 of the AI Driven Development Methodology. Breaking a PRD into ordered, checkpointed steps." />
-  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/plan.html" />
-    <meta property="og:image" content="https://aiarchitectmastery.com/assets/images/methodology-plan-social.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="AI Driven Development Methodology: 02 PLAN - Turn Intent Into Checkpoints" />
-  <meta property="og:site_name" content="AI Architect Mastery" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://aiarchitectmastery.com/assets/images/methodology-plan-social.jpg" />
-  <meta name="twitter:title" content="PLAN — Turn Intent Into a Structured Implementation Plan" />
-  <meta name="twitter:description" content="Phase 2 of the AI Driven Development Methodology — the PLAN." />
-
-  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLAN in AI Driven Development | Structure Work with AAM</title>
+  <meta name="description" content="Build a PLAN for AI Driven Development: turn an approved PRD into dependency-aware steps with completion conditions and checkpoints before delegating work.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/plan.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="PLAN in AI Driven Development | Structure Work with AAM">
+  <meta property="og:description" content="Turn approved intent into dependency-aware, reviewable implementation steps.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/plan.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PLAN: Structure the Work">
+  <meta name="twitter:description" content="Phase 2 of the Core: implementation order, requirement coverage and meaningful checkpoints.">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "AI Architect Mastery", "item": "https://aiarchitectmastery.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Methodology", "item": "https://aiarchitectmastery.com/#methodology" },
-      { "@type": "ListItem", "position": 3, "name": "02 — PLAN", "item": "https://aiarchitectmastery.com/methodology/plan.html" }
-    ]
-  }
-  </script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8SXT2JQ2D"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T8SXT2JQ2D');
-  </script>
-
-  <!-- MailerLite Universal -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2350883');
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"PLAN: turn intent into structured work","description":"Turn an approved PRD into dependency-aware implementation steps and checkpoints.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/plan.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"PLAN","item":"https://aiarchitectmastery.com/methodology/plan.html"}]}
+  ]}
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="../" class="brand" aria-label="AI Architect Mastery — home">
-        <img src="../assets/images/logo.png" alt="AI Architect Mastery logo" class="brand-logo" />
-        <span class="brand-text">AI Architect Mastery<sup>™</sup></span>
-      </a>
-      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-        <ul>
-          <li><a href="../#methodology">Methodology</a></li>
-          <li><a href="../#courses">Courses</a></li>
-          <li><a href="../gh-300/">GH-300 Docs</a></li>
-          <li><a href="../#instructor">Instructor</a></li>
-          <li><a href="../#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
   <main id="main" tabindex="-1">
-
-    <section class="section docs-hero">
-      <div class="container">
-        <p class="breadcrumb"><a href="../">Home</a><span class="breadcrumb-sep">/</span><a href="../#methodology">Methodology</a><span class="breadcrumb-sep">/</span>02 — PLAN</p>
-        <h1>PLAN — Turn Intent Into a Structured Implementation Plan</h1>
-        <p class="lead">
-          Phase 2 of 4 in the <strong>AI Driven Development Methodology</strong>. The PRD says what to build. The PLAN
-          says in what order, with what checkpoints — before any agent touches a file.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 0;">
-      <div class="container" style="max-width: 880px;">
-
-        <div style="aspect-ratio: 16/9; margin: 0 0 2.2em; border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <iframe
-            title="PLAN — Turn Intent Into a Structured Implementation Plan"
-            src="https://www.youtube.com/embed/XkG8_hsnaYA"
-            width="100%"
-            height="100%"
-            style="border: none; display: block;"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <h2>What a PLAN is in this methodology</h2>
-        <p>
-          A PLAN takes the approved PRD and breaks it into a <strong>structured implementation plan with explicit
-          checkpoints</strong>: an ordered sequence of steps, each one small enough to review, each one building on
-          the last. It is your architectural map before any code exists.
-        </p>
-        <p>A working PLAN typically defines:</p>
-        <ul class="check-list">
-          <li>What gets built first, and why — dependency order, not arbitrary order</li>
-          <li>Where the natural checkpoints are, so review happens before the codebase grows unreviewable</li>
-          <li>Which parts of the PRD map to which implementation steps</li>
-          <li>What "done" looks like for each step, not just for the whole feature</li>
-        </ul>
-
-        <p class="callout callout-tip">
-          <strong>Why this comes before TASK.</strong> An agent asked to "just build the PRD" in one pass tends to
-          produce a single large, hard-to-review diff. A PLAN forces the work into reviewable increments — the same
-          discipline a senior engineer would apply to any non-trivial change.
-        </p>
-
-        <h2>What goes wrong without one</h2>
-        <p>
-          Skipping the PLAN and going straight from PRD to code is where architectural control is usually lost first.
-          The agent makes sequencing decisions on its own — sometimes reasonably, sometimes not — and by the time a
-          human reviews the result, undoing a wrong structural choice costs far more than catching it up front would
-          have.
-        </p>
-
-        <h2>How this looks in practice</h2>
-        <p>
-          In AAM's methodology, the PLAN is usually generated collaboratively: you hand the agent the PRD and ask it
-          to propose a plan, then you edit and approve it before any TASK begins. The plan itself becomes a
-          checklist you and the agent both work through, one checkpoint at a time.
-        </p>
-
-        <div style="background: var(--color-card-bg); border: 1px solid var(--color-card-border); border-radius: var(--radius); padding: 28px; margin: 2.2em 0;">
-          <h3 style="margin-top: 0;">Start with the free PLAN template</h3>
-          <p style="margin: 0.8em 0 1.6em;">
-            The Workflow Starter Kit includes a ready-to-use <code>PLAN-template.md</code> — part of a four-part kit
-            (PRD, PLAN, TASK, IMPLEMENTATION) that works in any language or framework.
-          </p>
-          <p style="margin-bottom: 0;">
-            <a href="../get-started/" class="btn btn-primary" data-track="methodology-plan-get-started">Get the Starter Kit →</a>
-          </p>
-        </div>
-
-        <div class="two-col" style="margin-top: 2.6em;">
-          <div><a href="./prd.html" class="btn btn-ghost btn-small">← Back: 01 — PRD</a></div>
-          <div style="text-align: right;">
-            <a href="./task.html" class="btn btn-ghost btn-small">Next: 03 — TASK →</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><span aria-current="page">PLAN</span></nav>
+    <article>
+      <span class="eyebrow">Core phase 02 / 04</span>
+      <h1>PLAN: turn intent into structured work</h1>
+      <p class="lead">A PLAN turns an approved PRD into a dependency-aware, reviewable implementation approach with explicit completion conditions and checkpoints. It explains what should happen in what order before the work is delegated to agents.</p>
+      <p>PLAN is the second phase of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. It connects <a href="prd.html">approved intent</a> to bounded <a href="task.html">TASKs</a>.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §4.2 · Owner: AI Architect Mastery</p>
+      <iframe class="methodology-video"
+        src="https://www.youtube-nocookie.com/embed/XkG8_hsnaYA"
+        title="PLAN — Turn Intent Into a Structured Implementation Plan"
+        width="800" height="450" loading="lazy"
+        allow="encrypted-media; picture-in-picture; fullscreen"
+        allowfullscreen></iframe>
+      <h2>Why this comes before TASK</h2>
+      <p>An agent asked to "just build the PRD" in one pass can produce a large, hard-to-review diff. A PLAN divides the approach into reviewable increments and exposes architectural decisions before implementation makes them expensive to undo.</p>
+      <p>Skipping directly from intent to code leaves sequencing choices implicit. Even a reasonable local choice can conflict with constraints that the agent has not considered.</p>
+      <h2>What a working PLAN defines</h2>
+      <ul><li>What gets built first and why: dependency order, not arbitrary order.</li><li>Which PRD requirements map to which planned steps.</li><li>Where meaningful checkpoints occur before downstream work depends on a decision.</li><li>What done means for each step, not only for the whole feature.</li></ul>
+      <h2>Inputs, output and responsibility</h2>
+      <p><strong>Input:</strong> the approved PRD and relevant architecture and code context. <strong>Output:</strong> a reviewed implementation approach with steps and completion conditions. <strong>Owner:</strong> the Human Architect reviews and approves the approach; the agent may propose it.</p>
+      <p>In practice, the human can ask an agent to propose a plan, then edit and approve it before TASKs begin. <a href="plan-review.html">Plan review</a> checks coverage, dependencies, scope and verification, not merely whether the list sounds plausible.</p>
+      <section class="example">
+        <h2>Constructed example: sequence an authorization change</h2>
+        <p>The approved PRD requires owner-only export. The PLAN identifies the existing authorization helper, sequences the scoped handler change and specifies allowed/denied request checks plus output-format regression evidence. It does not bundle an unrelated reporting rewrite into the first step.</p>
+      </section>
+      <h2>Planning is not a guarantee</h2>
+      <p>Implementation can reveal that the approach cannot satisfy an approved constraint. Use a <a href="controlled-iteration.html">controlled return to PLAN</a>, revise the approach and refresh dependent TASKs. Do not let an obsolete plan justify unapproved agent improvisation.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="plan-review.html">Plan review</a> establishes readiness for delegation.</li><li><a href="acceptance-criteria.html">Acceptance criteria</a> anchor the completion conditions.</li><li><a href="task-handoff.html">Task handoff</a> carries one approved step into execution.</li><li><a href="refresh-and-revalidate.html">Refresh and revalidate</a> updates downstream work when the approach changes.</li></ul>
+      <p><a href="https://www.youtube.com/watch?v=XkG8_hsnaYA">Watch the PLAN methodology overview on YouTube</a> (optional video; this text is the current reference).</p>
+      <nav class="next" aria-label="Core workflow navigation"><a href="prd.html">← 01 · PRD</a><a href="task.html">Next: 03 · TASK →</a></nav>
+    </article>
   </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year">2026</span> AI Architect Mastery™ — All Rights Reserved</p>
-      <p class="footer-meta">
-        Sister brand of <a href="https://dataintegrationmastery.com/" rel="noopener">Data Integration Mastery™</a>
-      </p>
-    </div>
-  </footer>
-
-  <script src="../js/main.js" defer></script>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
 </body>
 </html>

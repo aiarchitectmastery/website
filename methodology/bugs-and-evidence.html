@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bugs and Evidence in AI Driven Development | AAM Guide</title>
+  <meta name="description" content="Evaluate bugs and evidence in AI Driven Development: compare observed behavior with requirements and record tested state instead of trusting agent confidence.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/bugs-and-evidence.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Bugs and Evidence in AI Driven Development | AAM Guide">
+  <meta property="og:description" content="A plausible answer is not evidence that the required behavior holds.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/bugs-and-evidence.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bugs and State-Aware Evidence">
+  <meta name="twitter:description" content="Connect observations to requirements, tested state and human decisions.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Bugs and evidence: why plausible is not enough","description":"Compare actual behavior with requirements and identify the state behind verification evidence.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/bugs-and-evidence.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"IMPLEMENTATION","item":"https://aiarchitectmastery.com/methodology/implementation.html"},{"@type":"ListItem","position":3,"name":"Bugs and evidence","item":"https://aiarchitectmastery.com/methodology/bugs-and-evidence.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><a href="implementation.html">IMPLEMENTATION</a><span aria-hidden="true">/</span><span aria-current="page">Bugs and evidence</span></nav>
+    <article>
+      <h1>Bugs and evidence: why plausible is not enough</h1>
+      <p class="lead">Evidence is an observable basis for a decision, such as a reviewed diff, a test result or a validation finding. A BUG is behavior that violates an established expectation. An agent's confident explanation is neither proof that the requirement holds nor a substitute for observing the relevant state.</p>
+      <p>This page explains evidence within <a href="implementation.html">IMPLEMENTATION</a> in AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. <a href="work-types.html">Work Types</a> defines how BUG differs from TASK and PROB.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§3–4, 6 · Owner: AI Architect Mastery</p>
+      <h2>Why evidence must be state-aware</h2>
+      <p>A result applies to the version, configuration, inputs and environment that produced it. A passing check before the latest change does not prove the current implementation. An unavailable integration environment remains a limitation, not a passed check.</p>
+      <h2>What useful evidence records</h2>
+      <ul><li>The requirement or acceptance criterion being checked.</li><li>The relevant implementation state and test conditions.</li><li>The check actually performed and the observed result.</li><li>The difference between expected and actual behavior.</li><li>Unexecuted checks, limitations and remaining risks.</li></ul>
+      <section class="example">
+        <h2>Constructed finding: allowed is not denied</h2>
+        <p>An export succeeds for its owner, but that says nothing about a signed-in non-owner. A separate denied-request check shows whether access is actually blocked and whether record contents leak in the response. Both observations must be tied to the reviewed change.</p>
+      </section>
+      <h2>Interpret the failure before correcting it</h2>
+      <p>If the requirement clearly prohibits the observed behavior, record a BUG and perform a <a href="scoped-correction.html">scoped correction</a>. If the expected behavior is undefined, treat the uncertainty as PROB and seek a human return decision. Evidence identifies the gap; it does not invent the missing policy.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="acceptance-criteria.html">Acceptance criteria</a> define what the evidence must support.</li><li><a href="refresh-and-revalidate.html">Refresh and revalidate</a> restores evidence after changes invalidate earlier results.</li><li><a href="implementation-checkpoint.html">Implementation checkpoint</a> evaluates the evidence and its limits.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="scoped-correction.html">Next: correct an established defect →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

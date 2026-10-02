@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human Checkpoints in AI Driven Development | AAM Guide</title>
+  <meta name="description" content="Use human checkpoints in AI Driven Development to check scope, criteria, architecture, tests and risks, then accept, revise, reject, reassign or return work.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/implementation-checkpoint.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Human Checkpoints in AI Driven Development | AAM Guide">
+  <meta property="og:description" content="A checkpoint is an evidence-backed human decision, not automatic approval.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/implementation-checkpoint.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Human Implementation Checkpoint">
+  <meta name="twitter:description" content="ACCEPT, REVISE, REJECT, REASSIGN or RETURN based on evidence and intent.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"The human implementation checkpoint","description":"A human evaluates scope, criteria, architecture, tests, risks and evidence before deciding.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/implementation-checkpoint.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"IMPLEMENTATION","item":"https://aiarchitectmastery.com/methodology/implementation.html"},{"@type":"ListItem","position":3,"name":"Human checkpoint","item":"https://aiarchitectmastery.com/methodology/implementation-checkpoint.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><a href="implementation.html">IMPLEMENTATION</a><span aria-hidden="true">/</span><span aria-current="page">Human checkpoint</span></nav>
+    <article>
+      <h1>The human implementation checkpoint</h1>
+      <p class="lead">At an implementation checkpoint, the Human Architect evaluates scope, acceptance criteria, architecture, tests, risks and evidence, then accepts, revises, rejects, reassigns or returns the work. The checkpoint turns a proposed result into a human decision; it does not automatically approve agent output.</p>
+      <p>Human Checkpoints apply throughout AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. This page explains their acceptance role within <a href="implementation.html">IMPLEMENTATION</a>.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§3–4 · Owner: AI Architect Mastery</p>
+      <h2>What the human inspects</h2>
+      <p>Compare the actual change with the approved TASK and underlying intent. Inspect the diff, the assertions and results of relevant tests, architectural fit, regression risks and explicitly unverified areas. An agent's summary helps locate evidence but does not replace reviewing it.</p>
+      <h2>Five possible decisions</h2>
+      <dl><dt>ACCEPT</dt><dd>The reviewed work satisfies its agreed scope and criteria with sufficient evidence for the decision.</dd><dt>REVISE</dt><dd>The approach remains suitable, but the result needs correction or additional evidence.</dd><dt>REJECT</dt><dd>The submitted result is not acceptable and should not progress as delivered.</dd><dt>REASSIGN</dt><dd>The work needs another responsibility holder, capability or execution environment.</dd><dt>RETURN</dt><dd>An earlier PRD, PLAN or TASK decision needs correction before implementation can continue.</dd></dl>
+      <section class="example">
+        <h2>Constructed decision: a green test is insufficient</h2>
+        <p>The export correction passes the owner-success test but provides no evidence for non-owner denial. The human requests revision and the missing check. If the intended non-owner behavior was never agreed, the decision is instead to return to PRD for clarification.</p>
+      </section>
+      <h2>Acceptance is not automatic release</h2>
+      <p><strong>Nothing merges without human review.</strong> A checkpoint is not a requirement to approve every microscopic action, and acceptance does not automatically authorize production deployment. Release remains part of the <a href="wider-process-context.html">wider engineering process</a>.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="human-led-model.html">Human-led model</a> establishes accountability.</li><li><a href="bugs-and-evidence.html">State-aware evidence</a> makes the acceptance basis inspectable.</li><li><a href="controlled-iteration.html">Controlled iteration</a> explains how the human chooses a return target.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="controlled-iteration.html">Next: handle a return decision →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

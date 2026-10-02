@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASK, BUG and PROB in AI Driven Development | AAM Guide</title>
+  <meta name="description" content="Distinguish TASK, BUG and PROB in AI Driven Development: known work, established failure and uncertainty that may require a human-led return to prior decisions.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/work-types.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="TASK, BUG and PROB in AI Driven Development | AAM Guide">
+  <meta property="og:description" content="Three sibling Work Types, not three extra workflow phases.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/work-types.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TASK, BUG and PROB">
+  <meta name="twitter:description" content="Classify the finding before deciding how to act.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"TASK, BUG and PROB: three sibling Work Types","description":"Classify known work, established failure and uncertainty without changing the Core workflow.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/work-types.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"Controlled iteration","item":"https://aiarchitectmastery.com/methodology/controlled-iteration.html"},{"@type":"ListItem","position":3,"name":"Work Types","item":"https://aiarchitectmastery.com/methodology/work-types.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><a href="controlled-iteration.html">Controlled iteration</a><span aria-hidden="true">/</span><span aria-current="page">Work Types</span></nav>
+    <article>
+      <h1>TASK, BUG and PROB: three sibling Work Types</h1>
+      <p class="lead">TASK is known, defined work. BUG is behavior that violates an established requirement or expectation. PROB is uncertainty indicating that the current requirement, plan, architecture, assignment or implementation may be insufficient. They are sibling Work Types that classify actionable work, not extra Core phases.</p>
+      <p>This classification supports <a href="controlled-iteration.html">controlled iteration</a> in AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding. A <a href="work-items.html">Work Item</a> carries the actual assignment, context and verification.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §6 · Owner: AI Architect Mastery</p>
+      <h2>How to classify the work</h2>
+      <dl><dt>TASK: the work is defined</dt><dd>The team knows what should be done and can delegate a bounded result. See the <a href="task.html">canonical TASK definition</a> for its relationship to an approved PLAN.</dd><dt>BUG: an expectation is violated</dt><dd>Record the established expectation and observed failure. Correct it within scope and prove the fix.</dd><dt>PROB: the current model may be insufficient</dt><dd>Record the uncertainty and evidence. The human decides whether the issue belongs in PRD, PLAN, TASK or a correction within implementation.</dd></dl>
+      <h2>Why the distinction matters</h2>
+      <p>Calling every problem a bug encourages patching undefined behavior. Calling every failure uncertainty avoids correcting a clear violation. Classify against the established intent and evidence, not just the severity or the folder holding the record.</p>
+      <section class="example">
+        <h2>Constructed examples from one export feature</h2>
+        <ul><li><strong>TASK:</strong> implement the approved owner-only export rule.</li><li><strong>BUG:</strong> a non-owner receives data despite that rule.</li><li><strong>PROB:</strong> ownership of shared records was never defined, so the correct behavior cannot yet be established.</li></ul>
+      </section>
+      <h2>Classification is not automatic routing</h2>
+      <p>A BUG may reveal a related PROB. Record both relationships rather than erasing the established failure. The Human Architect chooses what to correct and where to return; AAM does not assume an automatic routing engine.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="scoped-correction.html">Scoped correction</a> handles established BUG behavior.</li><li><a href="bugs-and-evidence.html">Bugs and evidence</a> ties the classification to an observable finding.</li><li><a href="refresh-and-revalidate.html">Refresh and revalidate</a> follows changes to the underlying decision.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="controlled-iteration.html">Next: choose the return target →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

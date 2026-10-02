@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Controlled Iteration in AI Driven Development | AAM</title>
+  <meta name="description" content="Use controlled iteration in AI Driven Development: return to PRD, PLAN or TASK when evidence exposes a prior problem, then refresh affected work and revalidate.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/controlled-iteration.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Controlled Iteration in AI Driven Development | AAM">
+  <meta property="og:description" content="Correct the decision where the problem belongs, not just the latest code.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/controlled-iteration.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Controlled Iteration and Return Decisions">
+  <meta name="twitter:description" content="The Human Architect chooses a return to PRD, PLAN or TASK using evidence.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Controlled iteration and return decisions","description":"A human-directed return to PRD, PLAN or TASK when evidence invalidates an earlier decision.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/controlled-iteration.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"Controlled iteration","item":"https://aiarchitectmastery.com/methodology/controlled-iteration.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><span aria-current="page">Controlled iteration</span></nav>
+    <article>
+      <h1>Controlled iteration and return decisions</h1>
+      <p class="lead">Controlled iteration is a human-directed return to PRD, PLAN or TASK when evidence shows that the problem belongs earlier than the current implementation step. It corrects the underlying intent, approach or assignment, then refreshes dependent work before execution continues.</p>
+      <p>AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding, is iterative rather than a one-way lifecycle. Its canonical Core remains PRD → PLAN → TASK → IMPLEMENTATION.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§3, 6 · Owner: AI Architect Mastery</p>
+      <h2>Why repeated patching can be the wrong response</h2>
+      <p>Implementation cannot reliably repair missing intent. A sequence of local fixes may preserve the wrong requirement or architecture. A <a href="work-types.html">PROB Work Item</a> records the uncertainty so the human can choose the correct decision level.</p>
+      <h2>Where should the work return?</h2>
+      <dl><dt>Return to <a href="prd.html">PRD</a></dt><dd>The intended outcome, constraint or acceptance expectation is missing or insufficient.</dd><dt>Return to <a href="plan.html">PLAN</a></dt><dd>The implementation approach, dependency sequence or architecture cannot support the approved intent.</dd><dt>Return to <a href="task.html">TASK</a></dt><dd>The assignment lacks relevant context, adequate scope, responsibility or verification criteria.</dd></dl>
+      <p>The Human Architect owns the return decision. AAM does not assume an automatic routing engine, and not every BUG requires a return: a clear failure inside valid scope may need only <a href="scoped-correction.html">scoped correction</a>.</p>
+      <h2>How the loop works</h2>
+      <p><strong>TASK → IMPLEMENTATION → PROB → PRD / PLAN / TASK</strong></p>
+      <ol><li>Capture the finding, evidence and affected assumption.</li><li>Pause work that depends on the unresolved decision.</li><li>Let the human select and correct the appropriate artifact.</li><li><a href="refresh-and-revalidate.html">Refresh downstream assignments and revalidate</a> the resulting claim before acceptance.</li></ol>
+      <section class="example">
+        <h2>Constructed return: ownership is undefined</h2>
+        <p>An export change exposes shared records with no agreed owner. The human returns to PRD to define the policy, reviews the affected PLAN and reissues the TASK. Editing an authorization condition without that decision would hide a requirements gap inside code.</p>
+      </section>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="work-types.html">TASK, BUG and PROB</a> distinguish known work, failure and uncertainty.</li><li><a href="implementation-checkpoint.html">Implementation checkpoint</a> is where RETURN becomes an explicit verdict.</li><li><a href="refresh-and-revalidate.html">Refresh and revalidate</a> closes the loop without stale dependencies.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="refresh-and-revalidate.html">Next: refresh the work after a return →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceptance Criteria for AI Driven Development | AAM Guide</title>
+  <meta name="description" content="Define acceptance criteria for AI Driven Development: observable outcomes, boundaries and evidence that let a human reject an incorrect final agent result.">
+  <link rel="canonical" href="https://aiarchitectmastery.com/methodology/acceptance-criteria.html">
+  <link rel="stylesheet" href="methodology.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Architect Mastery">
+  <meta property="og:title" content="Acceptance Criteria for AI Driven Development | AAM Guide">
+  <meta property="og:description" content="Make requirements observable and give acceptance a basis beyond agent confidence.">
+  <meta property="og:url" content="https://aiarchitectmastery.com/methodology/acceptance-criteria.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Acceptance Criteria for AI Driven Development">
+  <meta name="twitter:description" content="Specify required behavior, boundaries and the evidence needed to decide.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Acceptance criteria: make intent testable","description":"Observable expectations that support human acceptance of agent work.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/acceptance-criteria.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"PRD","item":"https://aiarchitectmastery.com/methodology/prd.html"},{"@type":"ListItem","position":3,"name":"Acceptance criteria","item":"https://aiarchitectmastery.com/methodology/acceptance-criteria.html"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><a href="prd.html">PRD</a><span aria-hidden="true">/</span><span aria-current="page">Acceptance criteria</span></nav>
+    <article>
+      <h1>Acceptance criteria: make intent testable</h1>
+      <p class="lead">Acceptance criteria are observable expectations that define when a requirement is satisfied. They let a human reject a plausible but incorrect agent result by comparing the actual behavior with the agreed outcome, constraints and boundaries.</p>
+      <p>They belong in the <a href="prd.html">PRD</a> and flow into planning, delegation and verification in AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>, also known as structured Vibe Coding.</p>
+      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§3–4 · Owner: AI Architect Mastery</p>
+      <h2>Why criteria come before execution</h2>
+      <p>"Improve security" or "make it faster" leaves the agent to invent success. Criteria identify the relevant scenario, expected result and constraint before implementation choices shape the definition of done.</p>
+      <h2>How to make a criterion useful</h2>
+      <ul><li>Describe observable behavior under specified conditions.</li><li>Include relevant denied, empty, invalid or boundary cases, not only the happy path.</li><li>State invariants: existing behavior that must remain unchanged.</li><li>Identify appropriate evidence and the environment or data conditions needed to interpret it.</li><li>Keep the human responsible for accepting or clarifying the expectation.</li></ul>
+      <section class="example">
+        <h2>Constructed example: an export requirement</h2>
+        <p><strong>Weak:</strong> "Make export secure."</p>
+        <p><strong>Bounded:</strong> "The record owner can export through the existing interface. A signed-in non-owner is denied and receives no record contents. The successful export format remains unchanged."</p>
+        <p>Evidence includes allowed and denied request tests plus a regression check for the output format. These illustrate a requirement; they are not a complete security assessment.</p>
+      </section>
+      <h2>Tests are evidence, not the definition of intent</h2>
+      <p>A test can encode the same misunderstanding as the implementation. Review whether its assertions represent the requirement, then check its actual result. If ownership was never defined, the right action is clarification of the PRD, not another speculative test.</p>
+      <h2>Related concepts</h2>
+      <ul class="related"><li><a href="plan-review.html">Plan review</a> checks that each important criterion has planned work and verification.</li><li><a href="bugs-and-evidence.html">Bugs and evidence</a> distinguishes a claimed result from an observed one.</li><li><a href="implementation-checkpoint.html">Implementation checkpoint</a> uses criteria for the acceptance decision.</li></ul>
+      <nav class="next" aria-label="Suggested next reading"><a href="plan.html">Next: turn criteria into a reviewable plan →</a></nav>
+    </article>
+  </main>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
+</body>
+</html>
