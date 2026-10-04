@@ -1,13 +1,19 @@
 # Implementation Plan
-> Generated from: [PRD filename · version]
+> Generated from: [approved PRD filename · version · human approval reference]
 >
 > This plan is the bridge between your requirements and your AI agent's tasks.
 > Keep this file in your repo. Update task status as work progresses.
 >
-> How to use: after filling in your PRD, ask Copilot Chat to generate a plan,
-> then review and structure the output using this template.
+> How to use: from the approved PRD, ask Copilot Chat to propose a plan,
+> then review and approve the approach before authorizing TASKs.
 
 ---
+
+## Plan Decision
+
+**Status:** [DRAFT / APPROVED]
+**Human owner, date and reviewed version:** [...]
+**Decision and rationale:** [coverage, dependencies, verification and accepted constraints]
 
 ## Module Breakdown
 
@@ -54,6 +60,7 @@
 <!-- These are the points where YOU review before the agent continues.
      Never skip checkpoints — this is where architectural control happens. -->
 
+- [ ] Before TASK delegation: approve this PLAN version and authorize each bounded assignment
 - [ ] After Module 1: review generated code against PRD constraints
 - [ ] After Module 2: run tests, verify acceptance criteria
 - [ ] Final: security review, code quality check, documentation completeness

@@ -1,8 +1,8 @@
 # Product Requirements Document (PRD)
-> Use this template to define what you want to build before involving AI agents.
+> Use this template to define and approve intent before implementation. AI may help research and draft; the human owns the decisions.
 > GitHub Copilot reads this file as context. The clearer your PRD, the better the output.
 >
-> How to use: fill in every section, then feed this file to Copilot Chat:
+> How to use: fill in every section, record human approval, then feed the approved version to Copilot Chat:
 > "Read this PRD and generate an implementation plan."
 
 ---
@@ -13,6 +13,7 @@
 **One-sentence summary:** [What this project does and why it matters]
 **Tech stack:** [Language, framework, key dependencies]
 **Repo:** [Link or path]
+**Approval:** [DRAFT / APPROVED · human owner · date · reviewed version · decision reference]
 
 ---
 
@@ -39,7 +40,7 @@
 ## Out of Scope
 
 <!-- Explicitly state what is NOT being built.
-     This prevents AI agents from going off-track. -->
+     Verify these boundaries during execution and review. -->
 
 - [Exclusion 1]
 - [Exclusion 2]
@@ -48,7 +49,7 @@
 
 ## Technical Constraints
 
-<!-- Constraints that must be respected. AI agents will treat these as hard limits. -->
+<!-- Required constraints. Written instructions do not enforce runtime permissions. -->
 
 - Must use: [framework / library / API]
 - Must NOT use: [framework / library / pattern]

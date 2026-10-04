@@ -1,36 +1,36 @@
 # AI Architect Mastery (AAM)
 
-> AI Architect Mastery (AAM) teaches the **AI Driven Development Methodology** — also known as *structured Vibe Coding* — a production-grade way to build software with GitHub Copilot agents. The methodology follows a four-phase loop: PRD → PLAN → TASK → IMPLEMENTATION, with the human acting as architect and AI agents as builders.
+> AI Architect Mastery publishes the AI Driven Development Methodology: a human-led, vendor-neutral method for engineering software with AI agents. Humans own intent, scope and decisions; agents perform bounded work through PRD → PLAN → TASK → IMPLEMENTATION. Review and evidence do not automatically authorize release.
 
-AAM is built for experienced developers, software architects, and engineering leaders who want to move from ad hoc AI prompting to a repeatable, agent-driven development practice. Courses are delivered on Udemy and supported by free written documentation on this site.
-
-Primary public term: **AI Driven Development Methodology** (or *AI Driven Development*).
-Branded / named method: **Vibe Coding** (retained in Udemy course names and as a recognizable label for the same methodology).
+This is a supplementary directory of public references, not an access policy or a promise of search inclusion. The HTML pages are the public content reference.
 
 ## Methodology
 
-- [Methodology overview](https://aiarchitectmastery.com/#methodology): The four-phase AI driven development loop — PRD, PLAN, TASK, IMPLEMENTATION — and how each phase maps to GitHub Copilot agent modes.
+- [Methodology overview](https://aiarchitectmastery.com/methodology/): Definition, human responsibility and the four-phase workflow.
+- [PRD](https://aiarchitectmastery.com/methodology/prd.html): Intent, scope, constraints and acceptance criteria.
+- [PLAN](https://aiarchitectmastery.com/methodology/plan.html): A reviewed, dependency-aware implementation approach.
+- [TASK](https://aiarchitectmastery.com/methodology/task.html): Bounded delegation with context and expected evidence.
+- [IMPLEMENTATION](https://aiarchitectmastery.com/methodology/implementation.html): Execution, verification and a human decision.
 
-## Courses
+The methodology pages are reference-only: no course enrollment is required.
 
-- [Introduction to Vibe Coding](https://aiarchitectmastery.com/#courses): Free entry course. Conceptual orientation to the AI Driven Development Methodology and the agent-driven workflow.
-- [Mastering Vibe Coding with GitHub Copilot](https://aiarchitectmastery.com/#courses): Core paid course. Full methodology with GitHub Copilot agent modes, real project workflow, PRD → PLAN → TASK → IMPLEMENTATION.
-- [GitHub Copilot Certification (GH-300) Preparation](https://aiarchitectmastery.com/gh-300/): Certification prep course covering responsible AI, Copilot features, data and architecture, prompt engineering, developer productivity, and privacy and safeguards.
+## Starter Kit and Courses
+
+- [Workflow Starter Kit](https://aiarchitectmastery.com/get-started/): Four free downloadable resources for PRD, PLAN, TASK and IMPLEMENTATION; no signup required.
+- [Current course information](https://aiarchitectmastery.com/#courses): The site lists GitHub Copilot GH-300 preparation with a Udemy link. Check the linked provider for current availability and pricing. Mastering AI Driven Development is marked coming soon, not available for enrollment.
 
 ## GH-300 Certification Documentation
 
-- [GH-300 hub](https://aiarchitectmastery.com/gh-300/): Free English documentation for the GitHub Copilot GH-300 certification, organized by exam domain.
-- [Responsible AI](https://aiarchitectmastery.com/gh-300/responsible-ai.html): Principles of responsible AI in the context of GitHub Copilot.
-- [Copilot features](https://aiarchitectmastery.com/gh-300/copilot-features.html): GitHub Copilot product surface, chat, agents, and editor integrations.
-- [Data and architecture](https://aiarchitectmastery.com/gh-300/data-and-architecture.html): How Copilot handles data, model routing, and enterprise architecture.
-- [Prompt engineering](https://aiarchitectmastery.com/gh-300/prompt-engineering.html): Prompt patterns and techniques for production-grade AI driven development.
-- [Developer productivity](https://aiarchitectmastery.com/gh-300/developer-productivity.html): Measuring and improving developer productivity with GitHub Copilot.
-- [Privacy and safeguards](https://aiarchitectmastery.com/gh-300/privacy-and-safeguards.html): Privacy controls, content exclusions, and enterprise safeguards.
+- [GH-300 hub](https://aiarchitectmastery.com/gh-300/): Six free written study guides, using the January 2026 study-guide baseline. These pages are not six separately available courses.
+- [Responsible AI](https://aiarchitectmastery.com/gh-300/responsible-ai.html): Responsible AI principles and limitations.
+- [Copilot features](https://aiarchitectmastery.com/gh-300/copilot-features.html): Copilot interfaces and capabilities.
+- [Data and architecture](https://aiarchitectmastery.com/gh-300/data-and-architecture.html): Context, data flow and model limitations.
+- [Prompt engineering](https://aiarchitectmastery.com/gh-300/prompt-engineering.html): Prompt structure and context.
+- [Developer productivity](https://aiarchitectmastery.com/gh-300/developer-productivity.html): Development use cases and their limits.
+- [Privacy and safeguards](https://aiarchitectmastery.com/gh-300/privacy-and-safeguards.html): Privacy settings and safeguards.
+- [Official GH-300 study guide](https://aka.ms/GH300-StudyGuide): Provider reference for current exam objectives; each domain guide also links its technical sources.
 
 ## About
 
-- [Instructor — Ari Vilkman](https://aiarchitectmastery.com/#instructor): Course author, software architect, and creator of the AI Driven Development Methodology / Vibe Coding curriculum.
-
-## Optional
-
-- [YouTube channel](https://www.youtube.com/@AIArchitectMastery): Video walkthroughs of the AI Driven Development Methodology in practice.
+- [Instructor — Ari Vilkman](https://aiarchitectmastery.com/#instructor): Instructor information and professional profile link.
+- [YouTube channel](https://www.youtube.com/@AIArchitectMastery): AAM videos supporting the written references.

@@ -1,14 +1,11 @@
 # AI Architect Mastery — robots.txt
-# Note: aiarchitectmastery.com domain is registered at Namecheap but
-# DNS is NOT yet pointed at GitHub Pages. Crawling is currently allowed —
-# canonical URLs point to the production domain so any github.io discovery
-# will be deduplicated by search engines once DNS is live.
-# To block all indexing pre-launch, change `Disallow:` to `Disallow: /`.
+# Existing general crawl policy retained.
 
 User-agent: *
 Disallow:
 
 Sitemap: https://aiarchitectmastery.com/sitemap.xml
+Sitemap: https://aiarchitectmastery.com/methodology/sitemap.xml
 
-# AI / LLM crawler guidance (llmstxt.org standard)
+# Optional supplementary content directory, not an access-control standard:
 # https://aiarchitectmastery.com/llms.txt

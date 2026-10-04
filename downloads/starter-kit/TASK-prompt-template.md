@@ -4,7 +4,8 @@
 > Structure: Role → Context → Task → Constraints → Output → Verification
 >
 > How to use: copy the template below, fill it in for your current PLAN task,
-> then paste it into Copilot Chat or your .github/copilot-instructions.md file.
+> then supply it as the current assignment in Copilot Chat. Keep one-off task
+> authorization separate from persistent repository instructions.
 
 ---
 
@@ -17,7 +18,8 @@ You are a [role — e.g., "senior Java developer following Clean Architecture pr
 [Describe the current state of the codebase / what already exists.]
 - Tech stack: [language, framework, key libraries]
 - Relevant files: [list the files the agent should read before starting]
-- This task is part of: [PRD version · PLAN task ID, e.g., TASK-003]
+- This task is part of: [approved PRD version · approved PLAN version and step ID]
+- Authorized by: [human owner · decision reference · permitted scope]
 
 ## Task
 [Describe exactly what to build or change. Be specific and complete.]
@@ -35,17 +37,30 @@ You are a [role — e.g., "senior Java developer following Clean Architecture pr
 - [File 2]: [what should be in it]
 - Tests: [what tests should be written and what they must verify]
 
+## Autonomy and Stop Conditions
+- Continue only within the authorized scope and available permissions.
+- Stop and report missing context, permissions, verification tools or an ambiguous policy.
+- Do not invent a decision, bypass access controls, broaden scope or claim an unrun check passed.
+- Return the issue to the human owner for a PRD, PLAN or TASK decision as appropriate.
+- This assignment does not authorize merge, publication or deployment.
+
 ## Verification
 Before finishing, confirm:
 - [ ] Code compiles without errors
 - [ ] All tests pass
 - [ ] No new dependencies added without approval
 - [ ] Acceptance criteria from PLAN task [TASK-ID] are met
+
+Return the reviewed revision, changed files and actual evidence: check/command,
+environment, observed result and artifact or log reference. List failed and
+unexecuted checks, remaining limitations and the decision needed from the human.
 ```
 
 ---
 
 ## Filled example
+
+Constructed assignment, not a tested implementation or a real approval record.
 
 ```
 You are a senior Spring Boot developer following Clean Architecture principles.
@@ -53,30 +68,44 @@ You are a senior Spring Boot developer following Clean Architecture principles.
 ## Context
 - Tech stack: Java 21, Spring Boot 3.x, Maven, PostgreSQL
 - Relevant files: src/main/java/com/example/user/UserService.java, UserRepository.java
-- This task is part of: PRD v1.2 · PLAN TASK-003
+- This task is part of: example approved PRD v1.2 · example approved PLAN v1.0, TASK-003
+- Authorization: the example human owner permits only this endpoint and its tests
+- ASSUMPTION: existing authentication and admin-authorization helpers are available; verify before changing code
 
 ## Task
 Implement a REST endpoint POST /api/v1/users that:
-1. Accepts a CreateUserRequest DTO with fields: name, email, role
-2. Validates input — name required, email format valid, role must be USER or ADMIN
-3. Persists the user via UserRepository
-4. Returns 201 Created with the created User entity as JSON
+1. Requires an authenticated administrator using the existing authorization helper
+2. Accepts only name and email; validates required name and email format
+3. Creates only a USER account; rejects a supplied role field without persistence
+4. Returns 201 Created with a response DTO containing only id, name and email, never the persistence entity
+5. Returns the established unauthenticated/forbidden error response without creating a record for denied callers
 
 ## Constraints
-- DO NOT modify the UserRepository interface — create a new implementation if needed
+- DO NOT modify the UserRepository interface or add another persistence implementation
 - DO NOT add new Maven dependencies
 - Follow the existing validation pattern used in OrderService.java
 
 ## Expected Output
 - UserController.java: new POST /api/v1/users endpoint
 - CreateUserRequest.java: new DTO with Bean Validation annotations
-- UserControllerTest.java: unit tests covering valid input, invalid email, and missing name
+- UserResponse.java: response DTO with the exact allowed fields
+- UserControllerTest.java: checks for valid admin creation, unauthenticated/non-admin denial, rejected role, invalid email, missing name and response field allowlist
+
+## Autonomy and Stop Conditions
+- Stop if the existing authorization or repository contract cannot satisfy this assignment.
+- Ask the human to revise the PLAN or TASK instead of inventing a policy or bypass.
+- No merge or deployment authorization.
 
 ## Verification
 - [ ] mvn test passes
 - [ ] POST /api/v1/users returns 201 for valid input
 - [ ] POST /api/v1/users returns 400 with error detail for invalid input
 - [ ] No new Maven dependencies introduced
+- [ ] Unauthenticated/non-admin callers and supplied role fields create no records
+- [ ] The response contains only id, name and email
+
+Return actual commands, environment, results and revision; list unexecuted checks
+and limitations. A confident summary is not evidence of passing tests.
 ```
 
 ---
@@ -85,7 +114,7 @@ Implement a REST endpoint POST /api/v1/users that:
 
 **Be specific about files.** Reference existing files by name — Copilot uses them as style and pattern context.
 
-**State what NOT to do.** Constraints prevent the most common AI drift: adding dependencies, changing interfaces, ignoring existing patterns.
+**State what NOT to do.** Constraints make prohibited changes explicit, but do not enforce themselves. Verify dependencies, interfaces and conventions in the returned diff and results.
 
 **One task at a time.** Giving Copilot a single, well-defined task produces better output than a multi-feature prompt. Keep tasks small enough to verify completely before moving on.
 

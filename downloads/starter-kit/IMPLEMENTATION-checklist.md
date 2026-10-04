@@ -10,6 +10,8 @@
 **Task reference:** [TASK-XXX title, from your PLAN]
 **Reviewer:** [Your name]
 **Date:** [YYYY-MM-DD]
+**Reviewed revision and environment:** [commit/content version · runtime/test environment]
+**Approved PRD / PLAN and task authorization:** [versioned references]
 
 ---
 
@@ -49,11 +51,28 @@
 
 ---
 
+## 5. Evidence and Human Decision
+
+| Check or reviewed artifact | Actual result | Evidence reference |
+|---|---|---|
+| [command, diff or runtime observation] | [observed result, not expectation] | [log/artifact/revision] |
+
+**Unexecuted checks and limitations:** [what remains unknown and why]
+**Human verdict:** [ACCEPT / REVISE / REJECT / REASSIGN / RETURN]
+**Rationale, reviewer and date:** [how the evidence supports the decision]
+**If RETURN:** [PRD / PLAN / TASK, issue to resolve and dependent work to refresh]
+
+Acceptance does not by itself authorize merge, release or deployment. Apply the
+project's separate delivery permissions; never infer them from passing tests.
+
 ## The Non-Negotiable Rule
 
 **Nothing merges without human review.** This is what keeps AI-generated code held to the same standard as human-generated code — production quality is not optional, regardless of how the code was written.
 
-If any box above is unchecked, the TASK is not done. Send it back to the agent with what's missing, or fix it yourself before merging.
+If a required check is incomplete, do not record acceptance. Request a scoped
+revision when the agreed expectation is clear. If intent, approach or assignment
+is inadequate, record RETURN to the relevant PRD, PLAN or TASK and refresh
+dependent work before continuing.
 
 ---
 

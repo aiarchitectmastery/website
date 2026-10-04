@@ -1,0 +1,1081 @@
+{
+  "api_version": 1,
+  "assets": [
+    {
+      "asset_id": "AAM-A002",
+      "indexing_intent": "not-a-canonical-page",
+      "kind": "hosting-configuration",
+      "path": "CNAME",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A005",
+      "indexing_intent": "crawl-policy",
+      "kind": "crawler-policy",
+      "path": "robots.txt",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A006",
+      "indexing_intent": "index",
+      "kind": "supplementary-directory",
+      "path": "llms.txt",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A007",
+      "indexing_intent": "discovery",
+      "kind": "sitemap",
+      "path": "sitemap.xml",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A008",
+      "indexing_intent": "discovery",
+      "kind": "sitemap",
+      "path": "methodology/sitemap.xml",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A009",
+      "indexing_intent": "render-resource",
+      "kind": "stylesheet",
+      "path": "css/style.css",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A010",
+      "indexing_intent": "render-resource",
+      "kind": "script",
+      "path": "js/main.js",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A011",
+      "indexing_intent": "render-resource",
+      "kind": "stylesheet",
+      "path": "methodology/methodology.css",
+      "public_status": "public"
+    },
+    {
+      "archive_members": [
+        "starter-kit/",
+        "starter-kit/PRD-template.md",
+        "starter-kit/PLAN-template.md",
+        "starter-kit/TASK-prompt-template.md",
+        "starter-kit/IMPLEMENTATION-checklist.md",
+        "starter-kit/README.md"
+      ],
+      "asset_id": "AAM-A012",
+      "indexing_intent": "download",
+      "kind": "derived-archive",
+      "path": "downloads/starter-kit.zip",
+      "public_status": "public",
+      "source_path": "downloads/starter-kit"
+    },
+    {
+      "asset_id": "AAM-A013",
+      "indexing_intent": "index",
+      "kind": "download-source",
+      "path": "downloads/starter-kit/PRD-template.md",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A014",
+      "indexing_intent": "index",
+      "kind": "download-source",
+      "path": "downloads/starter-kit/PLAN-template.md",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A015",
+      "indexing_intent": "index",
+      "kind": "download-source",
+      "path": "downloads/starter-kit/TASK-prompt-template.md",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A016",
+      "indexing_intent": "index",
+      "kind": "download-source",
+      "path": "downloads/starter-kit/IMPLEMENTATION-checklist.md",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A017",
+      "indexing_intent": "index",
+      "kind": "download-source",
+      "path": "downloads/starter-kit/README.md",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A018",
+      "indexing_intent": "index",
+      "kind": "image",
+      "path": "assets/images/ai-architect-mastery-canva.jpg",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A019",
+      "indexing_intent": "index",
+      "kind": "image",
+      "path": "assets/images/ai_driven_development_methodology.jpg",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A020",
+      "indexing_intent": "render-resource",
+      "kind": "image",
+      "path": "assets/images/backgrounds/kangas-8.jpg",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A021",
+      "indexing_intent": "index",
+      "kind": "image",
+      "path": "assets/images/c008-label.png",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A022",
+      "indexing_intent": "index",
+      "kind": "testimonial-image",
+      "path": "assets/images/c008-testimonial-001.png",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A023",
+      "indexing_intent": "index",
+      "kind": "testimonial-image",
+      "path": "assets/images/c008-testimonial-002.png",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A024",
+      "indexing_intent": "index",
+      "kind": "testimonial-image",
+      "path": "assets/images/c008-testimonial-003.png",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A025",
+      "indexing_intent": "index",
+      "kind": "image",
+      "path": "assets/images/instructor-ari.jpg",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A026",
+      "indexing_intent": "index",
+      "kind": "image",
+      "path": "assets/images/logo.png",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A027",
+      "indexing_intent": "index",
+      "kind": "social-image",
+      "path": "assets/images/methodology-implementation-social.jpg",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A028",
+      "indexing_intent": "index",
+      "kind": "social-image",
+      "path": "assets/images/methodology-plan-social.jpg",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A029",
+      "indexing_intent": "index",
+      "kind": "social-image",
+      "path": "assets/images/methodology-prd-social.jpg",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A030",
+      "indexing_intent": "index",
+      "kind": "social-image",
+      "path": "assets/images/methodology-task-social.jpg",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A032",
+      "indexing_intent": "supporting-asset",
+      "kind": "font",
+      "path": "assets/fonts/lato-v25-latin-400.woff2",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A033",
+      "indexing_intent": "supporting-asset",
+      "kind": "font",
+      "path": "assets/fonts/lato-v25-latin-700.woff2",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A034",
+      "indexing_intent": "supporting-asset",
+      "kind": "font",
+      "path": "assets/fonts/roboto-slab-v36-latin.woff2",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A035",
+      "indexing_intent": "supporting-asset",
+      "kind": "font-license",
+      "path": "assets/fonts/Lato-OFL.txt",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A036",
+      "indexing_intent": "supporting-asset",
+      "kind": "font-license",
+      "path": "assets/fonts/RobotoSlab-LICENSE.txt",
+      "public_status": "public"
+    }
+  ],
+  "contract_kind": "aam-public-check",
+  "entities": [],
+  "exceptions": [],
+  "origin": "https://aiarchitectmastery.com",
+  "pages": [
+    {
+      "concept_ids": [
+        "AAM-C001"
+      ],
+      "content_id": "AAM-P001",
+      "indexing_intent": "index",
+      "journey": "existing-commercial-offers",
+      "modified_at": null,
+      "page_type": "brand-home",
+      "path": "index.html",
+      "preferred_url": "https://aiarchitectmastery.com/",
+      "protected_fragments": [
+        "audience",
+        "contact",
+        "courses",
+        "gh-300",
+        "instructor",
+        "main",
+        "methodology",
+        "primary-nav",
+        "top",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P003",
+          "type": "related"
+        },
+        {
+          "target": "AAM-P010",
+          "type": "related"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C002"
+      ],
+      "content_id": "AAM-P002",
+      "indexing_intent": "index",
+      "journey": "existing-onboarding",
+      "modified_at": null,
+      "page_type": "onboarding",
+      "path": "get-started/index.html",
+      "preferred_url": "https://aiarchitectmastery.com/get-started/",
+      "protected_fragments": [
+        "main",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P001",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C003"
+      ],
+      "content_id": "AAM-P003",
+      "indexing_intent": "index",
+      "journey": "existing-certification-offer",
+      "modified_at": null,
+      "page_type": "certification-hub",
+      "path": "gh-300/index.html",
+      "preferred_url": "https://aiarchitectmastery.com/gh-300/",
+      "protected_fragments": [
+        "main",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P001",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C004"
+      ],
+      "content_id": "AAM-P004",
+      "indexing_intent": "index",
+      "journey": "existing-certification-offer",
+      "modified_at": "2026-05-08",
+      "page_type": "certification-guide",
+      "path": "gh-300/responsible-ai.html",
+      "preferred_url": "https://aiarchitectmastery.com/gh-300/responsible-ai.html",
+      "protected_fragments": [
+        "l01",
+        "l02",
+        "main",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P003",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C005"
+      ],
+      "content_id": "AAM-P005",
+      "indexing_intent": "index",
+      "journey": "existing-certification-offer",
+      "modified_at": "2026-05-08",
+      "page_type": "certification-guide",
+      "path": "gh-300/copilot-features.html",
+      "preferred_url": "https://aiarchitectmastery.com/gh-300/copilot-features.html",
+      "protected_fragments": [
+        "l01",
+        "l02",
+        "l03",
+        "l04",
+        "l05",
+        "main",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P003",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C006"
+      ],
+      "content_id": "AAM-P006",
+      "indexing_intent": "index",
+      "journey": "existing-certification-offer",
+      "modified_at": "2026-05-08",
+      "page_type": "certification-guide",
+      "path": "gh-300/data-and-architecture.html",
+      "preferred_url": "https://aiarchitectmastery.com/gh-300/data-and-architecture.html",
+      "protected_fragments": [
+        "l01",
+        "l02",
+        "main",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P003",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C007"
+      ],
+      "content_id": "AAM-P007",
+      "indexing_intent": "index",
+      "journey": "existing-certification-offer",
+      "modified_at": "2026-05-08",
+      "page_type": "certification-guide",
+      "path": "gh-300/prompt-engineering.html",
+      "preferred_url": "https://aiarchitectmastery.com/gh-300/prompt-engineering.html",
+      "protected_fragments": [
+        "l01",
+        "l02",
+        "l03",
+        "main",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P003",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C008"
+      ],
+      "content_id": "AAM-P008",
+      "indexing_intent": "index",
+      "journey": "existing-certification-offer",
+      "modified_at": null,
+      "page_type": "certification-guide",
+      "path": "gh-300/developer-productivity.html",
+      "preferred_url": "https://aiarchitectmastery.com/gh-300/developer-productivity.html",
+      "protected_fragments": [
+        "l01",
+        "l02",
+        "main",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P003",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C009"
+      ],
+      "content_id": "AAM-P009",
+      "indexing_intent": "index",
+      "journey": "existing-certification-offer",
+      "modified_at": null,
+      "page_type": "certification-guide",
+      "path": "gh-300/privacy-and-safeguards.html",
+      "preferred_url": "https://aiarchitectmastery.com/gh-300/privacy-and-safeguards.html",
+      "protected_fragments": [
+        "l01",
+        "l02",
+        "l03",
+        "main",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P003",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C010"
+      ],
+      "content_id": "AAM-P010",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-overview",
+      "path": "methodology/index.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/",
+      "protected_fragments": [
+        "core",
+        "main",
+        "method",
+        "responsibility"
+      ],
+      "protected_video_ids": [],
+      "relations": []
+    },
+    {
+      "concept_ids": [
+        "AAM-C011"
+      ],
+      "content_id": "AAM-P011",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": null,
+      "page_type": "core-phase",
+      "path": "methodology/prd.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/prd.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [
+        "qJ2m_tF0pRk"
+      ],
+      "relations": [
+        {
+          "target": "AAM-P010",
+          "type": "parent"
+        },
+        {
+          "target": "AAM-P012",
+          "type": "precedes"
+        },
+        {
+          "target": "AAM-P015",
+          "type": "related"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C012"
+      ],
+      "content_id": "AAM-P012",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": null,
+      "page_type": "core-phase",
+      "path": "methodology/plan.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/plan.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [
+        "XkG8_hsnaYA"
+      ],
+      "relations": [
+        {
+          "target": "AAM-P010",
+          "type": "parent"
+        },
+        {
+          "target": "AAM-P013",
+          "type": "precedes"
+        },
+        {
+          "target": "AAM-P025",
+          "type": "related"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C013"
+      ],
+      "content_id": "AAM-P013",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": null,
+      "page_type": "core-phase",
+      "path": "methodology/task.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/task.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [
+        "h99uBn6cdSw"
+      ],
+      "relations": [
+        {
+          "target": "AAM-P010",
+          "type": "parent"
+        },
+        {
+          "target": "AAM-P014",
+          "type": "precedes"
+        },
+        {
+          "target": "AAM-P030",
+          "type": "related"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C014"
+      ],
+      "content_id": "AAM-P014",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": null,
+      "page_type": "core-phase",
+      "path": "methodology/implementation.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/implementation.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [
+        "NuDzn_Osu7c"
+      ],
+      "relations": [
+        {
+          "target": "AAM-P010",
+          "type": "parent"
+        },
+        {
+          "target": "AAM-P022",
+          "type": "related"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C015"
+      ],
+      "content_id": "AAM-P015",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/acceptance-criteria.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/acceptance-criteria.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P011",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C016"
+      ],
+      "content_id": "AAM-P016",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/agent-model.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/agent-model.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P013",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C017"
+      ],
+      "content_id": "AAM-P017",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/autonomy-boundaries.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/autonomy-boundaries.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P013",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C018"
+      ],
+      "content_id": "AAM-P018",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/bugs-and-evidence.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/bugs-and-evidence.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C019"
+      ],
+      "content_id": "AAM-P019",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/context-and-harness.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/context-and-harness.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P010",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C020"
+      ],
+      "content_id": "AAM-P020",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/controlled-iteration.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/controlled-iteration.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        },
+        {
+          "target": "AAM-P026",
+          "type": "related"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C021"
+      ],
+      "content_id": "AAM-P021",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/define-delegate-build-verify.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/define-delegate-build-verify.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P010",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C022"
+      ],
+      "content_id": "AAM-P022",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/implementation-checkpoint.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/implementation-checkpoint.html",
+      "protected_fragments": [
+        "human-judgment",
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C023"
+      ],
+      "content_id": "AAM-P023",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/native-runtime-execution.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/native-runtime-execution.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C024"
+      ],
+      "content_id": "AAM-P024",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/next-bounded-change.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/next-bounded-change.html",
+      "protected_fragments": [
+        "inspect-before-assigning",
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C025"
+      ],
+      "content_id": "AAM-P025",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/plan-review.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/plan-review.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P012",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C026"
+      ],
+      "content_id": "AAM-P026",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/refresh-and-revalidate.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/refresh-and-revalidate.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        },
+        {
+          "target": "AAM-P020",
+          "type": "related"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C027"
+      ],
+      "content_id": "AAM-P027",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/runtime-adaptation.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/runtime-adaptation.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C028"
+      ],
+      "content_id": "AAM-P028",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/scoped-correction.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/scoped-correction.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C029"
+      ],
+      "content_id": "AAM-P029",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/human-led-model.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/human-led-model.html",
+      "protected_fragments": [
+        "human-governance",
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P010",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C030"
+      ],
+      "content_id": "AAM-P030",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/task-handoff.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/task-handoff.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P013",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C031"
+      ],
+      "content_id": "AAM-P031",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/wider-process-context.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/wider-process-context.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P010",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C032"
+      ],
+      "content_id": "AAM-P032",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/work-items.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/work-items.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P013",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C033"
+      ],
+      "content_id": "AAM-P033",
+      "indexing_intent": "index",
+      "journey": "reference-only",
+      "modified_at": "2026-10-03",
+      "page_type": "methodology-reference",
+      "path": "methodology/work-types.html",
+      "preferred_url": "https://aiarchitectmastery.com/methodology/work-types.html",
+      "protected_fragments": [
+        "main"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P014",
+          "type": "parent"
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "core_videos": {
+      "methodology/implementation.html": "NuDzn_Osu7c",
+      "methodology/plan.html": "XkG8_hsnaYA",
+      "methodology/prd.html": "qJ2m_tF0pRk",
+      "methodology/task.html": "h99uBn6cdSw"
+    },
+    "protected_primary_paths": [
+      "methodology/index.html",
+      "methodology/prd.html",
+      "methodology/plan.html",
+      "methodology/task.html",
+      "methodology/implementation.html"
+    ],
+    "sitemaps": [
+      "sitemap.xml",
+      "methodology/sitemap.xml"
+    ]
+  },
+  "schema_version": 1
+}

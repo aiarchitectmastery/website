@@ -57,12 +57,6 @@ article { max-width: 51rem; margin: auto; }
 .eyebrow { font-size: .875rem; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; }
 .lead { font-size: 1.2rem; max-width: 65ch; }
 .meta { font-size: .9rem; }
-.model-level { border-left: 3px solid var(--color-brand); padding-left: 1.25rem; margin: 1.5rem 0; }
-.model-level h3 { margin-top: .5rem; }
-.framework-map { border-left: 3px solid var(--color-border); padding-left: 1.25rem; }
-summary { min-height: 44px; padding-block: .5rem; cursor: pointer; font-weight: 700; }
-details[open] > summary { margin-bottom: .75rem; }
-.terminology { margin-top: 2rem; border-top: 1px solid var(--color-border); padding-top: 1rem; }
 .methodology-video {
   display: block;
   width: 100%;
@@ -83,9 +77,20 @@ details[open] > summary { margin-bottom: .75rem; }
 .card h2, .card h3 { margin-top: 0; }
 .card ul { padding-left: 1.25rem; }
 .card li a, .related a, dt a { display: inline-block; padding-block: .5rem; }
-.flow { display: flex; flex-wrap: wrap; gap: .75rem; padding: 0; list-style: none; }
-.flow li { margin: 0; flex: 1 1 10rem; }
-.flow a { display: block; border: 1px solid var(--color-border); border-radius: .4rem; padding: .9rem 1rem; font-weight: 700; }
+.flow { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding: 0; list-style: none; }
+.flow li { position: relative; margin: 0; min-width: 0; }
+.flow li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -1.1rem;
+  left: calc(50% - .25rem);
+  width: .5rem;
+  height: .5rem;
+  border-right: 2px solid var(--color-brand);
+  border-bottom: 2px solid var(--color-brand);
+  transform: rotate(45deg);
+}
+.flow a { display: block; height: 100%; min-height: 44px; border: 1px solid var(--color-border); border-radius: .4rem; padding: .9rem 1rem; font-weight: 700; }
 .flow span { display: block; font-size: .9rem; font-weight: 400; }
 .next { border-top: 1px solid var(--color-border); margin-top: 2rem; padding-top: 1rem; }
 dt { font-weight: 700; }
@@ -93,6 +98,7 @@ dd { margin: 0 0 1rem; }
 code { font-size: .95em; }
 footer { border-top: 1px solid var(--color-border); font-size: .9rem; }
 footer p { margin: .4rem 0; }
+footer a { display: inline-flex; min-height: 44px; align-items: center; }
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -105,6 +111,16 @@ footer p { margin: .4rem 0; }
 @media (min-width: 768px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .card { padding: 1.5rem; }
+}
+@media (min-width: 1025px) {
+  .flow { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .flow li:not(:last-child)::after {
+    bottom: auto;
+    top: calc(50% - .25rem);
+    left: auto;
+    right: -1.05rem;
+    transform: rotate(-45deg);
+  }
 }
 @media print {
   body { background: var(--color-card-bg); }

@@ -17,14 +17,14 @@
   <meta name="twitter:description" content="Phase 2 of the Core: implementation order, requirement coverage and meaningful checkpoints.">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Article","headline":"PLAN: turn intent into structured work","description":"Turn an approved PRD into dependency-aware implementation steps and checkpoints.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/plan.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"Article","headline":"PLAN: turn intent into structured work","description":"Turn an approved PRD into dependency-aware implementation steps and checkpoints.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/plan.html","inLanguage":"en","author":{"@type":"Organization","@id":"https://aiarchitectmastery.com/#organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"PLAN","item":"https://aiarchitectmastery.com/methodology/plan.html"}]}
   ]}
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="prd.html">PRD</a><a href="plan.html" aria-current="page">PLAN</a><a href="task.html">TASK</a><a href="implementation.html">IMPLEMENTATION</a></nav></header>
   <main id="main" tabindex="-1">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><span aria-current="page">PLAN</span></nav>
     <article>
@@ -32,7 +32,7 @@
       <h1>PLAN: turn intent into structured work</h1>
       <p class="lead">A PLAN turns an approved PRD into a dependency-aware, reviewable implementation approach with explicit completion conditions and checkpoints. It explains what should happen in what order before the work is delegated to agents.</p>
       <p>PLAN is the second Core phase of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>. It connects <a href="prd.html">approved intent</a> to bounded <a href="task.html">TASKs</a>.</p>
-      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §4.2 · Owner: AI Architect Mastery</p>
+      <p class="meta">Content baseline <time datetime="2026-10-03">3 October 2026</time> · Source: AAM Methodology v1.2, §4.2 · Owner: AI Architect Mastery</p>
       <iframe class="methodology-video"
         src="https://www.youtube-nocookie.com/embed/XkG8_hsnaYA"
         title="PLAN — Turn Intent Into a Structured Implementation Plan"
@@ -50,15 +50,21 @@
       <section class="example">
         <h2>Constructed example: sequence an authorization change</h2>
         <p>The approved PRD requires owner-only export. The PLAN identifies the existing authorization helper, sequences the scoped handler change and specifies allowed/denied request checks plus output-format regression evidence. It does not bundle an unrelated reporting rewrite into the first step.</p>
+        <ol>
+          <li><strong>P1, confirm the approach:</strong> against example PRD E1, locate the helper and single-owner policy. Completion requires a supported owner/denial path; missing support blocks P2.</li>
+          <li><strong>P2, make the bounded change:</strong> update the handler and its tests together. Completion requires owner-success, non-owner-no-data and unchanged-format evidence for the same revision.</li>
+          <li><strong>P3, human checkpoint:</strong> evaluate the diff, results and limitations before acceptance; passing one request is insufficient.</li>
+        </ol>
+        <p><strong>Illustrative decision and artifact:</strong> approve example PLAN E2 because P1 gates P2 and verification accompanies the change, not a later optional task. Revise E2 if helper reuse cannot meet E1. These are constructed plan entries and decisions, not claims of executed work.</p>
       </section>
       <h2>Planning is not a guarantee</h2>
-      <p>Implementation can reveal that the approach cannot satisfy an approved constraint. Use a <a href="controlled-iteration.html">controlled return to PLAN</a>, revise the approach and refresh dependent TASKs. Do not let an obsolete plan justify unapproved agent improvisation.</p>
+      <p>Implementation can reveal that the approach cannot satisfy an approved constraint. The human directs a <a href="controlled-iteration.html">controlled return to PLAN</a>, reviews the revised approach and refreshes dependent TASKs and verification. Revalidate the affected behavior before acceptance. Do not let an obsolete plan justify unapproved agent improvisation.</p>
       <h2>Related concepts</h2>
       <ul class="related"><li><a href="plan-review.html">Plan review</a> establishes readiness for delegation.</li><li><a href="acceptance-criteria.html">Acceptance criteria</a> anchor the completion conditions.</li><li><a href="task-handoff.html">Task handoff</a> carries one approved step into execution.</li><li><a href="refresh-and-revalidate.html">Refresh and revalidate</a> updates downstream work when the approach changes.</li></ul>
       <p><a href="https://www.youtube.com/watch?v=XkG8_hsnaYA">Watch the PLAN methodology overview on YouTube</a> (optional video; this text is the current reference).</p>
       <nav class="next" aria-label="Core workflow navigation"><a href="prd.html">← 01 · PRD</a><a href="task.html">Next: 03 · TASK →</a></nav>
     </article>
   </main>
-  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p><p>Terminology note: Structured Vibe Coding has been used as an alternative term for this approach.</p></footer>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
 </body>
 </html>

@@ -1,0 +1,331 @@
+{
+  "files": [
+    {
+      "bytes": 23,
+      "path": "CNAME",
+      "sha256": "488c1a543819c13d2d32ace99eb4fc424f85961e2c0e71085cb48bed541bba2f"
+    },
+    {
+      "bytes": 4407,
+      "path": "assets/fonts/Lato-OFL.txt",
+      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
+      "bytes": 11358,
+      "path": "assets/fonts/RobotoSlab-LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "bytes": 13980,
+      "path": "assets/fonts/lato-v25-latin-400.woff2",
+      "sha256": "d4ae5188a65370ecfe28f42293bbee8297cfd5712c6aadfdb270d48f2bcd88b0"
+    },
+    {
+      "bytes": 14168,
+      "path": "assets/fonts/lato-v25-latin-700.woff2",
+      "sha256": "7a7ce1a34f3e9944fe88fc61abbc93b6db383afa2b90815fd7ccea456fbce4e5"
+    },
+    {
+      "bytes": 34160,
+      "path": "assets/fonts/roboto-slab-v36-latin.woff2",
+      "sha256": "317b2dafcfcd18ae868e7cb3c5a33a323999bc4c3c400e237801efc2a3a74aac"
+    },
+    {
+      "bytes": 74709,
+      "path": "assets/images/ai-architect-mastery-canva.jpg",
+      "sha256": "0cb019fc5727b1b63b9ee04aff4e3c265af0b4e58c2b74586447a1ebf49d5025"
+    },
+    {
+      "bytes": 99527,
+      "path": "assets/images/ai_driven_development_methodology.jpg",
+      "sha256": "f66d4fb2b67cac0aed165fd83ceb46958505ef83078308a30017581230416791"
+    },
+    {
+      "bytes": 68188,
+      "path": "assets/images/backgrounds/kangas-8.jpg",
+      "sha256": "9f35a4fa2d5dff9f59e9dc5c3e463dd41fd344b0bc37e21f3fcc5fcb7cc1c64b"
+    },
+    {
+      "bytes": 887317,
+      "path": "assets/images/c008-label.png",
+      "sha256": "cd9f5b2f60e89678fb27eea02b661da225310128aee3ee94279a7e3d5c71b3f1"
+    },
+    {
+      "bytes": 1128220,
+      "path": "assets/images/c008-testimonial-001.png",
+      "sha256": "3415f68c2d6521034ae99a1908779994e399beae4a9c686817e26b82e01024ee"
+    },
+    {
+      "bytes": 858496,
+      "path": "assets/images/c008-testimonial-002.png",
+      "sha256": "c0b147260f7e2351c33027fef4eb9a83594c7eed549ba83dfc7337d8cfbeb913"
+    },
+    {
+      "bytes": 666847,
+      "path": "assets/images/c008-testimonial-003.png",
+      "sha256": "a75bbdc3ab97ecf4c03d372fd01e168567f7df2b9a708b6643a49f320bf24eab"
+    },
+    {
+      "bytes": 185458,
+      "path": "assets/images/instructor-ari.jpg",
+      "sha256": "500136397cdd0a6d339bf8c1e56c34a72697a5d1c31732ba074d270f81d3f473"
+    },
+    {
+      "bytes": 24470,
+      "path": "assets/images/logo.png",
+      "sha256": "6c7aba461c147b724479a6c2d33c10ca22aff2d2d2d76baade8098c9d7a8f067"
+    },
+    {
+      "bytes": 181808,
+      "path": "assets/images/methodology-implementation-social.jpg",
+      "sha256": "2c855ff41926db3bdb3699d2e62b08d1055cc21a39d77b3921beaf14b54fce7f"
+    },
+    {
+      "bytes": 179347,
+      "path": "assets/images/methodology-plan-social.jpg",
+      "sha256": "44ff561dbed9c21f8fcd8f09c5101fb34fa1ea5409a3cd14b2e4d490c30161a7"
+    },
+    {
+      "bytes": 177411,
+      "path": "assets/images/methodology-prd-social.jpg",
+      "sha256": "3a58c39d28c030ff4d424f544634f09348a74130b95d2cf3fc5895a41ef0f26c"
+    },
+    {
+      "bytes": 173584,
+      "path": "assets/images/methodology-task-social.jpg",
+      "sha256": "e81d5b5836fc69a37b9ac0265edd19942b365b5b82efd700cde0ce03acdf33aa"
+    },
+    {
+      "bytes": 25385,
+      "path": "css/style.css",
+      "sha256": "c4ae8fd9aa502f356ce261a05b9c67bd3f975c2119cbf527dee033b5d3aa0dd9"
+    },
+    {
+      "bytes": 8707,
+      "path": "downloads/starter-kit.zip",
+      "sha256": "1671833de52aee8b2c93ba4d513e253234f99cb11440db72718d56d688725460"
+    },
+    {
+      "bytes": 3148,
+      "path": "downloads/starter-kit/IMPLEMENTATION-checklist.md",
+      "sha256": "eceee9e6efbdd18d9f113ed7e066b126fb86fe46ef8945e55e17903aee230dad"
+    },
+    {
+      "bytes": 2325,
+      "path": "downloads/starter-kit/PLAN-template.md",
+      "sha256": "52dd9a4728da721695affc0f8c4c4d779bce1ee268cdfef34c7b7d2c76399a6a"
+    },
+    {
+      "bytes": 2433,
+      "path": "downloads/starter-kit/PRD-template.md",
+      "sha256": "1b4b3bfa812dad1625784ee9f2696a8c64ca824da1750b8e47d972f0c48ba285"
+    },
+    {
+      "bytes": 3550,
+      "path": "downloads/starter-kit/README.md",
+      "sha256": "ee1abd0aa7e271a755ceea39a6de217cb8ece057e241488b85cd1df299487061"
+    },
+    {
+      "bytes": 5577,
+      "path": "downloads/starter-kit/TASK-prompt-template.md",
+      "sha256": "8f2a4ae10ac461034ccf2ad59cf481062c1d0c6325543232e25ef5e7ab1ca45c"
+    },
+    {
+      "bytes": 12427,
+      "path": "get-started/index.html",
+      "sha256": "3f892f5671ea3e7a1583da04d693def7e257631010ec085f0c129bc0f2077bdc"
+    },
+    {
+      "bytes": 24095,
+      "path": "gh-300/copilot-features.html",
+      "sha256": "e8224daa2bfcc021f5c13861abeeda240b52ddf40d28cc1517242bc78a4c9275"
+    },
+    {
+      "bytes": 13787,
+      "path": "gh-300/data-and-architecture.html",
+      "sha256": "be7c033bf7b990d7e173d132b6b6db67e5c07f311859cec5f49c52ff3275da9a"
+    },
+    {
+      "bytes": 13654,
+      "path": "gh-300/developer-productivity.html",
+      "sha256": "a46b8f48da7891931f4d494e52052b65a73e29fe73e3037abcf2c1589a0a241b"
+    },
+    {
+      "bytes": 16540,
+      "path": "gh-300/index.html",
+      "sha256": "6afeb6bff2da9ce95e94d16894360b31fb920e4da69eaa19cfcc6d7d9a788f64"
+    },
+    {
+      "bytes": 15013,
+      "path": "gh-300/privacy-and-safeguards.html",
+      "sha256": "8bc01f6319f21a416fe2eabd9d4a86102c1534b4ecb7db1909887fe0d8fb65f3"
+    },
+    {
+      "bytes": 13463,
+      "path": "gh-300/prompt-engineering.html",
+      "sha256": "a929bb6f3d701d1c74ff677c1fc3a67174922382defe37b97916f1dcd8bdc8f1"
+    },
+    {
+      "bytes": 17905,
+      "path": "gh-300/responsible-ai.html",
+      "sha256": "699e318c45868d6784e675838dab4ee785c24c142122293fdf8267cec356e11a"
+    },
+    {
+      "bytes": 25433,
+      "path": "index.html",
+      "sha256": "a8ff6fd002dcf5deeb36faa6302ea9c50e6091dff4de1b2604eb261232303acb"
+    },
+    {
+      "bytes": 5991,
+      "path": "js/main.js",
+      "sha256": "a4837a1ef04eeef940ae26711b2428422c50d65e303190cdcc8c400390236387"
+    },
+    {
+      "bytes": 3110,
+      "path": "llms.txt",
+      "sha256": "9bf5115d2b5bf2013c446494c1839b8d60a84c77dda331dad924672ba6c6579b"
+    },
+    {
+      "bytes": 5877,
+      "path": "methodology/acceptance-criteria.html",
+      "sha256": "b5c9598b1ae4400a686ef168e158281707d04a94ae056da2874a710e6a7352ca"
+    },
+    {
+      "bytes": 6019,
+      "path": "methodology/agent-model.html",
+      "sha256": "7f1a6f316c735acc77808071b7b7eceb6c1450af9dc65b3d69ea2f6e34b67cc4"
+    },
+    {
+      "bytes": 5866,
+      "path": "methodology/autonomy-boundaries.html",
+      "sha256": "63246ab29c02796654e2704c50caf6584f12aab7b397488cbed10e3a1465b58d"
+    },
+    {
+      "bytes": 6227,
+      "path": "methodology/bugs-and-evidence.html",
+      "sha256": "fbbb1c5b9d2024dc260cf8c11beb014e76ea774cd6b2d7a8be995790eb86803f"
+    },
+    {
+      "bytes": 6040,
+      "path": "methodology/context-and-harness.html",
+      "sha256": "44d22f9ee8c4f08fc010ec5b331fa18754eb3929702d166affe45f46c1c73af6"
+    },
+    {
+      "bytes": 6419,
+      "path": "methodology/controlled-iteration.html",
+      "sha256": "3999460509090e9d393885b363144b6efe8acca650803a6350c44eaa5e268f3d"
+    },
+    {
+      "bytes": 5997,
+      "path": "methodology/define-delegate-build-verify.html",
+      "sha256": "670cfccd360262916fb5e486fb31a443b59b373383a8512acd5de78b52c6befa"
+    },
+    {
+      "bytes": 6622,
+      "path": "methodology/human-led-model.html",
+      "sha256": "8a8a0ee77c1d1cf9d7d28dc00882df82a27c855591a545d65b4fa62e59285625"
+    },
+    {
+      "bytes": 6754,
+      "path": "methodology/implementation-checkpoint.html",
+      "sha256": "3938b1180c4dce860035f579b098868560cb0028576a20f8f5e3ea20f0022d3b"
+    },
+    {
+      "bytes": 10023,
+      "path": "methodology/implementation.html",
+      "sha256": "e84cd686d76c29bd4e894263f6ba950d394bfb5ae417aae3de1158dc54632072"
+    },
+    {
+      "bytes": 4944,
+      "path": "methodology/index.html",
+      "sha256": "537975d303c8e2ce2b0c01eb340a5f3953197b64d1dd78b81c169f346a7352dd"
+    },
+    {
+      "bytes": 4989,
+      "path": "methodology/methodology.css",
+      "sha256": "49d1efcfb822fb33b24338181c3f5f21a70786269f0b5620282e95d41d89b8e0"
+    },
+    {
+      "bytes": 6146,
+      "path": "methodology/native-runtime-execution.html",
+      "sha256": "7c4241c5dc374736b58a3c5ca32a0c4cfe244ddbf217c98b4437d0e6c8a94126"
+    },
+    {
+      "bytes": 6281,
+      "path": "methodology/next-bounded-change.html",
+      "sha256": "c532331c4df92910425c93a339e3cae47ad38c6c84cb5b53a1e92c748541b3e2"
+    },
+    {
+      "bytes": 5829,
+      "path": "methodology/plan-review.html",
+      "sha256": "f79b4790f40714faeca98ee6a57595bd6388c995d95e00bf22bbfa0328c9b95a"
+    },
+    {
+      "bytes": 7818,
+      "path": "methodology/plan.html",
+      "sha256": "62f8291198409d0819f2ce20878c2157533c802272da13445d7688b32ae2c068"
+    },
+    {
+      "bytes": 7319,
+      "path": "methodology/prd.html",
+      "sha256": "bf2d5587bea2e18183fd59653d13db7e68909a880642803ff69e541948c29f2b"
+    },
+    {
+      "bytes": 6134,
+      "path": "methodology/refresh-and-revalidate.html",
+      "sha256": "ccb663a27cda11d24f9add354f94399e2068100beadc92219e3b4e0d608d8dc2"
+    },
+    {
+      "bytes": 6685,
+      "path": "methodology/runtime-adaptation.html",
+      "sha256": "9224bbf7372b72fd2949cee304cdcaf07e6e6fae65d1c6fb65eec73097717eda"
+    },
+    {
+      "bytes": 5919,
+      "path": "methodology/scoped-correction.html",
+      "sha256": "ec15858edd48387463b12452d1e08fb04169480d02255aadc7edf4a96e9589b8"
+    },
+    {
+      "bytes": 2799,
+      "path": "methodology/sitemap.xml",
+      "sha256": "0e5de57d85e77533e5b1e5ed05d7cde9189b65232355cfdf5a976801135f82e5"
+    },
+    {
+      "bytes": 5912,
+      "path": "methodology/task-handoff.html",
+      "sha256": "0a0055e457a2e34cc3d2944a9624c93c63ea63f198343a7a81843f10e6db0a6f"
+    },
+    {
+      "bytes": 7435,
+      "path": "methodology/task.html",
+      "sha256": "a812cb79822a19ed69297a45800c2ab18d645974d9dc0a22ba06105aba033196"
+    },
+    {
+      "bytes": 6943,
+      "path": "methodology/wider-process-context.html",
+      "sha256": "8bbcf054148438fae3c415d1b4b1c8e22f84e8aed6599f58d303204d792d59db"
+    },
+    {
+      "bytes": 5622,
+      "path": "methodology/work-items.html",
+      "sha256": "8a5c25ea1852b2df733d9fe6e4dc0a2729617e0f7b36ea5568927fe186c5ebef"
+    },
+    {
+      "bytes": 6016,
+      "path": "methodology/work-types.html",
+      "sha256": "99fa3b0118811be6eb719d90926da4e2dab917d518776507a7229a962e74b8aa"
+    },
+    {
+      "bytes": 341,
+      "path": "robots.txt",
+      "sha256": "995c756df17615582ae0389eb777b093b0a447a1493ed2819e2565ad04f32101"
+    },
+    {
+      "bytes": 2166,
+      "path": "sitemap.xml",
+      "sha256": "ba85a5096f594129f1386fb80ff4608ba06d7ee513239e45425fa1e9be9631fc"
+    }
+  ],
+  "schema_version": 1,
+  "sha256": "a0732e9b046b33453139870659c81e24be08d1f421ec3602b3806ee23e80b142"
+}

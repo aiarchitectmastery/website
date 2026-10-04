@@ -17,22 +17,22 @@
   <meta name="twitter:description" content="Phase 3 of the Core: an approved plan step becomes one reviewable assignment.">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Article","headline":"TASK: delegate bounded agent work","description":"A bounded Work Item for known work derived from an approved PLAN.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/task.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"Article","headline":"TASK: delegate bounded agent work","description":"A bounded assignment for known work derived from an approved PLAN, with context, scope, criteria and expected evidence.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/task.html","inLanguage":"en","author":{"@type":"Organization","@id":"https://aiarchitectmastery.com/#organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"TASK","item":"https://aiarchitectmastery.com/methodology/task.html"}]}
   ]}
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="prd.html">PRD</a><a href="plan.html">PLAN</a><a href="task.html" aria-current="page">TASK</a><a href="implementation.html">IMPLEMENTATION</a></nav></header>
   <main id="main" tabindex="-1">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><span aria-current="page">TASK</span></nav>
     <article>
       <span class="eyebrow">Core phase 03 / 04</span>
       <h1>TASK: delegate bounded agent work</h1>
-      <p class="lead">A TASK is a bounded Work Item for known, defined work, derived from an approved PLAN and assigned with relevant context, scope, acceptance criteria and expected evidence. It gives an agent one reviewable responsibility instead of an open-ended instruction to build a feature.</p>
+      <p class="lead">A TASK is a bounded assignment for known, defined work, derived from an approved PLAN and assigned with relevant context, scope, acceptance criteria and expected evidence. It gives an agent one reviewable responsibility instead of an open-ended instruction to build a feature.</p>
       <p>TASK is the third Core phase of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>. It connects the <a href="plan.html">approved approach</a> to <a href="implementation.html">bounded execution and verification</a>.</p>
-      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §§4.3, 6 · Owner: AI Architect Mastery</p>
+      <p class="meta">Content baseline <time datetime="2026-10-03">3 October 2026</time> · Source: AAM Methodology v1.2, §§4.3, 6 · Owner: AI Architect Mastery</p>
       <iframe class="methodology-video"
         src="https://www.youtube-nocookie.com/embed/h99uBn6cdSw"
         title="TASK — Direct Agents Through Scoped, Reviewable Work"
@@ -43,22 +43,24 @@
       <p>Broad instructions make multi-file or multi-agent work difficult to review. One agent can change a contract while another still assumes the old behavior. A tightly scoped TASK makes the expected contract, permitted change and review boundary visible.</p>
       <p>The goal is not simply a smaller prompt. It is enough context that the agent does not have to guess and enough constraint that it cannot quietly expand its own scope.</p>
       <h2>What a working TASK establishes</h2>
-      <ul><li>The applicable approved PLAN step.</li><li>Relevant files, interfaces, context and constraints.</li><li>Expected outputs and acceptance criteria.</li><li>Permitted scope, tools and <a href="autonomy-boundaries.html">autonomy boundary</a>.</li><li>The evidence needed to verify the result and support human review.</li></ul>
+      <ul><li>The applicable approved PLAN step.</li><li>Relevant files, interfaces, context and constraints.</li><li>Expected outputs and acceptance criteria.</li><li>Permitted scope and tools, plus an autonomy boundary: what the agent may decide and when it must stop or ask the human.</li><li>The evidence needed to verify the result and support human review.</li></ul>
       <h2>Inputs, output and responsibility</h2>
       <p><strong>Input:</strong> one approved plan step and the context needed for it. <strong>Output:</strong> an authorized, bounded assignment. <strong>Owner:</strong> the human directs delegation and acceptance; the agent performs the assigned responsibility.</p>
-      <p>The <a href="task-handoff.html">handoff</a> must make the current assignment explicit rather than relying on conversational memory. A TASK is also one of the sibling <a href="work-types.html">Work Types</a>, alongside BUG and PROB; it is not the name for every kind of actionable work.</p>
+      <p>The <a href="task-handoff.html">handoff</a> must make the current approved assignment explicit rather than relying on conversational memory. Confirm the relevant context, tools and permissions before execution; a written instruction cannot supply a missing verification environment.</p>
       <section class="example">
         <h2>Constructed TASK: one export correction</h2>
         <p>Apply the approved owner-only rule to the existing export handler using the established authorization helper. Preserve the public response format. Include owner-success, non-owner-denial and format regression evidence. Stop if the ownership policy or helper cannot support the agreed rule.</p>
+        <p><strong>Example handoff E3:</strong> the illustrative human owner authorizes only P2 of approved example PLAN E2, based on PRD E1, after P1 confirms helper support. Edit only the handler and its directly related tests; do not change the shared-record policy or reporting architecture.</p>
+        <p><strong>Required return:</strong> identify the revision, supply the diff and each actual check result with its environment, and list failures, unexecuted checks and limitations. Missing permissions or a test environment require a stop and report. This constructed authorization permits bounded implementation, not merge or deployment.</p>
       </section>
       <h2>When the assignment is insufficient</h2>
       <p>If relevant context, permitted scope or verification is missing, return the assignment for clarification. A valid PRD and PLAN do not excuse an agent from working against an inadequate TASK. Refresh the handoff before continuing.</p>
       <h2>Related concepts</h2>
-      <ul class="related"><li><a href="work-items.html">Work Item</a> is the broader actionable-artifact category.</li><li><a href="agent-model.html">Agent Model</a> separates the assigned responsibility from tools and capabilities.</li><li><a href="autonomy-boundaries.html">Autonomy boundaries</a> establish when the agent must stop.</li><li><a href="task-handoff.html">Task handoff</a> makes authorization and evidence requirements explicit.</li></ul>
+      <ul class="related"><li><a href="autonomy-boundaries.html">Autonomy boundaries</a> establish when the agent must stop.</li><li><a href="task-handoff.html">Task handoff</a> makes authorization and evidence requirements explicit.</li></ul>
       <p><a href="https://www.youtube.com/watch?v=h99uBn6cdSw">Watch the TASK methodology overview on YouTube</a> (optional video; this text is the current reference).</p>
       <nav class="next" aria-label="Core workflow navigation"><a href="plan.html">← 02 · PLAN</a><a href="implementation.html">Next: 04 · IMPLEMENTATION →</a></nav>
     </article>
   </main>
-  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p><p>Terminology note: Structured Vibe Coding has been used as an alternative term for this approach.</p></footer>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
 </body>
 </html>

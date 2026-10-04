@@ -17,14 +17,14 @@
   <meta name="twitter:description" content="Phase 1 of the four-phase Core: define the intended outcome without leaving critical gaps to the agent.">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Article","headline":"PRD: capture intent before code","description":"The PRD records intent, scope, constraints, non-goals and acceptance criteria.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/prd.html","dateModified":"2026-10-02","inLanguage":"en","author":{"@type":"Organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
+    {"@type":"Article","headline":"PRD: capture intent before code","description":"The PRD records intent, scope, constraints, non-goals and acceptance criteria.","mainEntityOfPage":"https://aiarchitectmastery.com/methodology/prd.html","inLanguage":"en","author":{"@type":"Organization","@id":"https://aiarchitectmastery.com/#organization","name":"AI Architect Mastery"},"isPartOf":{"@id":"https://aiarchitectmastery.com/methodology/"}},
     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Methodology","item":"https://aiarchitectmastery.com/methodology/"},{"@type":"ListItem","position":2,"name":"PRD","item":"https://aiarchitectmastery.com/methodology/prd.html"}]}
   ]}
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="./#core">Core workflow</a><a href="./#concept-map">Concept map</a><a href="./#terminology">Terminology</a></nav></header>
+  <header><a class="brand" href="./">AI Architect Mastery</a><nav class="site-nav" aria-label="Methodology navigation"><a href="./">Overview</a><a href="prd.html" aria-current="page">PRD</a><a href="plan.html">PLAN</a><a href="task.html">TASK</a><a href="implementation.html">IMPLEMENTATION</a></nav></header>
   <main id="main" tabindex="-1">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Methodology</a><span aria-hidden="true">/</span><span aria-current="page">PRD</span></nav>
     <article>
@@ -32,7 +32,7 @@
       <h1>PRD: capture intent before code</h1>
       <p class="lead">A PRD (Product Requirements Document) records the intended outcome, scope, constraints, non-goals and acceptance criteria so an agent does not invent the meaning of done. It is the smallest durable statement of intent that prevents critical gaps from becoming implementation assumptions.</p>
       <p>PRD is the first Core phase of AI Architect Mastery's <a href="./">AI Driven Development Methodology</a>. Approved intent feeds the <a href="plan.html">PLAN</a>, then bounded TASKs and evidenced IMPLEMENTATION.</p>
-      <p class="meta">Updated <time datetime="2026-10-02">2 October 2026</time> · Source: AAM Methodology v1.1, §4.1 · Owner: AI Architect Mastery</p>
+      <p class="meta">Content baseline <time datetime="2026-10-03">3 October 2026</time> · Source: AAM Methodology v1.2, §4.1 · Owner: AI Architect Mastery</p>
       <iframe class="methodology-video"
         src="https://www.youtube-nocookie.com/embed/qJ2m_tF0pRk"
         title="PRD — Capture Intent Before Any AI Agent Runs"
@@ -50,15 +50,16 @@
       <section class="example">
         <h2>Constructed example: owner-only export</h2>
         <p><strong>Outcome:</strong> only the record owner may export through the existing interface. <strong>Non-goal:</strong> redesigning report formatting. <strong>Constraints:</strong> use the existing authorization conventions. <strong>Acceptance:</strong> owners can export, non-owners receive no record contents and the successful output format remains unchanged.</p>
+        <p><strong>Illustrative human decision:</strong> approve example PRD E1 for ordinary, single-owner records because the outcome and denial criteria are explicit. Shared-record policy remains an open question, not an implied permission. <strong>Resulting artifact:</strong> E1 records that scope and those three acceptance criteria; encountering shared records requires a return to the human before that scope can expand. This is a constructed decision, not a real project approval.</p>
       </section>
       <h2>What if intent is incomplete?</h2>
       <p>If shared-record ownership is undefined, record the uncertainty instead of authorizing an invented policy. During later work, the same finding may require a <a href="controlled-iteration.html">controlled return to PRD</a> and a refresh of affected plans and assignments.</p>
       <h2>Related concepts</h2>
-      <ul class="related"><li><a href="acceptance-criteria.html">Acceptance criteria</a> make this artifact testable.</li><li><a href="human-led-model.html">Human-led model</a> establishes who owns intent.</li><li><a href="plan.html">PLAN</a> turns approved requirements into an implementation approach.</li><li><a href="wider-process-context.html">Wider process context</a> explains optional exploration before PRD.</li></ul>
+      <ul class="related"><li><a href="acceptance-criteria.html">Acceptance criteria</a> make this artifact testable.</li><li><a href="plan.html">PLAN</a> turns approved requirements into an implementation approach.</li></ul>
       <p><a href="https://www.youtube.com/watch?v=qJ2m_tF0pRk">Watch the PRD methodology overview on YouTube</a> (optional video; this text is the current reference).</p>
       <nav class="next" aria-label="Core workflow navigation"><a href="./#core">← Core overview</a><a href="plan.html">Next: 02 · PLAN →</a></nav>
     </article>
   </main>
-  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p><p>Terminology note: Structured Vibe Coding has been used as an alternative term for this approach.</p></footer>
+  <footer><p>AI Architect Mastery · Methodology reference · <a href="./">Reference overview</a></p></footer>
 </body>
 </html>
