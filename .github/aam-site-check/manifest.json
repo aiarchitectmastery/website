@@ -196,9 +196,9 @@
       "sha256": "a4837a1ef04eeef940ae26711b2428422c50d65e303190cdcc8c400390236387"
     },
     {
-      "bytes": 3110,
+      "bytes": 3199,
       "path": "llms.txt",
-      "sha256": "9bf5115d2b5bf2013c446494c1839b8d60a84c77dda331dad924672ba6c6579b"
+      "sha256": "93077b12289167002ae70348af51cd8529ebf6e26d19459c7f2aadf32f4b4021"
     },
     {
       "bytes": 5877,
@@ -342,5 +342,5 @@
     }
   ],
   "schema_version": 1,
-  "sha256": "db416e9b3448e8b4c1bac54ba7b1b4e9f5881a28626dd642b1b3873f696384e7"
+  "sha256": "200d1bd49e547538b5e24965cb928e4e43ec1f8f3244710c5654d405ce917460"
 }

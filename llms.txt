@@ -16,7 +16,7 @@ The methodology pages are reference-only: no course enrollment is required.
 
 ## Starter Kit and Courses
 
-- [Workflow Starter Kit](https://aiarchitectmastery.com/get-started/): Four free downloadable resources for PRD, PLAN, TASK and IMPLEMENTATION; no signup required.
+- [Workflow Starter Kit](https://aiarchitectmastery.com/get-started/): Seven free downloadable resources: PRD, PLAN, TASK and IMPLEMENTATION templates, bounded task context, fresh-session handoff and Copilot guidance review prompts; no signup required.
 - [Current course information](https://aiarchitectmastery.com/#courses): The site lists GitHub Copilot GH-300 preparation with a Udemy link. Check the linked provider for current availability and pricing. Mastering AI Driven Development is marked coming soon, not available for enrollment.
 
 ## GH-300 Certification Documentation
