@@ -101,9 +101,9 @@
       "sha256": "c4ae8fd9aa502f356ce261a05b9c67bd3f975c2119cbf527dee033b5d3aa0dd9"
     },
     {
-      "bytes": 8707,
+      "bytes": 14414,
       "path": "downloads/starter-kit.zip",
-      "sha256": "1671833de52aee8b2c93ba4d513e253234f99cb11440db72718d56d688725460"
+      "sha256": "225a4a6d73c49b28e33006afbb01712a817e8cace05bf2dc3de1bb3e6e7303a6"
     },
     {
       "bytes": 3148,
@@ -121,9 +121,9 @@
       "sha256": "1b4b3bfa812dad1625784ee9f2696a8c64ca824da1750b8e47d972f0c48ba285"
     },
     {
-      "bytes": 3550,
+      "bytes": 6167,
       "path": "downloads/starter-kit/README.md",
-      "sha256": "ee1abd0aa7e271a755ceea39a6de217cb8ece057e241488b85cd1df299487061"
+      "sha256": "3bdae0800e4e43f5f7e4ca75f9cc83adaaf36aced7869e028ec6ce213650eade"
     },
     {
       "bytes": 5577,
@@ -131,9 +131,24 @@
       "sha256": "8f2a4ae10ac461034ccf2ad59cf481062c1d0c6325543232e25ef5e7ab1ca45c"
     },
     {
-      "bytes": 12427,
+      "bytes": 7268,
+      "path": "downloads/starter-kit/agent-guidance-review-prompts.md",
+      "sha256": "1dd4c216b2babf43edf801428c6937ec73579c3f678ace0e81f87991d99193ad"
+    },
+    {
+      "bytes": 1294,
+      "path": "downloads/starter-kit/bounded-task-template.md",
+      "sha256": "c0ce372e0db6cb55bf67c7712c8cae86c0a49c5443d681825839cb2d2a1f5234"
+    },
+    {
+      "bytes": 1385,
+      "path": "downloads/starter-kit/fresh-session-handoff.md",
+      "sha256": "e2611e0b04c8cbfbb43cd3dcc6bdc36df41f9f4ad22805161ea8b69fac4909c6"
+    },
+    {
+      "bytes": 13732,
       "path": "get-started/index.html",
-      "sha256": "3f892f5671ea3e7a1583da04d693def7e257631010ec085f0c129bc0f2077bdc"
+      "sha256": "5747d354ddef6f2cf5bcb57ed10adf3fbfb607450251308cf56ba4e82f87cb26"
     },
     {
       "bytes": 24095,
@@ -171,9 +186,9 @@
       "sha256": "699e318c45868d6784e675838dab4ee785c24c142122293fdf8267cec356e11a"
     },
     {
-      "bytes": 25433,
+      "bytes": 25761,
       "path": "index.html",
-      "sha256": "a8ff6fd002dcf5deeb36faa6302ea9c50e6091dff4de1b2604eb261232303acb"
+      "sha256": "5e5e62dc915505b39b7638bb4e3caef89fb7caee2d904d3a85b728c673e8f30d"
     },
     {
       "bytes": 5991,
@@ -327,5 +342,5 @@
     }
   ],
   "schema_version": 1,
-  "sha256": "a0732e9b046b33453139870659c81e24be08d1f421ec3602b3806ee23e80b142"
+  "sha256": "db416e9b3448e8b4c1bac54ba7b1b4e9f5881a28626dd642b1b3873f696384e7"
 }

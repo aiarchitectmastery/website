@@ -64,6 +64,9 @@
         "starter-kit/PLAN-template.md",
         "starter-kit/TASK-prompt-template.md",
         "starter-kit/IMPLEMENTATION-checklist.md",
+        "starter-kit/bounded-task-template.md",
+        "starter-kit/fresh-session-handoff.md",
+        "starter-kit/agent-guidance-review-prompts.md",
         "starter-kit/README.md"
       ],
       "asset_id": "AAM-A012",
@@ -106,6 +109,27 @@
       "indexing_intent": "index",
       "kind": "download-source",
       "path": "downloads/starter-kit/README.md",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-resource-bounded-task-template",
+      "indexing_intent": "index",
+      "kind": "download-source",
+      "path": "downloads/starter-kit/bounded-task-template.md",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-resource-fresh-session-handoff",
+      "indexing_intent": "index",
+      "kind": "download-source",
+      "path": "downloads/starter-kit/fresh-session-handoff.md",
+      "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-resource-agent-guidance-review-prompts",
+      "indexing_intent": "index",
+      "kind": "download-source",
+      "path": "downloads/starter-kit/agent-guidance-review-prompts.md",
       "public_status": "public"
     },
     {
