@@ -64,7 +64,7 @@
   // Fixed labels only; never turn arbitrary DOM text or URL values into events.
   const trackingLabels = new Set([
     'cta-gh300-bestprice-inline', 'cta-gh300-bestprice', 'cta-gh300-udemy',
-    'cta-gh300-docs', 'm1-download-kit', 'social-linkedin', 'social-youtube',
+    'cta-gh300-docs', 'social-linkedin', 'social-youtube',
     'social-instagram', 'contact-email'
   ]);
   const udemyCoursePath = '/course/github-copilot-gh-300-certification-prep/';

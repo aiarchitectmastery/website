@@ -6,6 +6,11 @@
       "sha256": "488c1a543819c13d2d32ace99eb4fc424f85961e2c0e71085cb48bed541bba2f"
     },
     {
+      "bytes": 17565,
+      "path": "agent-workflow/index.html",
+      "sha256": "e77f1c09c193fe314f25719c607c6fff88b7933af1c5d77702339f1fd7e31130"
+    },
+    {
       "bytes": 4407,
       "path": "assets/fonts/Lato-OFL.txt",
       "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
@@ -146,9 +151,9 @@
       "sha256": "e2611e0b04c8cbfbb43cd3dcc6bdc36df41f9f4ad22805161ea8b69fac4909c6"
     },
     {
-      "bytes": 13732,
+      "bytes": 3482,
       "path": "get-started/index.html",
-      "sha256": "5747d354ddef6f2cf5bcb57ed10adf3fbfb607450251308cf56ba4e82f87cb26"
+      "sha256": "3d964b6dba4857694de5bedb74942df93090f67957b0063e8b0a67dafa2255ad"
     },
     {
       "bytes": 24095,
@@ -186,19 +191,19 @@
       "sha256": "699e318c45868d6784e675838dab4ee785c24c142122293fdf8267cec356e11a"
     },
     {
-      "bytes": 25761,
+      "bytes": 26472,
       "path": "index.html",
-      "sha256": "5e5e62dc915505b39b7638bb4e3caef89fb7caee2d904d3a85b728c673e8f30d"
+      "sha256": "c5af7dbb0b1cf52090d103cc6297fc991b7143b7a2d4070e3bbc0690a18ecf03"
     },
     {
-      "bytes": 5991,
+      "bytes": 5972,
       "path": "js/main.js",
-      "sha256": "a4837a1ef04eeef940ae26711b2428422c50d65e303190cdcc8c400390236387"
+      "sha256": "062a49d9b5e4eaa7cfc6b64d4577113f1bf3ba952a520105547cc512a9862ad4"
     },
     {
-      "bytes": 3199,
+      "bytes": 3410,
       "path": "llms.txt",
-      "sha256": "93077b12289167002ae70348af51cd8529ebf6e26d19459c7f2aadf32f4b4021"
+      "sha256": "ca4c5262b5812951e62d8955951377ca89d189633bf6ceabe8108717d57ec5a4"
     },
     {
       "bytes": 5877,
@@ -336,11 +341,11 @@
       "sha256": "995c756df17615582ae0389eb777b093b0a447a1493ed2819e2565ad04f32101"
     },
     {
-      "bytes": 2166,
+      "bytes": 2235,
       "path": "sitemap.xml",
-      "sha256": "ba85a5096f594129f1386fb80ff4608ba06d7ee513239e45425fa1e9be9631fc"
+      "sha256": "853f9ef7f7031ac4e7c7357956202cbb0b31217ed4743e64536aae2ff847cf55"
     }
   ],
   "schema_version": 1,
-  "sha256": "200d1bd49e547538b5e24965cb928e4e43ec1f8f3244710c5654d405ce917460"
+  "sha256": "7f3d8dd7a2cab62173ac39ecbdff1fd0f19d84ba762b42efd38dcb532d51f6a8"
 }

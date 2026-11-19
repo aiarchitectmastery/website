@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Free AI Driven Development Template | AI Architect Mastery</title>
+  <meta name="description" content="Free AAM Agent Workflow template for AI Driven Development, plus a three-day email guide to your first PRD → PLAN → TASK → IMPLEMENTATION cycle." />
+
+  <link rel="canonical" href="https://aiarchitectmastery.com/agent-workflow/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#15182A" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AAM Agent Workflow: Free AI Driven Development Template" />
+  <meta property="og:description" content="A free template repository for the AI Driven Development Methodology, with you as the final gate at every step, plus a three-day email guide to your first cycle." />
+  <meta property="og:url" content="https://aiarchitectmastery.com/agent-workflow/" />
+  <meta property="og:image" content="https://aiarchitectmastery.com/assets/images/ai-architect-mastery-canva.jpg" />
+  <meta property="og:site_name" content="AI Architect Mastery" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AAM Agent Workflow: Free AI Driven Development Template" />
+  <meta name="twitter:description" content="Free AI Driven Development template: PRD, PLAN, TASK and IMPLEMENTATION, plus a three-day email guide to your first cycle." />
+  <meta name="twitter:image" content="https://aiarchitectmastery.com/assets/images/ai-architect-mastery-canva.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+
+  <!-- Fonts: unmodified Google Fonts, served locally with licenses in assets/fonts/. -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/lato-v25-latin-400.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/lato-v25-latin-700.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/roboto-slab-v36-latin.woff2" crossorigin />
+  <style>
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('../assets/fonts/lato-v25-latin-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('../assets/fonts/lato-v25-latin-700.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Roboto Slab';
+      font-style: normal;
+      font-weight: 600 700;
+      font-display: swap;
+      src: url('../assets/fonts/roboto-slab-v36-latin.woff2') format('woff2');
+    }
+  </style>
+
+  <script>document.documentElement.classList.add('nav-ready');</script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aiarchitectmastery.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AAM Agent Workflow",
+        "item": "https://aiarchitectmastery.com/agent-workflow/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage (text identical to the visible Questions section) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is AAM Agent Workflow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A free template repository for the AI Driven Development Methodology. It is a set of plain Markdown files you copy into your own repository: the PRD → PLAN → TASK → IMPLEMENTATION workflow, templates, an IMPLEMENTATION review checklist and reusable prompts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it an agent, an installer or a plugin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You copy files and nothing runs on its own. The files do not enforce permissions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it cost anything?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The template is free and no course purchase is required. Subscribing by email takes you to the template repository and starts the three-day guide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI tools does it work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitHub Copilot and other AI agents that can read files in your repository."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I get after I subscribe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The form takes you to the template repository, and the first email arrives with the same link. Over the next three days you get one short email a day about your first cycle: the PRD, one bounded task and the IMPLEMENTATION review. After that you join the regular AAM list."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I still review the AI's work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The human approves the PRD and the PLAN, authorizes each TASK and decides on each result. Nothing merges without human review."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- MailerLite Universal (signup form 4TDpWG) -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2350883');
+  </script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="AI Architect Mastery — home">
+        <img src="../assets/images/logo.png" alt="AI Architect Mastery logo" class="brand-logo" />
+        <span class="brand-text">AI Architect Mastery<sup>™</sup></span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/#courses">Courses</a></li>
+          <li><a href="/#methodology">Methodology</a></li>
+          <li><a href="/gh-300/">GH-300 Study Guide</a></li>
+          <li><a href="/#instructor">Instructor</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="section docs-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span class="breadcrumb-sep">/</span> AAM Agent Workflow
+        </div>
+        <h1>AAM Agent Workflow</h1>
+        <p class="lead">
+          <strong>Your repository, your rules, with you as the final gate.</strong> A free template repository for the AI Driven Development Methodology (PRD → PLAN → TASK → IMPLEMENTATION), plus a three-day email guide through your first cycle.
+        </p>
+        <p>
+          <a href="#get-template" class="btn btn-primary">Get the template</a>
+        </p>
+        <p class="note small">Free. Plain Markdown files. No installer, no course purchase.</p>
+      </div>
+    </section>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <section class="docs-article">
+      <div class="container">
+
+        <h2>Who it is for</h2>
+        <p>
+          You build software for a living, and you already use GitHub Copilot or another AI agent. The usage works, but it is ad hoc: each session starts from scratch, and the result depends on how you happened to prompt that day. AAM Agent Workflow gives that work a structure you can review, so AI-generated changes meet the same standard as code a colleague wrote.
+        </p>
+
+        <h2>What it is</h2>
+        <p>
+          AAM Agent Workflow is a set of plain Markdown files that live in your own repository: the PRD → PLAN → TASK → IMPLEMENTATION workflow, templates for the PRD, PLAN and TASK, an IMPLEMENTATION review checklist and reusable prompts. It is the AI Driven Development Methodology in practice. You stay the architect at every checkpoint. The AI agent is the builder.
+        </p>
+        <p>
+          It works with GitHub Copilot and with other AI agents that can read files in your repository.
+        </p>
+
+        <h3>What it is not</h3>
+        <ul>
+          <li>Not an agent, installer or tool to configure. You copy files, and nothing runs on its own.</li>
+          <li>Not a runtime control. The files do not enforce permissions, so keep using your environment's permission controls.</li>
+          <li>Not a guarantee of correctness or productivity. Quality still depends on the task, your verification and your judgment.</li>
+        </ul>
+
+        <h2 id="get-template" tabindex="-1">Get the template and the three-day guide</h2>
+        <p>
+          Enter your email below. The form takes you straight to the template repository on GitHub, and the first email arrives in your inbox with the same link, the three ways to start and your first step.
+        </p>
+        <ul>
+          <li>Today: the template repository, and email 1 with the three ways to start and your first step.</li>
+          <li>Tomorrow: pick one small, real change and write its PRD.</li>
+          <li>In two days: hand one bounded task to your agent, with a gap check before it edits anything.</li>
+          <li>In three days: review the result against the IMPLEMENTATION checklist and record your decision.</li>
+          <li>After that: the regular AAM list, with practical insights on the methodology and news about new courses. You can unsubscribe at any time.</li>
+        </ul>
+
+        <div class="mailerlite-wrap">
+          <div class="ml-embedded" data-form="4TDpWG"></div>
+        </div>
+
+        <p>If the first email doesn't arrive, check Promotions and Spam, and mark it as not spam.</p>
+        <p>Came here from the agent guidance review video? The exact prompts from the demo are in the template.</p>
+        <p>Form blocked by an ad blocker or not loading? Email <a href="mailto:info@aiarchitectmastery.com">info@aiarchitectmastery.com</a> and I'll send you the link.</p>
+
+        <h2>What's inside</h2>
+        <p>A simplified view of the folder structure:</p>
+        <pre tabindex="0" role="region" aria-label="Simplified folder structure of the template"><code>.
+├── .aam/                              ← the reusable workflow
+│   ├── workflows/core-workflow.md     ← start here: the procedure
+│   ├── templates/
+│   │   ├── PRD-template.md
+│   │   ├── PLAN-template.md
+│   │   ├── TASK-template.md
+│   │   ├── bounded-task-template.md
+│   │   └── IMPLEMENTATION-checklist.md
+│   └── prompts/
+│       ├── fresh-session-handoff.md
+│       └── agent-guidance-review-prompts.md
+└── agent-workflow/                    ← your own PRDs, PLANs and TASKs go here</code></pre>
+        <ul>
+          <li><code>core-workflow.md</code>: the four phases, six steps and the mandatory human checkpoints</li>
+          <li><code>PRD-template.md</code>: capture intent, scope, constraints and acceptance criteria</li>
+          <li><code>PLAN-template.md</code>: turn an approved PRD into ordered tasks with checkpoints</li>
+          <li><code>TASK-template.md</code>: delegate one bounded task with context, constraints and verification</li>
+          <li><code>bounded-task-template.md</code>: a short brief and a read-only gap check before any edits</li>
+          <li><code>IMPLEMENTATION-checklist.md</code>: the human review before anything merges, with an evidence-based verdict</li>
+          <li><code>fresh-session-handoff.md</code>: move work to a fresh conversation without losing verified context</li>
+          <li><code>agent-guidance-review-prompts.md</code>: review existing agent instructions one approved change at a time</li>
+        </ul>
+
+        <h2>The four phases</h2>
+        <ol>
+          <li><strong>PRD:</strong> define what will change and what will not, the constraints and the acceptance criteria. Approve it yourself.</li>
+          <li><strong>PLAN:</strong> turn the approved PRD into ordered steps with checkpoints. Review the approach before any work is delegated.</li>
+          <li><strong>TASK:</strong> delegate one bounded task with context, constraints, stop conditions and the checks to run.</li>
+          <li><strong>IMPLEMENTATION:</strong> review the result against evidence (scope, tests, conventions, security and edge cases) and record your decision: accept, revise, reject, reassign or return. Acceptance does not authorize release or deployment.</li>
+        </ol>
+        <p>
+          Read the vendor-neutral definition in the <a href="/methodology/">AI Driven Development Methodology reference</a>, or see how the review works on the <a href="/methodology/implementation.html">IMPLEMENTATION phase page</a>.
+        </p>
+
+        <h2>Three ways to start</h2>
+        <ul>
+          <li>New project: create a new repository from the template.</li>
+          <li>Existing project: copy the <code>.aam/</code> and <code>agent-workflow/</code> folders into your repository. Never overwrite files you already have.</li>
+          <li>ZIP: download it from the latest release and copy the folders.</li>
+        </ul>
+        <p>The README in the repository has the exact steps for each path.</p>
+
+        <h2>Why this works</h2>
+        <ul>
+          <li><strong>Architectural control:</strong> you own the intent, the plan and every decision. The agent performs bounded work.</li>
+          <li><strong>Evidence before acceptance:</strong> checkpoints help expose issues. They do not guarantee production readiness or authorize release.</li>
+          <li><strong>A repeatable structure:</strong> the same files work across languages and frameworks, and your teammates can follow the same workflow.</li>
+        </ul>
+
+        <h2>Questions</h2>
+
+        <h3>What is AAM Agent Workflow?</h3>
+        <p>A free template repository for the AI Driven Development Methodology. It is a set of plain Markdown files you copy into your own repository: the PRD → PLAN → TASK → IMPLEMENTATION workflow, templates, an IMPLEMENTATION review checklist and reusable prompts.</p>
+
+        <h3>Is it an agent, an installer or a plugin?</h3>
+        <p>No. You copy files and nothing runs on its own. The files do not enforce permissions.</p>
+
+        <h3>Does it cost anything?</h3>
+        <p>No. The template is free and no course purchase is required. Subscribing by email takes you to the template repository and starts the three-day guide.</p>
+
+        <h3>Which AI tools does it work with?</h3>
+        <p>GitHub Copilot and other AI agents that can read files in your repository.</p>
+
+        <h3>What do I get after I subscribe?</h3>
+        <p>The form takes you to the template repository, and the first email arrives with the same link. Over the next three days you get one short email a day about your first cycle: the PRD, one bounded task and the IMPLEMENTATION review. After that you join the regular AAM list.</p>
+
+        <h3>Do I still review the AI's work?</h3>
+        <p>Yes. The human approves the PRD and the PLAN, authorizes each TASK and decides on each result. Nothing merges without human review.</p>
+
+        <h2>Next steps</h2>
+        <p>
+          For the vendor-neutral definition and responsibilities, read the <a href="/methodology/">AI Driven Development Methodology reference</a>. For tool-specific certification preparation, see the <a href="/gh-300/">GitHub Copilot GH-300 Study Guide</a>: free written domain guides, official source links and a separate route to the Udemy preparation course.
+        </p>
+        <p>
+          <a href="#get-template" class="btn btn-primary">Get the template</a>
+        </p>
+
+        <p style="margin-top: 2.8em; text-align: center; opacity: 0.7; font-size: 0.95rem;">
+          Questions? Email <a href="mailto:info@aiarchitectmastery.com">info@aiarchitectmastery.com</a>
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> AI Architect Mastery™ — All Rights Reserved</p>
+      <p class="footer-meta">
+        Sister brand of <a href="https://dataintegrationmastery.com/" rel="noopener">Data Integration Mastery™</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

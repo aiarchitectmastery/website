@@ -303,16 +303,41 @@
       },
       {
         "concept_ids": [
-          "AAM-C002"
+          "AAM-C034"
         ],
         "content_id": "AAM-P002",
-        "indexing_intent": "index",
-        "journey": "existing-onboarding",
+        "indexing_intent": "noindex",
+        "journey": "legacy-redirect",
         "modified_at": null,
-        "page_type": "onboarding",
+        "page_type": "redirect-stub",
         "path": "get-started/index.html",
         "preferred_url": "https://aiarchitectmastery.com/get-started/",
         "protected_fragments": [
+          "main",
+          "primary-nav",
+          "year"
+        ],
+        "protected_video_ids": [],
+        "relations": [
+          {
+            "target": "AAM-P001",
+            "type": "parent"
+          }
+        ]
+      },
+      {
+        "concept_ids": [
+          "AAM-C002"
+        ],
+        "content_id": "AAM-P034",
+        "indexing_intent": "index",
+        "journey": "lead-magnet-onboarding",
+        "modified_at": null,
+        "page_type": "lead-magnet-landing",
+        "path": "agent-workflow/index.html",
+        "preferred_url": "https://aiarchitectmastery.com/agent-workflow/",
+        "protected_fragments": [
+          "get-template",
           "main",
           "primary-nav",
           "year"
@@ -1111,6 +1136,7 @@
   "schema_version": 1,
   "site_paths": [
     "CNAME",
+    "agent-workflow/index.html",
     "assets/fonts/Lato-OFL.txt",
     "assets/fonts/RobotoSlab-LICENSE.txt",
     "assets/fonts/lato-v25-latin-400.woff2",

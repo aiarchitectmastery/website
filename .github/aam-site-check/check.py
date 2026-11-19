@@ -459,6 +459,7 @@ class Checker:
         self.records = {}
         self.graph = defaultdict(set)
         self.sitemap_entries = defaultdict(list)
+        self.stubs = {}
         self.archive_inventory = {}
         self.public = registry.get("contract_kind") == "aam-public-check"
         self.origin = registry.get("origin", "").rstrip("/")
@@ -694,6 +695,27 @@ class Checker:
             self.finding("DISC-06", "broken-fragment", path, {"reference": ref, "kind": kind}, "existing target ID")
         return dest
 
+    def redirect_stub(self, path, page):
+        """Return the target URL when `path` is a declared redirect stub, else None.
+
+        A stub is registered with indexing_intent "noindex", answers with an
+        immediate meta refresh and names the same registered indexable page as
+        its canonical. It stays out of the sitemap and may be unlinked
+        (GitHub Pages has no server-side 301). Any other combination keeps the
+        normal self-canonical rules, so a mistyped stub still fails strict.
+        """
+        if self.records.get(path, {}).get("indexing_intent") != "noindex":
+            return None
+        indexable = {r.get("preferred_url") for r in self.records.values()
+                     if r.get("indexing_intent") == "index"}
+        for value in page.meta.get("refresh", []):
+            match = re.fullmatch(r"\s*0\s*;\s*url\s*=\s*['\"]?([^'\"\s]+)['\"]?\s*", value, re.I)
+            if match:
+                target = urljoin(page_url(self.origin, path), match.group(1))
+                if page.canonicals == [target] and target in indexable:
+                    return target
+        return None
+
     def html_checks(self):
         for path in sorted(self.manifest):
             if Path(path).suffix.lower() in (".html", ".htm"):
@@ -703,14 +725,20 @@ class Checker:
                     self.finding("DISC-07", "html-read", path, str(exc), "UTF-8 parseable HTML")
         extracted = {}
         titles, descriptions = defaultdict(list), defaultdict(list)
+        self.stubs = {}
         for path, page in sorted(self.pages.items()):
             info = page.extracted()
             extracted[path] = info
-            expected = self.records.get(path, {}).get("preferred_url", page_url(self.origin, path))
+            stub = self.redirect_stub(path, page)
+            if stub:
+                self.stubs[path] = stub
+            expected = stub or self.records.get(path, {}).get("preferred_url", page_url(self.origin, path))
             if page.canonicals != [expected]:
                 self.finding("DISC-03", "canonical-agreement", path, page.canonicals, [expected])
-            if page.meta.get("og:url") != [expected]:
-                self.finding("DISC-03", "og-url-agreement", path, page.meta.get("og:url", []), [expected])
+            og_urls = page.meta.get("og:url", [])
+            og_allowed = [[], [expected]] if stub else [[expected]]
+            if og_urls not in og_allowed:
+                self.finding("DISC-03", "og-url-agreement", path, og_urls, [expected])
             if page.base:
                 self.finding("DISC-06", "unsupported-base-url", path, page.base, "no base override; preserve local URL resolution")
             if len(page.h1) != 1 or not info["h1"][0]:
@@ -782,7 +810,7 @@ class Checker:
             if node not in reachable:
                 reachable.add(node)
                 queue.extend(sorted(self.graph[node] - reachable))
-        for path in sorted(set(self.pages) - reachable):
+        for path in sorted(set(self.pages) - reachable - set(self.stubs)):
             self.finding("DISC-07", "orphan-page", path, "unreachable from homepage via HTML anchors", "crawlable path")
         return extracted, sorted(reachable & set(self.pages))
 
@@ -1014,7 +1042,10 @@ class Checker:
             for fragment in facts.get("ids", []):
                 if fragment not in self.pages[path].ids:
                     self.finding("DISC-06", "baseline-fragment-removed", path, fragment, "retained")
-            if facts.get("canonical") != self.pages[path].canonicals:
+            # A declared redirect stub intentionally moves its canonical to the
+            # successor page; the original URL itself is retained.
+            if (facts.get("canonical") != self.pages[path].canonicals
+                    and self.stubs.get(path) not in self.pages[path].canonicals):
                 self.finding("DISC-06", "baseline-canonical-changed", path, self.pages[path].canonicals, facts.get("canonical"))
         # A no-op source cannot acquire a new freshness date. Content-change
         # approval itself remains human judgment, not mtime or a build clock.
