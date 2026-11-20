@@ -6,9 +6,9 @@
       "sha256": "488c1a543819c13d2d32ace99eb4fc424f85961e2c0e71085cb48bed541bba2f"
     },
     {
-      "bytes": 17565,
+      "bytes": 17543,
       "path": "agent-workflow/index.html",
-      "sha256": "e77f1c09c193fe314f25719c607c6fff88b7933af1c5d77702339f1fd7e31130"
+      "sha256": "654a99bfe10fc05a4e7103f006d875953c073fb9021fd9345a6242753513e057"
     },
     {
       "bytes": 4407,
@@ -34,6 +34,11 @@
       "bytes": 34160,
       "path": "assets/fonts/roboto-slab-v36-latin.woff2",
       "sha256": "317b2dafcfcd18ae868e7cb3c5a33a323999bc4c3c400e237801efc2a3a74aac"
+    },
+    {
+      "bytes": 72574,
+      "path": "assets/images/aam-social-card.jpg",
+      "sha256": "e0e4a32e959f944dd674a19ae368d8736d9fe0c1e96283ae35c96a95c428d6c9"
     },
     {
       "bytes": 74709,
@@ -76,9 +81,9 @@
       "sha256": "500136397cdd0a6d339bf8c1e56c34a72697a5d1c31732ba074d270f81d3f473"
     },
     {
-      "bytes": 24470,
+      "bytes": 149657,
       "path": "assets/images/logo.png",
-      "sha256": "6c7aba461c147b724479a6c2d33c10ca22aff2d2d2d76baade8098c9d7a8f067"
+      "sha256": "4608933dd9220169889b00017045f07ce54c3666b45e07fc091ab857e2025ddf"
     },
     {
       "bytes": 181808,
@@ -156,44 +161,44 @@
       "sha256": "3d964b6dba4857694de5bedb74942df93090f67957b0063e8b0a67dafa2255ad"
     },
     {
-      "bytes": 24095,
+      "bytes": 24117,
       "path": "gh-300/copilot-features.html",
-      "sha256": "e8224daa2bfcc021f5c13861abeeda240b52ddf40d28cc1517242bc78a4c9275"
+      "sha256": "ded66fba83d7b4a1960602da44a9594ba8489299acdd99954285f763e189a117"
     },
     {
-      "bytes": 13787,
+      "bytes": 13809,
       "path": "gh-300/data-and-architecture.html",
-      "sha256": "be7c033bf7b990d7e173d132b6b6db67e5c07f311859cec5f49c52ff3275da9a"
+      "sha256": "cd5d557e54ac2e34eea58cf55ff8605c556c668f53c5db39800c1967e0d0ec58"
     },
     {
-      "bytes": 13654,
+      "bytes": 13676,
       "path": "gh-300/developer-productivity.html",
-      "sha256": "a46b8f48da7891931f4d494e52052b65a73e29fe73e3037abcf2c1589a0a241b"
+      "sha256": "24f74d7a6c345d650d603c102a828d1a2f8d52473c28e3bffad02d05f026bf6a"
     },
     {
-      "bytes": 16540,
+      "bytes": 16551,
       "path": "gh-300/index.html",
-      "sha256": "6afeb6bff2da9ce95e94d16894360b31fb920e4da69eaa19cfcc6d7d9a788f64"
+      "sha256": "4c39b468fe5df150e06744cbc7667c3270ab53987c7ffa3fba684a249e6334dd"
     },
     {
-      "bytes": 15013,
+      "bytes": 15035,
       "path": "gh-300/privacy-and-safeguards.html",
-      "sha256": "8bc01f6319f21a416fe2eabd9d4a86102c1534b4ecb7db1909887fe0d8fb65f3"
+      "sha256": "f9357e2e7828f39fe14700fb04334d87961418ed053332c836841a66a1dc9fab"
     },
     {
-      "bytes": 13463,
+      "bytes": 13485,
       "path": "gh-300/prompt-engineering.html",
-      "sha256": "a929bb6f3d701d1c74ff677c1fc3a67174922382defe37b97916f1dcd8bdc8f1"
+      "sha256": "ee93db4c820b6e325fddbca4287796eab85bd3251934dfc49e3fcc0de7d794e6"
     },
     {
-      "bytes": 17905,
+      "bytes": 17927,
       "path": "gh-300/responsible-ai.html",
-      "sha256": "699e318c45868d6784e675838dab4ee785c24c142122293fdf8267cec356e11a"
+      "sha256": "8a8fb25a1a17f552c71ec36c79b944606532b9856921cdc449bb0f356f34b6d3"
     },
     {
-      "bytes": 26472,
+      "bytes": 26450,
       "path": "index.html",
-      "sha256": "c5af7dbb0b1cf52090d103cc6297fc991b7143b7a2d4070e3bbc0690a18ecf03"
+      "sha256": "91e21d623d934903ba5d6476164f3b486d90f09fe9fd48b907b9dc4e2271cbde"
     },
     {
       "bytes": 5972,
@@ -347,5 +352,5 @@
     }
   ],
   "schema_version": 1,
-  "sha256": "7f3d8dd7a2cab62173ac39ecbdff1fd0f19d84ba762b42efd38dcb532d51f6a8"
+  "sha256": "e0430146cd37b0efa022efe1fcc6a7943ce9dd7902af35dd792a32193cb54284"
 }

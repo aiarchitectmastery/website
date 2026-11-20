@@ -257,6 +257,13 @@
       "kind": "font-license",
       "path": "assets/fonts/RobotoSlab-LICENSE.txt",
       "public_status": "public"
+    },
+    {
+      "asset_id": "AAM-A037",
+      "indexing_intent": "index",
+      "kind": "social-image",
+      "path": "assets/images/aam-social-card.jpg",
+      "public_status": "public"
     }
   ],
   "contract_kind": "aam-public-check",

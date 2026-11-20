@@ -259,6 +259,13 @@
         "kind": "font-license",
         "path": "assets/fonts/RobotoSlab-LICENSE.txt",
         "public_status": "public"
+      },
+      {
+        "asset_id": "AAM-A037",
+        "indexing_intent": "index",
+        "kind": "social-image",
+        "path": "assets/images/aam-social-card.jpg",
+        "public_status": "public"
       }
     ],
     "contract_kind": "aam-public-check",
@@ -1142,6 +1149,7 @@
     "assets/fonts/lato-v25-latin-400.woff2",
     "assets/fonts/lato-v25-latin-700.woff2",
     "assets/fonts/roboto-slab-v36-latin.woff2",
+    "assets/images/aam-social-card.jpg",
     "assets/images/ai-architect-mastery-canva.jpg",
     "assets/images/ai_driven_development_methodology.jpg",
     "assets/images/backgrounds/kangas-8.jpg",
