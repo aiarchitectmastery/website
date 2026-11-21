@@ -98,46 +98,69 @@
     }
   });
 
-  // ----- MailerLite lead tracking -----
-  // MailerLite renders this callback for the embedded form after a successful
-  // subscription. A DOM observer is also used because MailerLite loads
-  // asynchronously and can define its callback after this script runs.
-  let mailerLiteLeadTracked = false;
-  function trackMailerLiteLead() {
-    if (mailerLiteLeadTracked) return;
-    mailerLiteLeadTracked = true;
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'generate_lead', {
-        method: 'mailerlite',
-        form_id: '4TDpWG'
-      });
-    }
-  }
-
-  const mailerLiteSuccess = window.ml_webform_success_41342389;
-  window.ml_webform_success_41342389 = function () {
-    if (typeof mailerLiteSuccess === 'function') {
-      mailerLiteSuccess.apply(this, arguments);
-    }
-    trackMailerLiteLead();
+  // ----- MailerLite lead tracking (form registry) -----
+  // Registry: MailerLite webform numeric id -> fixed GA4 form label.
+  // Adding a form = one entry here + one test fixture (tools/aam_website).
+  // Labels are fixed strings; no email, field value or DOM text is ever sent.
+  const leadForms = {
+    '41342389': 'lm002_form' // MailerLite form 4TDpWG (AAM Agent Workflow, LM-002)
+    // LM-FORM (label 'lm_form'): webform id comes from TASK-04; added in TASK-06.
+    // Reserved: 'c_form' (course lead PRD).
   };
 
-  const mailerLiteObserver = new MutationObserver(function () {
-    const success = document.querySelector('.ml-subscribe-form-41342389 .ml-form-successBody');
-    if (!success || !success.isConnected || success.getClientRects().length === 0) return;
+  function isVisibleSuccess(success) {
+    if (!success || !success.isConnected || success.getClientRects().length === 0) return false;
     for (let element = success; element; element = element.parentElement) {
       const style = window.getComputedStyle(element);
       if (element.hidden || style.display === 'none' ||
           style.visibility === 'hidden' || style.visibility === 'collapse' ||
-          style.opacity === '0' || element.getAttribute('aria-hidden') === 'true') return;
+          style.opacity === '0' || element.getAttribute('aria-hidden') === 'true') return false;
     }
-    trackMailerLiteLead();
-    mailerLiteObserver.disconnect();
-  });
-  mailerLiteObserver.observe(document.body, {
-    attributes: true,
-    attributeFilter: ['class', 'style', 'hidden', 'aria-hidden'],
-    childList: true,
-    subtree: true
+    return true;
+  }
+
+  // Each form has its own success-callback wrapper, success-view observer and
+  // once-only flag. MailerLite renders ml_webform_success_<id> after a
+  // successful subscription; the observer covers the case where MailerLite
+  // loads asynchronously and defines its callback after this script runs.
+  function registerLeadForm(webformId, label) {
+    if (!/^[0-9]+$/.test(webformId)) return;
+    let tracked = false;
+    function trackLead() {
+      if (tracked) return;
+      tracked = true;
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          method: 'mailerlite',
+          form_id: label
+        });
+      }
+    }
+
+    const callbackName = 'ml_webform_success_' + webformId;
+    const original = window[callbackName];
+    window[callbackName] = function () {
+      if (typeof original === 'function') {
+        original.apply(this, arguments);
+      }
+      trackLead();
+    };
+
+    const selector = '.ml-subscribe-form-' + webformId + ' .ml-form-successBody';
+    const observer = new MutationObserver(function () {
+      if (!isVisibleSuccess(document.querySelector(selector))) return;
+      trackLead();
+      observer.disconnect();
+    });
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class', 'style', 'hidden', 'aria-hidden'],
+      childList: true,
+      subtree: true
+    });
+  }
+
+  Object.keys(leadForms).forEach(function (webformId) {
+    registerLeadForm(webformId, leadForms[webformId]);
   });
 })();

@@ -6,9 +6,9 @@
       "sha256": "488c1a543819c13d2d32ace99eb4fc424f85961e2c0e71085cb48bed541bba2f"
     },
     {
-      "bytes": 17543,
+      "bytes": 17855,
       "path": "agent-workflow/index.html",
-      "sha256": "654a99bfe10fc05a4e7103f006d875953c073fb9021fd9345a6242753513e057"
+      "sha256": "b89f4686de7776ce6ed0a14534c19c3b0a99e05f5d118eef12c4c90af4b44324"
     },
     {
       "bytes": 4407,
@@ -201,9 +201,9 @@
       "sha256": "91e21d623d934903ba5d6476164f3b486d90f09fe9fd48b907b9dc4e2271cbde"
     },
     {
-      "bytes": 5972,
+      "bytes": 6833,
       "path": "js/main.js",
-      "sha256": "062a49d9b5e4eaa7cfc6b64d4577113f1bf3ba952a520105547cc512a9862ad4"
+      "sha256": "3278a797960112fb74c0bdec464172cf411ef4bbde090f021e0b40ceb4e98c04"
     },
     {
       "bytes": 3410,
@@ -352,5 +352,5 @@
     }
   ],
   "schema_version": 1,
-  "sha256": "e0430146cd37b0efa022efe1fcc6a7943ce9dd7902af35dd792a32193cb54284"
+  "sha256": "bf96c8794423d5074769e28b9249657f469d2d198e4bb3289bffd832099db80f"
 }
