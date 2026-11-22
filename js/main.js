@@ -5,6 +5,7 @@
    - YouTube facade (lazy load player on click)
    - Footer year
     - GA4 conversion and outbound link tracking
+    - LM-FORM free-resource checkbox pre-tick (no telemetry)
 */
 
 (function () {
@@ -103,8 +104,8 @@
   // Adding a form = one entry here + one test fixture (tools/aam_website).
   // Labels are fixed strings; no email, field value or DOM text is ever sent.
   const leadForms = {
-    '41342389': 'lm002_form' // MailerLite form 4TDpWG (AAM Agent Workflow, LM-002)
-    // LM-FORM (label 'lm_form'): webform id comes from TASK-04; added in TASK-06.
+    '41342389': 'lm002_form', // MailerLite form 4TDpWG (AAM Agent Workflow, LM-002)
+    '48855836': 'lm_form' // MailerLite LM-FORM pzf8Rl (homepage #contact + /free-resources/; page from page_location)
     // Reserved: 'c_form' (course lead PRD).
   };
 
@@ -163,4 +164,62 @@
   Object.keys(leadForms).forEach(function (webformId) {
     registerLeadForm(webformId, leadForms[webformId]);
   });
+
+  // ----- LM-FORM free-resource pre-tick -----
+  // On /free-resources/ and on any LM-FORM page opened with ?lm=<code>, tick the
+  // matching interest-group checkbox once the MailerLite embed has rendered.
+  // Only an existing checkbox is ticked: no inputs or groups are ever created,
+  // nothing is sent to analytics, and a missing checkbox is silently ignored.
+  // The visitor's own choice wins: each rendered form is pre-ticked at most once.
+  const lmFormId = '48855836';
+  const resourceCheckboxes = {
+    // LM-004 interest-group checkbox in the LM-FORM embed (verified 2026-11-22).
+    '004': { name: 'groups[]', value: '204738464093045920' }
+  };
+  const resourcePages = { '/free-resources/': '004' };
+
+  function requestedResource() {
+    const loc = window.location;
+    if (!loc) return null;
+    const has = Object.prototype.hasOwnProperty;
+    const code = new URLSearchParams(loc.search || '').get('lm');
+    if (code && has.call(resourceCheckboxes, code)) return code;
+    let pagePath = String(loc.pathname || '').replace(/index\.html$/, '');
+    if (pagePath.charAt(pagePath.length - 1) !== '/') pagePath += '/';
+    return has.call(resourcePages, pagePath) ? resourcePages[pagePath] : null;
+  }
+
+  function preTickResource(webformId) {
+    const target = resourceCheckboxes[requestedResource()];
+    if (!target || !target.name || !target.value) return;
+    const handled = [];
+    function apply() {
+      let pending = false;
+      Array.prototype.forEach.call(
+        document.querySelectorAll('.ml-subscribe-form-' + webformId),
+        function (form) {
+          if (handled.indexOf(form) !== -1) return;
+          const box = Array.prototype.find.call(
+            form.querySelectorAll('input[type="checkbox"]'),
+            function (input) { return input.name === target.name && input.value === target.value; });
+          if (!box) { pending = true; return; }
+          handled.push(form);
+          if (!box.disabled) box.checked = true;
+        });
+      return handled.length > 0 && !pending;
+    }
+    if (apply()) return;
+    const observer = new MutationObserver(function () {
+      try {
+        if (apply()) observer.disconnect();
+      } catch (_) { observer.disconnect(); }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    // Stop watching if the embed never renders (blocked or failed to load).
+    if (typeof setTimeout === 'function') {
+      setTimeout(function () { observer.disconnect(); }, 60000);
+    }
+  }
+
+  try { preTickResource(lmFormId); } catch (_) { /* fail silently */ }
 })();

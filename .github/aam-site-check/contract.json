@@ -293,6 +293,7 @@
           "main",
           "methodology",
           "primary-nav",
+          "starterpack",
           "top",
           "year"
         ],
@@ -345,6 +346,32 @@
         "preferred_url": "https://aiarchitectmastery.com/agent-workflow/",
         "protected_fragments": [
           "get-template",
+          "main",
+          "primary-nav",
+          "year"
+        ],
+        "protected_video_ids": [],
+        "relations": [
+          {
+            "target": "AAM-P001",
+            "type": "parent"
+          }
+        ]
+      },
+      {
+        "concept_ids": [
+          "AAM-C035"
+        ],
+        "content_id": "AAM-P035",
+        "indexing_intent": "index",
+        "journey": "lead-magnet-onboarding",
+        "modified_at": null,
+        "page_type": "lead-magnet-landing",
+        "path": "free-resources/index.html",
+        "preferred_url": "https://aiarchitectmastery.com/free-resources/",
+        "protected_fragments": [
+          "agent-guidance-review-prompts",
+          "get-resources",
           "main",
           "primary-nav",
           "year"
@@ -1173,6 +1200,7 @@
     "downloads/starter-kit/agent-guidance-review-prompts.md",
     "downloads/starter-kit/bounded-task-template.md",
     "downloads/starter-kit/fresh-session-handoff.md",
+    "free-resources/index.html",
     "get-started/index.html",
     "gh-300/copilot-features.html",
     "gh-300/data-and-architecture.html",

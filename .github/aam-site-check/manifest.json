@@ -6,9 +6,9 @@
       "sha256": "488c1a543819c13d2d32ace99eb4fc424f85961e2c0e71085cb48bed541bba2f"
     },
     {
-      "bytes": 17855,
+      "bytes": 18147,
       "path": "agent-workflow/index.html",
-      "sha256": "b89f4686de7776ce6ed0a14534c19c3b0a99e05f5d118eef12c4c90af4b44324"
+      "sha256": "5c8ea10bd9990912dc3c8e149fef7882bd8b9ff7210b401e5ed7a63f48b727b4"
     },
     {
       "bytes": 4407,
@@ -106,9 +106,9 @@
       "sha256": "e81d5b5836fc69a37b9ac0265edd19942b365b5b82efd700cde0ce03acdf33aa"
     },
     {
-      "bytes": 25385,
+      "bytes": 25941,
       "path": "css/style.css",
-      "sha256": "c4ae8fd9aa502f356ce261a05b9c67bd3f975c2119cbf527dee033b5d3aa0dd9"
+      "sha256": "19bb92e7448042f06d5d37d69a08b0d86f576892af9a01be38ce8be789e23703"
     },
     {
       "bytes": 14414,
@@ -156,59 +156,64 @@
       "sha256": "e2611e0b04c8cbfbb43cd3dcc6bdc36df41f9f4ad22805161ea8b69fac4909c6"
     },
     {
-      "bytes": 3482,
+      "bytes": 10768,
+      "path": "free-resources/index.html",
+      "sha256": "ed5671a8f55532efa520afd57955d3ead29a7ba712872fe1222122bc04ba7f85"
+    },
+    {
+      "bytes": 3550,
       "path": "get-started/index.html",
-      "sha256": "3d964b6dba4857694de5bedb74942df93090f67957b0063e8b0a67dafa2255ad"
+      "sha256": "a9b75c1f9096212f7f27639ac920a5266b2746b82d4dbc7dff04fd393c7efc75"
     },
     {
-      "bytes": 24117,
+      "bytes": 24184,
       "path": "gh-300/copilot-features.html",
-      "sha256": "ded66fba83d7b4a1960602da44a9594ba8489299acdd99954285f763e189a117"
+      "sha256": "d9db72342d5ed582df40b8197ffd8bb37d77d25f0697024bd14428e71ab7c41e"
     },
     {
-      "bytes": 13809,
+      "bytes": 13876,
       "path": "gh-300/data-and-architecture.html",
-      "sha256": "cd5d557e54ac2e34eea58cf55ff8605c556c668f53c5db39800c1967e0d0ec58"
+      "sha256": "0ed4664741c60c76d2dd6a68ba3c6de3a2b3c46c834a81fbcb64350c35dc4685"
     },
     {
-      "bytes": 13676,
+      "bytes": 13743,
       "path": "gh-300/developer-productivity.html",
-      "sha256": "24f74d7a6c345d650d603c102a828d1a2f8d52473c28e3bffad02d05f026bf6a"
+      "sha256": "494aa4aab241ebcd44f230dd3c51f93ebe9fe21ad4e021dea8897a1b2d02213f"
     },
     {
-      "bytes": 16551,
+      "bytes": 16621,
       "path": "gh-300/index.html",
-      "sha256": "4c39b468fe5df150e06744cbc7667c3270ab53987c7ffa3fba684a249e6334dd"
+      "sha256": "db31cf7b166f02e0829b5aaba8acb520268750aea3e0158e3a706de1b2b9178f"
     },
     {
-      "bytes": 15035,
+      "bytes": 15102,
       "path": "gh-300/privacy-and-safeguards.html",
-      "sha256": "f9357e2e7828f39fe14700fb04334d87961418ed053332c836841a66a1dc9fab"
+      "sha256": "18a154772edaf720f0e1deec25b88ca4cf901b3a2cc37b79c5cc79cc6c16b931"
     },
     {
-      "bytes": 13485,
+      "bytes": 13552,
       "path": "gh-300/prompt-engineering.html",
-      "sha256": "ee93db4c820b6e325fddbca4287796eab85bd3251934dfc49e3fcc0de7d794e6"
+      "sha256": "1b153633dfdc3f9e788674d4f4dd001a881d5bbac22a24566119b194697ea82b"
     },
     {
-      "bytes": 17927,
+      "bytes": 17997,
       "path": "gh-300/responsible-ai.html",
-      "sha256": "8a8fb25a1a17f552c71ec36c79b944606532b9856921cdc449bb0f356f34b6d3"
+      "sha256": "9f106d9f0bfccb253d9f24cba119a2e15c962c53fb63d8523543b40531020cfb"
     },
     {
-      "bytes": 26450,
+      "bytes": 26318,
       "path": "index.html",
-      "sha256": "91e21d623d934903ba5d6476164f3b486d90f09fe9fd48b907b9dc4e2271cbde"
+      "sha256": "9822c876f50a13fcdfd898c0caad953665469911e329fd3f4bdb4dbc34fab63f"
     },
     {
-      "bytes": 6833,
+      "bytes": 9500,
       "path": "js/main.js",
-      "sha256": "3278a797960112fb74c0bdec464172cf411ef4bbde090f021e0b40ceb4e98c04"
+      "sha256": "9e57a5304b45b715f5c1975e7e0ea039cbd7abd8063987447d4065136272610d"
     },
     {
-      "bytes": 3410,
+      "bytes": 4134,
       "path": "llms.txt",
-      "sha256": "ca4c5262b5812951e62d8955951377ca89d189633bf6ceabe8108717d57ec5a4"
+      "sha256": "82a5101df792d6e67efd07822e63b408654d3db3dc8e91d9f3b85552bbd6c96a"
     },
     {
       "bytes": 5877,
@@ -346,11 +351,11 @@
       "sha256": "995c756df17615582ae0389eb777b093b0a447a1493ed2819e2565ad04f32101"
     },
     {
-      "bytes": 2235,
+      "bytes": 2380,
       "path": "sitemap.xml",
-      "sha256": "853f9ef7f7031ac4e7c7357956202cbb0b31217ed4743e64536aae2ff847cf55"
+      "sha256": "3f184197dd1fa692a4bc2328e75870ca794ca214e3dc9120477e30ef3e9b5b21"
     }
   ],
   "schema_version": 1,
-  "sha256": "bf96c8794423d5074769e28b9249657f469d2d198e4bb3289bffd832099db80f"
+  "sha256": "fd465799ce85c631784ccfa10c7bfe8b5e279ac68cc0cee760565d3c9cfeb236"
 }

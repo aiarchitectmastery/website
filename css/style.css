@@ -170,6 +170,13 @@ code {
 }
 .primary-nav a:hover { color: var(--color-heading); }
 
+/* Six nav items: tighten spacing between the mobile breakpoint and wide desktop
+   so the header never overflows horizontally. */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .primary-nav ul { gap: 0 18px; flex-wrap: wrap; justify-content: flex-end; }
+  .primary-nav a { font-size: 0.9rem; }
+}
+
 .nav-toggle {
   display: none;
   min-width: 44px; min-height: 44px; flex-shrink: 0;
@@ -545,6 +552,14 @@ img.video-facade-thumb {
   margin-left: 0 !important;
   margin-right: auto !important;
 }
+/* Generic consent text, directly below every LM-FORM embed (no gap to scroll past). */
+.form-consent {
+  margin: 0.6em 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+.section-sub.form-intro { margin-bottom: 1em; }
 
 /* ---------- Social / contact ---------- */
 
