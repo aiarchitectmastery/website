@@ -5,7 +5,7 @@
    - YouTube facade (lazy load player on click)
    - Footer year
     - GA4 conversion and outbound link tracking
-    - LM-FORM free-resource checkbox pre-tick (no telemetry)
+    - Free-resource checkbox pre-tick in LM-FORM and C-FORM (no telemetry)
 */
 
 (function () {
@@ -105,8 +105,8 @@
   // Labels are fixed strings; no email, field value or DOM text is ever sent.
   const leadForms = {
     '41342389': 'lm002_form', // MailerLite form 4TDpWG (AAM Agent Workflow, LM-002)
-    '48855836': 'lm_form' // MailerLite LM-FORM pzf8Rl (homepage #contact + /free-resources/; page from page_location)
-    // Reserved: 'c_form' (course lead PRD).
+    '48855836': 'lm_form', // MailerLite LM-FORM pzf8Rl (homepage #contact + /free-resources/; page from page_location)
+    '48890602': 'c_form' // MailerLite C-FORM CxESYl (/gh-300/#cheat-sheet, course gift LM-001; course lead PRD W7)
   };
 
   function isVisibleSuccess(success) {
@@ -165,18 +165,23 @@
     registerLeadForm(webformId, leadForms[webformId]);
   });
 
-  // ----- LM-FORM free-resource pre-tick -----
-  // On /free-resources/ and on any LM-FORM page opened with ?lm=<code>, tick the
-  // matching interest-group checkbox once the MailerLite embed has rendered.
+  // ----- Free-resource pre-tick (LM-FORM and C-FORM) -----
+  // On a registered resource page (/free-resources/, /gh-300/) and on any page
+  // opened with ?lm=<code>, tick the matching interest-group checkbox once the
+  // MailerLite embed has rendered. Each checkbox entry names the registered
+  // webform that carries it (PLAN v1.5 §5.3), so a code only ever ticks its own
+  // form's option; a page without that form is left alone (e.g. ?lm=001 on the
+  // homepage, which has only LM-FORM).
   // Only an existing checkbox is ticked: no inputs or groups are ever created,
   // nothing is sent to analytics, and a missing checkbox is silently ignored.
   // The visitor's own choice wins: each rendered form is pre-ticked at most once.
-  const lmFormId = '48855836';
   const resourceCheckboxes = {
-    // LM-004 interest-group checkbox in the LM-FORM embed (verified 2026-11-22).
-    '004': { name: 'groups[]', value: '204738464093045920' }
+    // LM-001 interest-group checkbox in the C-FORM CxESYl embed (verified 2026-11-22).
+    '001': { name: 'groups[]', value: '204847501052741361', form: '48890602' },
+    // LM-004 interest-group checkbox in the LM-FORM pzf8Rl embed (verified 2026-11-22).
+    '004': { name: 'groups[]', value: '204738464093045920', form: '48855836' }
   };
-  const resourcePages = { '/free-resources/': '004' };
+  const resourcePages = { '/free-resources/': '004', '/gh-300/': '001' };
 
   function requestedResource() {
     const loc = window.location;
@@ -189,9 +194,12 @@
     return has.call(resourcePages, pagePath) ? resourcePages[pagePath] : null;
   }
 
-  function preTickResource(webformId) {
+  function preTickResource() {
     const target = resourceCheckboxes[requestedResource()];
     if (!target || !target.name || !target.value) return;
+    const webformId = target.form;
+    if (!/^[0-9]+$/.test(webformId || '') ||
+        !Object.prototype.hasOwnProperty.call(leadForms, webformId)) return;
     const handled = [];
     function apply() {
       let pending = false;
@@ -221,5 +229,5 @@
     }
   }
 
-  try { preTickResource(lmFormId); } catch (_) { /* fail silently */ }
+  try { preTickResource(); } catch (_) { /* fail silently */ }
 })();

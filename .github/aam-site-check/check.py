@@ -368,7 +368,7 @@ PUBLIC_PAGE_FIELDS = (
 )
 PUBLIC_ASSET_FIELDS = (
     "asset_id", "path", "kind", "public_status", "indexing_intent",
-    "source_path", "archive_members",
+    "source_path", "archive_members", "reviewed_sha256",
 )
 
 
@@ -1027,7 +1027,12 @@ class Checker:
                 except (UnicodeError, ValueError) as exc:
                     self.finding("CONTENT-09", "text-asset-parse", path, str(exc), "inspectable text")
             elif suffix == ".pdf":
-                self.finding("CONTENT-09", "pdf-review-required", path, "new PDF surface", "approved extraction and terminology check")
+                # A human-reviewed PDF passes only while its bytes equal the reviewed hash.
+                if asset.get("reviewed_sha256") and asset["reviewed_sha256"] == self.manifest[path]:
+                    self.review(path, "pdf-reviewed", "Reviewed PDF bytes " + asset["reviewed_sha256"][:12]
+                                + "; re-review on any change.")
+                else:
+                    self.finding("CONTENT-09", "pdf-review-required", path, "new PDF surface", "approved extraction and terminology check")
             else:
                 self.review(path, "asset-visual-terminology", "Raster/media contents need human inspection; no OCR or video review inferred.")
 

@@ -111,6 +111,11 @@
       "sha256": "19bb92e7448042f06d5d37d69a08b0d86f576892af9a01be38ce8be789e23703"
     },
     {
+      "bytes": 55867,
+      "path": "downloads/gh-300/gh300-exam-cheat-sheet.pdf",
+      "sha256": "495ec4b287a51e90f273c062c469101eb5859d55fdec81c2912b4644365bbe19"
+    },
+    {
       "bytes": 14414,
       "path": "downloads/starter-kit.zip",
       "sha256": "225a4a6d73c49b28e33006afbb01712a817e8cace05bf2dc3de1bb3e6e7303a6"
@@ -166,49 +171,49 @@
       "sha256": "a9b75c1f9096212f7f27639ac920a5266b2746b82d4dbc7dff04fd393c7efc75"
     },
     {
-      "bytes": 24184,
+      "bytes": 24496,
       "path": "gh-300/copilot-features.html",
-      "sha256": "d9db72342d5ed582df40b8197ffd8bb37d77d25f0697024bd14428e71ab7c41e"
+      "sha256": "ee8b6a7c71b57da3f5ef091b475159a47a661b70c66a109151fd67676f8ac392"
     },
     {
-      "bytes": 13876,
+      "bytes": 14187,
       "path": "gh-300/data-and-architecture.html",
-      "sha256": "0ed4664741c60c76d2dd6a68ba3c6de3a2b3c46c834a81fbcb64350c35dc4685"
+      "sha256": "f7143ed9344d7b0d21bf941e01717a585bacd468e4040cd147d1be903dbaf1d8"
     },
     {
-      "bytes": 13743,
+      "bytes": 14054,
       "path": "gh-300/developer-productivity.html",
-      "sha256": "494aa4aab241ebcd44f230dd3c51f93ebe9fe21ad4e021dea8897a1b2d02213f"
+      "sha256": "f330683aadabd9cabaa3ed637f5f0972e1beee14b09813a53192452a886a6634"
     },
     {
-      "bytes": 16621,
+      "bytes": 20065,
       "path": "gh-300/index.html",
-      "sha256": "db31cf7b166f02e0829b5aaba8acb520268750aea3e0158e3a706de1b2b9178f"
+      "sha256": "6b8051ab826420dd533b5e202ebff83c9e77d0b0824bcc603445393cdd28229b"
     },
     {
-      "bytes": 15102,
+      "bytes": 15492,
       "path": "gh-300/privacy-and-safeguards.html",
-      "sha256": "18a154772edaf720f0e1deec25b88ca4cf901b3a2cc37b79c5cc79cc6c16b931"
+      "sha256": "6912021c7f6c26b3afe0c785e6b822a76580a1226375da4690d47b5181d38d41"
     },
     {
-      "bytes": 13552,
+      "bytes": 13863,
       "path": "gh-300/prompt-engineering.html",
-      "sha256": "1b153633dfdc3f9e788674d4f4dd001a881d5bbac22a24566119b194697ea82b"
+      "sha256": "f8ed8cac3e51e61100681da8386870db56327ed02edd0c32f8d4b8437ff4a3e5"
     },
     {
-      "bytes": 17997,
+      "bytes": 18309,
       "path": "gh-300/responsible-ai.html",
-      "sha256": "9f106d9f0bfccb253d9f24cba119a2e15c962c53fb63d8523543b40531020cfb"
+      "sha256": "71fee2f96af609e73258cdf7b9e1aafdbcd4b3a193de51964a24773fc9892690"
     },
     {
-      "bytes": 26318,
+      "bytes": 26545,
       "path": "index.html",
-      "sha256": "9822c876f50a13fcdfd898c0caad953665469911e329fd3f4bdb4dbc34fab63f"
+      "sha256": "5b0662bd13a95e95db85251f1dd6679b1aa5ca6bf47c2b2c65358b3b2ec66480"
     },
     {
-      "bytes": 9500,
+      "bytes": 10199,
       "path": "js/main.js",
-      "sha256": "9e57a5304b45b715f5c1975e7e0ea039cbd7abd8063987447d4065136272610d"
+      "sha256": "02b7be47cc23e49e7bd4adeffdabf917cfdeb5ce0cd3c7bcdf541fd244500990"
     },
     {
       "bytes": 4134,
@@ -357,5 +362,5 @@
     }
   ],
   "schema_version": 1,
-  "sha256": "fd465799ce85c631784ccfa10c7bfe8b5e279ac68cc0cee760565d3c9cfeb236"
+  "sha256": "7fe1f7f9b2a614b7dd235a8da6c674098b2a56c5a64a83c1ec8046a1482082f4"
 }

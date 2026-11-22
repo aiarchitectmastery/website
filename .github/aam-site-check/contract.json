@@ -135,6 +135,14 @@
         "public_status": "public"
       },
       {
+        "asset_id": "AAM-resource-gh300-exam-cheat-sheet",
+        "indexing_intent": "download",
+        "kind": "download",
+        "path": "downloads/gh-300/gh300-exam-cheat-sheet.pdf",
+        "public_status": "public",
+        "reviewed_sha256": "495ec4b287a51e90f273c062c469101eb5859d55fdec81c2912b4644365bbe19"
+      },
+      {
         "asset_id": "AAM-A018",
         "indexing_intent": "index",
         "kind": "image",
@@ -396,6 +404,7 @@
         "path": "gh-300/index.html",
         "preferred_url": "https://aiarchitectmastery.com/gh-300/",
         "protected_fragments": [
+          "cheat-sheet",
           "main",
           "primary-nav",
           "year"
@@ -1191,6 +1200,7 @@
     "assets/images/methodology-prd-social.jpg",
     "assets/images/methodology-task-social.jpg",
     "css/style.css",
+    "downloads/gh-300/gh300-exam-cheat-sheet.pdf",
     "downloads/starter-kit.zip",
     "downloads/starter-kit/IMPLEMENTATION-checklist.md",
     "downloads/starter-kit/PLAN-template.md",
