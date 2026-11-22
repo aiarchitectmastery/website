@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>GitHub Copilot Features — GH-300 Module 2 (IDE, CLI, Agent Mode, MCP) | AI Architect Mastery</title>
-  <meta name="description" content="Module 2 of the GH-300 study guide: GitHub Copilot in the IDE, CLI, Agent Mode vs. Plan Mode vs. Ask, MCP, Code Review, Spaces, Spark, cloud agent, memory, and organization governance." />
+  <meta name="description" content="Module 2 of the GH-300 study guide: GitHub Copilot in the IDE, CLI, Agent Mode vs. Plan Mode vs. Ask, MCP, Code Review, Spaces, Spark (retired), cloud agent, memory, and organization governance." />
 
   <link rel="canonical" href="https://aiarchitectmastery.com/gh-300/copilot-features.html" />
   <meta name="robots" content="index, follow" />
@@ -13,14 +13,14 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="GitHub Copilot Features — GH-300 Module 2" />
-  <meta property="og:description" content="The largest GH-300 exam domain. Copilot in the IDE, CLI, Agent Mode, Plan Mode, MCP, Code Review, Spaces, Spark, cloud agent, memory, and org governance." />
+  <meta property="og:description" content="The largest GH-300 exam domain. Copilot in the IDE, CLI, Agent Mode, Plan Mode, MCP, Code Review, Spaces, Spark (retired), cloud agent, memory, and org governance." />
   <meta property="og:url" content="https://aiarchitectmastery.com/gh-300/copilot-features.html" />
   <meta property="og:image" content="https://aiarchitectmastery.com/assets/images/aam-social-card.jpg" />
   <meta property="og:site_name" content="AI Architect Mastery" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GitHub Copilot Features — GH-300 Module 2" />
-  <meta name="twitter:description" content="The largest GH-300 exam domain — IDE, CLI, Agent Mode, Plan Mode, MCP, Code Review, Spaces, Spark, governance." />
+  <meta name="twitter:description" content="The largest GH-300 exam domain — IDE, CLI, Agent Mode, Plan Mode, MCP, Code Review, Spaces, Spark (retired), governance." />
   <meta name="twitter:image" content="https://aiarchitectmastery.com/assets/images/aam-social-card.jpg" />
 
   <link rel="icon" type="image/png" href="../assets/images/logo.png" />
@@ -150,7 +150,7 @@
         </tbody>
       </table>
 
-      <p>Chat participants (<code>@</code>): <code>@workspace</code>, <code>@vscode</code>, <code>@terminal</code>, <code>@github</code>. File and selection references with <code>#</code>: <code>#file:path/to/file.ts</code>, <code>#selection</code>.</p>
+      <p>Chat participants (<code>@</code>) in VS Code: <code>@github</code>, <code>@terminal</code>, <code>@vscode</code>. Older materials also list <code>@workspace</code>; it is not in the current VS Code participant list in GitHub Docs. File and selection references with <code>#</code>: <code>#file:path/to/file.ts</code>, <code>#selection</code>.</p>
 
       <h2 id="l02">GitHub Copilot CLI</h2>
 
@@ -242,14 +242,14 @@
       </ul>
       <p>For the exam, remember: MCP is the mechanism that enables external integrations in Agent Mode.</p>
 
-      <h2 id="l04">Code Review, Spaces, Spark, PR summaries, cloud agent, memory</h2>
+      <h2 id="l04">Code Review, Spaces, Spark (retired), PR summaries, cloud agent, memory</h2>
 
       <h3>Copilot Code Review</h3>
       <p>Automated code review on GitHub pull requests. Configured at the organization level (Settings → Copilot → Code Review). Review standards can be defined in instructions files (<code>.github/copilot-instructions.md</code>).</p>
 
       <h3>Copilot Spaces and GitHub Spark</h3>
       <p><strong>Copilot Spaces</strong> organize relevant context (code, documentation, specifications) into a curated knowledge surface that Copilot draws on for a specific task. Spaces is a context-management tool, not a shared team workspace.</p>
-      <p><strong>GitHub Spark</strong> <em>(public preview)</em> builds and deploys full-stack apps from natural language. Available only on <strong>Pro+ and Enterprise</strong> plans.</p>
+      <p><strong>GitHub Spark</strong> <em>(retired)</em> built full-stack apps from natural language. GitHub stopped new Spark apps on github.com on August 4, 2026, and access ended on August 31, 2026. The official skills outline (August 7, 2026) still names Spark, so know the concept for the exam: an app built from a natural-language description.</p>
 
       <h3>Pull Request Summaries</h3>
       <p>Copilot generates a natural-language summary of PR changes. <strong>Plan limitation:</strong> not available on Free — Student plan and above.</p>
@@ -283,7 +283,7 @@
         <tbody>
           <tr><td>Automated PR review</td><td>Copilot Code Review</td></tr>
           <tr><td>Curated team context</td><td>Copilot Spaces</td></tr>
-          <tr><td>Quick prototype or demo app</td><td>GitHub Spark</td></tr>
+          <tr><td>Quick prototype or demo app (exam concept)</td><td>GitHub Spark — retired August 31, 2026</td></tr>
           <tr><td>PR description takes too long</td><td>PR Summary</td></tr>
           <tr><td>Consistent team behavior</td><td>Instructions + prompt files</td></tr>
           <tr><td>Delegate implementation on GitHub</td><td>Copilot cloud agent</td></tr>

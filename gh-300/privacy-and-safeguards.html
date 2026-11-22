@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy, Content Exclusions, and Safeguards | GH-300 Module 6 | AI Architect Mastery</title>
-  <meta name="description" content="Module 6 of the GH-300 study guide: GitHub Copilot privacy settings, content exclusions (org &gt; repo &gt; user), Duplication Detection, security warnings, plan-level differences, and a working troubleshooting checklist." />
+  <meta name="description" content="Module 6 of the GH-300 study guide: GitHub Copilot privacy settings, content exclusions (repository, organization, enterprise), Duplication Detection, security warnings, plan-level differences, and a working troubleshooting checklist." />
   <link rel="canonical" href="https://aiarchitectmastery.com/gh-300/privacy-and-safeguards.html" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#15182A" />
@@ -94,12 +94,12 @@
       <table>
         <thead><tr><th>Level</th><th>Configured in</th><th>Who can set it</th></tr></thead>
         <tbody>
-          <tr><td>Organization</td><td>GitHub.com → Org Settings → Copilot</td><td>Org admin</td></tr>
-          <tr><td>Repository</td><td>GitHub.com → Repo Settings → Copilot → Content exclusion</td><td>Repo admin</td></tr>
-          <tr><td>User</td><td>IDE settings</td><td>Individual user (limited)</td></tr>
+          <tr><td>Repository</td><td>GitHub.com → Repo Settings → Copilot → Content exclusion</td><td>Repository admin</td></tr>
+          <tr><td>Organization</td><td>GitHub.com → Org Settings → Copilot</td><td>Organization owner</td></tr>
+          <tr><td>Enterprise</td><td>GitHub.com → Enterprise settings</td><td>Enterprise owner</td></tr>
         </tbody>
       </table>
-      <p class="callout"><strong>Key exam point.</strong> Org-level exclusions take precedence — users cannot override them.</p>
+      <p class="callout"><strong>Key exam point.</strong> Content exclusion is a Business/Enterprise feature and has no user level. Exclusions inherited from a higher level are shown read-only in the lower-level settings.</p>
 
       <h3>Configuring org-level exclusions</h3>
       <ol>
@@ -147,13 +147,12 @@
       <h2 id="l02">Safeguards and troubleshooting</h2>
 
       <h3>Duplication Detection</h3>
-      <p>Duplication Detection checks whether a Copilot suggestion resembles known public code (e.g. open source on GitHub). Settings:</p>
+      <p>Duplication Detection checks whether a Copilot suggestion, together with about 150 characters of surrounding code, matches public code on GitHub. Matches occur in less than 1% of inline suggestions. The setting has two options:</p>
       <ul>
-        <li><strong>Block</strong> — suggestions matching public code are not shown at all (highest protection).</li>
-        <li><strong>Allow with warning</strong> — shown with a warning and a reference to the source (balanced default for most orgs).</li>
-        <li><strong>Allow</strong> — all suggestions shown (default, lowest protection).</li>
+        <li><strong>Block</strong> — suggestions matching public code are not shown.</li>
+        <li><strong>Allow</strong> — matching suggestions are shown with code references (repository URL and license).</li>
       </ul>
-      <p>Configured at GitHub.com → Settings → GitHub Copilot → Suggestions matching public code (per user) or Org Settings → Copilot (per org).</p>
+      <p>Configured at GitHub.com → Settings → GitHub Copilot → Suggestions matching public code (per user) or Org Settings → Copilot (per org). Users who get Copilot from an organization inherit the organization or enterprise setting.</p>
 
       <h3>Security warnings</h3>
       <p>Copilot can warn inline in the IDE about hard-coded secrets, SQL injection patterns, missing input validation, insecure HTTP, and weak/deprecated cryptography. Active automatically when Copilot is enabled (Business/Enterprise). These warnings are <em>not</em> exhaustive — pair with SAST tools.</p>
@@ -164,7 +163,7 @@
         <li>Is the extension installed and up to date?</li>
         <li>Does the user have an active subscription?</li>
         <li>Is the file type excluded (org or user setting)?</li>
-        <li>Is the file excluded by Content Exclusions (org or repo)?</li>
+        <li>Is the file excluded by Content Exclusions (repository, organization or enterprise)?</li>
         <li>Is Copilot temporarily disabled in the IDE status bar?</li>
       </ol>
 
@@ -172,13 +171,13 @@
       <ol>
         <li>Is the path/pattern correct?</li>
         <li>Have the changes propagated yet (up to 30 minutes)? Reload the IDE.</li>
-        <li>Is this an org-level or repo-level exclusion?</li>
+        <li>Is this a repository-, organization- or enterprise-level exclusion?</li>
         <li>Run "Reload Window".</li>
       </ol>
 
       <p><strong>Duplication Detection not triggering:</strong></p>
       <ol>
-        <li>Is it set to Block or Allow with warning?</li>
+        <li>Is it set to Block (hide matches) or Allow (show code references)?</li>
         <li>Is the user on Business/Enterprise? (limited on Free)</li>
         <li>Is GitHub authentication still valid?</li>
       </ol>
@@ -199,7 +198,7 @@
         <li><strong>M03 — Data and Architecture (10–15%):</strong> data flow IDE → tokenization → prompt → LLM → filtering → IDE; Business/Enterprise = no training.</li>
         <li><strong>M04 — Prompt Engineering (10–15%):</strong> Role + Task + Context + Format; zero-shot, few-shot, chain-of-thought, role prompting.</li>
         <li><strong>M05 — Developer Productivity (10–15%):</strong> repetitive structures, boilerplate, docs, tests, edge cases, security warnings.</li>
-        <li><strong>M06 — Privacy &amp; Safeguards (10–15%):</strong> exclusions org &gt; repo &gt; user; Duplication Detection Block / Allow-with-warning / Allow; security warnings.</li>
+        <li><strong>M06 — Privacy &amp; Safeguards (10–15%):</strong> exclusions at repository, organization or enterprise level (no user level); Duplication Detection Block / Allow; security warnings.</li>
       </ul>
 
       <h3>Exam preparation checklist</h3>

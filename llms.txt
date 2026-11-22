@@ -23,7 +23,7 @@ The methodology pages are reference-only: no course enrollment is required.
 
 ## GH-300 Certification Documentation
 
-- [GH-300 hub](https://aiarchitectmastery.com/gh-300/): Six free written study guides, using the January 2026 study-guide baseline. These pages are not six separately available courses.
+- [GH-300 hub](https://aiarchitectmastery.com/gh-300/): Six free written study guides, organized around the official skills outline of August 7, 2026 and updated November 2026. These pages are not six separately available courses.
 - [Responsible AI](https://aiarchitectmastery.com/gh-300/responsible-ai.html): Responsible AI principles and limitations.
 - [Copilot features](https://aiarchitectmastery.com/gh-300/copilot-features.html): Copilot interfaces and capabilities.
 - [Data and architecture](https://aiarchitectmastery.com/gh-300/data-and-architecture.html): Context, data flow and model limitations.
