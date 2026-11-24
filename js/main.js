@@ -66,7 +66,12 @@
   const trackingLabels = new Set([
     'cta-gh300-bestprice-inline', 'cta-gh300-bestprice', 'cta-gh300-udemy',
     'cta-gh300-docs', 'social-linkedin', 'social-youtube',
-    'social-instagram', 'contact-email'
+    'social-instagram', 'contact-email',
+    // Web v2 (PLAN aam-website-v2 §3). Internal-scroll CTAs fire an event named
+    // after their label; Udemy CTAs fire udemy_course_click with cta_id=<label>.
+    'cta-home-hero', 'cta-gh300-offer-home', 'cta-home-early-access',
+    'cta-gh300-offer-home-end', 'cta-courses-early-access', 'cta-gh300-nav',
+    'social-tiktok'
   ]);
   const udemyCoursePath = '/course/github-copilot-gh-300-certification-prep/';
   document.addEventListener('click', function (e) {
@@ -178,7 +183,7 @@
   const resourceCheckboxes = {
     // LM-001 interest-group checkbox in the C-FORM CxESYl embed (verified 2026-11-22).
     '001': { name: 'groups[]', value: '204847501052741361', form: '48890602' },
-    // LM-004 interest-group checkbox in the LM-FORM pzf8Rl embed (verified 2026-11-22).
+    // LM-004 (AAM Prompt Pack) request-group checkbox in the LM-FORM pzf8Rl embed (verified 2026-11-22).
     '004': { name: 'groups[]', value: '204738464093045920', form: '48855836' }
   };
   const resourcePages = { '/free-resources/': '004', '/gh-300/': '001' };

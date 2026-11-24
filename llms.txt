@@ -17,9 +17,9 @@ The methodology pages are reference-only: no course enrollment is required.
 ## AAM Agent Workflow, Free Resources and Courses
 
 - [AAM Agent Workflow](https://aiarchitectmastery.com/agent-workflow/): A free template repository for the AI Driven Development Methodology (PRD, PLAN, TASK, IMPLEMENTATION), delivered as plain Markdown files: templates for the PRD, PLAN and TASK, an IMPLEMENTATION review checklist and reusable prompts. The current release is BETA 2.0.0. The email signup on that page takes you to the repository and starts a three-day onboarding guide. It is not an agent or an installer, and nothing runs on its own.
-- [Free Resources](https://aiarchitectmastery.com/free-resources/): Prompts and templates from the AAM videos, sent free by email. The first resource is the Agent Guidance Review Prompts: review the Copilot instructions, custom agents and prompt files a project already has, one approved change at a time. The prompts do not enforce tool permissions or guarantee performance gains.
-- [AAM email list](https://aiarchitectmastery.com/#contact): The homepage form joins the AAM email list: practical insights on the AI Driven Development Methodology and news about AAM videos, courses and free resources. A free resource is sent only if it is ticked in the form.
-- [Current course information](https://aiarchitectmastery.com/#courses): The site lists GitHub Copilot GH-300 preparation with a Udemy link. Check the linked provider for current availability and pricing. Mastering AI Driven Development is marked coming soon, not available for enrollment.
+- [Free Resources](https://aiarchitectmastery.com/free-resources/): Prompts and templates from the AAM videos, sent free by email. The first resource is the AAM Prompt Pack: every prompt in the AAM Agent Workflow, currently the agent guidance review prompts (review the Copilot instructions, custom agents and prompt files a project already has, one approved change at a time) and the fresh session handoff prompts. The pack follows the AAM Agent Workflow releases. The prompts do not enforce tool permissions or guarantee performance gains.
+- [AAM email list](https://aiarchitectmastery.com/#contact): The homepage form joins the AAM email list: founding price news for Mastering AI Driven Development and practical insights on the AI Driven Development Methodology. A free resource is sent only if it is ticked in the form.
+- [Courses](https://aiarchitectmastery.com/courses/): AI Architect Mastery courses for experienced developers: GitHub Copilot certification (GH-300) preparation now, and Mastering AI Driven Development coming soon. Check the linked provider for current availability and pricing; Mastering AI Driven Development is not available for enrollment yet.
 
 ## GH-300 Certification Documentation
 
@@ -34,5 +34,5 @@ The methodology pages are reference-only: no course enrollment is required.
 
 ## About
 
-- [Instructor — Ari Vilkman](https://aiarchitectmastery.com/#instructor): Instructor information and professional profile link.
+- [Ari Vilkman — AI Architect](https://aiarchitectmastery.com/about/): Ari Vilkman is an AI Architect and the founder of AI Architect Mastery and Data Integration Mastery; he created the AI Driven Development Methodology (PRD → PLAN → TASK → IMPLEMENTATION).
 - [YouTube channel](https://www.youtube.com/@AIArchitectMastery): AAM videos supporting the written references.

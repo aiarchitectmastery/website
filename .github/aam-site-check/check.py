@@ -33,14 +33,16 @@ import xml.etree.ElementTree as ET
 import zipfile
 
 API_VERSION = 1
-SCHEMA_VOCABULARY_VERSION = "aam-observed-subset-2026-10-04-v1"
+SCHEMA_VOCABULARY_VERSION = "aam-observed-subset-2026-11-23-v2"
 SCHEMA_SOURCES = ["https://schema.org/docs/full.html", "https://schema.org/docs/schemas.html"]
 # Deliberately a finite vocabulary, not a full schema.org validator. New usages
 # require review of this set, not a silent generic acceptance of arbitrary keys.
+# v2 (2026-11-23, Web v2 PRD AB-02): ProfilePage + knowsAbout for /about/.
 SCHEMA_TYPES = set("""
 Organization Person Course Offer FAQPage Question Answer WebPage Article
 BreadcrumbList ListItem Thing Audience CollectionPage ItemList LearningResource
 EducationalOccupationalCredential VideoObject ImageObject WebSite CreativeWork
+ProfilePage
 """.split())
 SCHEMA_PROPERTIES = set("""
 name url logo description founder sameAs provider inLanguage offers availability
@@ -51,7 +53,7 @@ keywords alternateName identifier teaches learningResourceType timeRequired
 educationalCredentialAwarded numberOfItems itemListOrder contentUrl embedUrl
 thumbnailUrl uploadDate duration potentialAction target address jobTitle
 price priceCurrency priceValidUntil category aggregateRating ratingValue
-reviewCount bestRating worstRating review reviewBody
+reviewCount bestRating worstRating review reviewBody knowsAbout
 """.split())
 SCHEMA_REQUIRED = {
     "Organization": {"name"}, "Person": {"name"}, "Course": {"name"},
@@ -66,6 +68,10 @@ CORE_VIDEOS = {
     "methodology/implementation.html": "NuDzn_Osu7c",
 }
 PRIMARY_PATHS = ["methodology/index.html", *CORE_VIDEOS]
+# Web v2 PRD ID-04: content pages whose JSON-LD author must be the one Person
+# @id. Active only when the registry sets policies.content_author_id.
+CONTENT_PAGE_PREFIXES = ("methodology/", "gh-300/", "agent-workflow/",
+                         "free-resources/", "courses/", "about/")
 TEXT_EXTENSIONS = {".html", ".htm", ".md", ".txt", ".xml", ".json", ".js", ".css", ".svg", ".yml", ".yaml"}
 RETIRED = re.compile(r"\bstructured[\s-]*vibe[\s-]*coding\b", re.I)
 TRACKING = re.compile(
@@ -680,6 +686,48 @@ class Checker:
         self.review(path, "schema-truth-and-identity", "Vocabulary subset checks only; review every statement against visible content and authoritative sources.")
         return modified
 
+    def authorship(self, path, page):
+        """DATA-05 (Web v2 PRD ID-04): content pages name the one Person as author.
+
+        Opt-in: runs only when the registry sets policies.content_author_id, so
+        existing registries and the exported public contract are unaffected.
+        Every JSON-LD `author` on a content page must be an @id reference equal
+        to the policy value (at least one must exist), and every `publisher`
+        must reference the Organization @id (at least one must exist).
+        """
+        policy = self.registry.get("policies")
+        if not isinstance(policy, dict):
+            return
+        author_id = policy.get("content_author_id")
+        if not isinstance(author_id, str) or not author_id:
+            return
+        prefixes = policy.get("content_page_prefixes", CONTENT_PAGE_PREFIXES)
+        if not isinstance(prefixes, (list, tuple)) or not path.startswith(tuple(prefixes)):
+            return
+        if Path(path).suffix.lower() not in (".html", ".htm"):
+            return
+        if self.records.get(path, {}).get("indexing_intent") == "noindex":
+            return
+        publisher_id = policy.get("content_publisher_id", self.origin + "/#organization")
+        authors, publishers = [], []
+        for raw in page.json_ld:
+            try:
+                value = load_json(raw)
+            except (ValueError, RecursionError):
+                continue  # already reported by schema()
+            for node in json_nodes(value):
+                for key, bucket in (("author", authors), ("publisher", publishers)):
+                    if key in node:
+                        found = node[key]
+                        bucket.extend(found if isinstance(found, list) else [found])
+        def ids(values):
+            return [v.get("@id") if isinstance(v, dict) else v for v in values]
+        author_ids, publisher_ids = ids(authors), ids(publishers)
+        if not author_ids or any(a != author_id for a in author_ids):
+            self.finding("DATA-05", "content-author-id", path, author_ids, [author_id])
+        if not publisher_ids or any(p != publisher_id for p in publisher_ids):
+            self.finding("DATA-05", "content-publisher-id", path, publisher_ids, [publisher_id])
+
     def resolve_link(self, path, ref, kind):
         try:
             target = local_target(self.origin, page_url(self.origin, path), ref)
@@ -782,6 +830,7 @@ class Checker:
                 if script["type"] != "application/ld+json":
                     self.terminology(path, script["text"], "inline script strings")
             info["date_modified"] = self.schema(path, page)
+            self.authorship(path, page)
             for time in page.times:
                 self.check_date(time["datetime"], path, "visible time datetime")
                 # "Reviewed" is NOT a substantive-change date. Keep separately

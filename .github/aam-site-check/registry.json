@@ -376,6 +376,7 @@
       "path": "free-resources/index.html",
       "preferred_url": "https://aiarchitectmastery.com/free-resources/",
       "protected_fragments": [
+        "aam-prompt-pack",
         "agent-guidance-review-prompts",
         "get-resources",
         "main",
@@ -1145,6 +1146,58 @@
       "relations": [
         {
           "target": "AAM-P014",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C036"
+      ],
+      "content_id": "AAM-P036",
+      "indexing_intent": "index",
+      "journey": "existing-commercial-offers",
+      "modified_at": null,
+      "page_type": "courses-hub",
+      "path": "courses/index.html",
+      "preferred_url": "https://aiarchitectmastery.com/courses/",
+      "protected_fragments": [
+        "gh-300",
+        "main",
+        "mastering-ai-driven-development",
+        "primary-nav",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P001",
+          "type": "parent"
+        }
+      ]
+    },
+    {
+      "concept_ids": [
+        "AAM-C037"
+      ],
+      "content_id": "AAM-P037",
+      "indexing_intent": "index",
+      "journey": "identity-profile",
+      "modified_at": null,
+      "page_type": "profile",
+      "path": "about/index.html",
+      "preferred_url": "https://aiarchitectmastery.com/about/",
+      "protected_fragments": [
+        "main",
+        "primary-nav",
+        "profiles",
+        "questions",
+        "year"
+      ],
+      "protected_video_ids": [],
+      "relations": [
+        {
+          "target": "AAM-P001",
           "type": "parent"
         }
       ]

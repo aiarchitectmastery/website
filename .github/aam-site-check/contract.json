@@ -378,6 +378,7 @@
         "path": "free-resources/index.html",
         "preferred_url": "https://aiarchitectmastery.com/free-resources/",
         "protected_fragments": [
+          "aam-prompt-pack",
           "agent-guidance-review-prompts",
           "get-resources",
           "main",
@@ -1150,6 +1151,58 @@
             "type": "parent"
           }
         ]
+      },
+      {
+        "concept_ids": [
+          "AAM-C036"
+        ],
+        "content_id": "AAM-P036",
+        "indexing_intent": "index",
+        "journey": "existing-commercial-offers",
+        "modified_at": null,
+        "page_type": "courses-hub",
+        "path": "courses/index.html",
+        "preferred_url": "https://aiarchitectmastery.com/courses/",
+        "protected_fragments": [
+          "gh-300",
+          "main",
+          "mastering-ai-driven-development",
+          "primary-nav",
+          "year"
+        ],
+        "protected_video_ids": [],
+        "relations": [
+          {
+            "target": "AAM-P001",
+            "type": "parent"
+          }
+        ]
+      },
+      {
+        "concept_ids": [
+          "AAM-C037"
+        ],
+        "content_id": "AAM-P037",
+        "indexing_intent": "index",
+        "journey": "identity-profile",
+        "modified_at": null,
+        "page_type": "profile",
+        "path": "about/index.html",
+        "preferred_url": "https://aiarchitectmastery.com/about/",
+        "protected_fragments": [
+          "main",
+          "primary-nav",
+          "profiles",
+          "questions",
+          "year"
+        ],
+        "protected_video_ids": [],
+        "relations": [
+          {
+            "target": "AAM-P001",
+            "type": "parent"
+          }
+        ]
       }
     ],
     "rules": {
@@ -1179,6 +1232,7 @@
   "schema_version": 1,
   "site_paths": [
     "CNAME",
+    "about/index.html",
     "agent-workflow/index.html",
     "assets/fonts/Lato-OFL.txt",
     "assets/fonts/RobotoSlab-LICENSE.txt",
@@ -1199,6 +1253,7 @@
     "assets/images/methodology-plan-social.jpg",
     "assets/images/methodology-prd-social.jpg",
     "assets/images/methodology-task-social.jpg",
+    "courses/index.html",
     "css/style.css",
     "downloads/gh-300/gh300-exam-cheat-sheet.pdf",
     "downloads/starter-kit.zip",

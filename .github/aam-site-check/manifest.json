@@ -6,9 +6,14 @@
       "sha256": "488c1a543819c13d2d32ace99eb4fc424f85961e2c0e71085cb48bed541bba2f"
     },
     {
-      "bytes": 18147,
+      "bytes": 13608,
+      "path": "about/index.html",
+      "sha256": "b57b032d265f085f92ef13191a811d444bef1bf647c51983a0a1277c5ae07398"
+    },
+    {
+      "bytes": 19405,
       "path": "agent-workflow/index.html",
-      "sha256": "5c8ea10bd9990912dc3c8e149fef7882bd8b9ff7210b401e5ed7a63f48b727b4"
+      "sha256": "6d703cdd7b5adbc578c7a6d78a9c4ca0c51a0845725a5c50411ec61df080c13c"
     },
     {
       "bytes": 4407,
@@ -106,9 +111,14 @@
       "sha256": "e81d5b5836fc69a37b9ac0265edd19942b365b5b82efd700cde0ce03acdf33aa"
     },
     {
-      "bytes": 25941,
+      "bytes": 13758,
+      "path": "courses/index.html",
+      "sha256": "521a93bda86c30bdd811bce93e82e0c8e318b20df198db98b6038dd6c863a0d7"
+    },
+    {
+      "bytes": 30920,
       "path": "css/style.css",
-      "sha256": "19bb92e7448042f06d5d37d69a08b0d86f576892af9a01be38ce8be789e23703"
+      "sha256": "b003a010d08bd38497944764cf23897372dd896c191aa128058e445e6f0f2386"
     },
     {
       "bytes": 55869,
@@ -161,164 +171,164 @@
       "sha256": "e2611e0b04c8cbfbb43cd3dcc6bdc36df41f9f4ad22805161ea8b69fac4909c6"
     },
     {
-      "bytes": 10768,
+      "bytes": 11742,
       "path": "free-resources/index.html",
-      "sha256": "ed5671a8f55532efa520afd57955d3ead29a7ba712872fe1222122bc04ba7f85"
+      "sha256": "56abcec92c73e625eb7042748ca8f220042725707b42e643a4a413b8af50aac5"
     },
     {
-      "bytes": 3550,
+      "bytes": 3932,
       "path": "get-started/index.html",
-      "sha256": "a9b75c1f9096212f7f27639ac920a5266b2746b82d4dbc7dff04fd393c7efc75"
+      "sha256": "2d497e9bcd227eaeedf1b03a502b0db43468491e8f7d099ad91719d07ab5ce15"
     },
     {
-      "bytes": 24848,
+      "bytes": 25852,
       "path": "gh-300/copilot-features.html",
-      "sha256": "6f6a50d67d849c3136fe63258bac3a31044c2b8df6e4e632c7b6de710b6e54b1"
+      "sha256": "182addaa48aafc854226d0e3a5b97313647a60de93bc545a9148420e94c5ebb7"
     },
     {
-      "bytes": 14187,
+      "bytes": 15194,
       "path": "gh-300/data-and-architecture.html",
-      "sha256": "f7143ed9344d7b0d21bf941e01717a585bacd468e4040cd147d1be903dbaf1d8"
+      "sha256": "4688256d208adae900ec53affc17d9981b5bd00a2d5b368d9b4f219f95cd3b8b"
     },
     {
-      "bytes": 14054,
+      "bytes": 15063,
       "path": "gh-300/developer-productivity.html",
-      "sha256": "f330683aadabd9cabaa3ed637f5f0972e1beee14b09813a53192452a886a6634"
+      "sha256": "bbe07c2fa6c5a962f1bef7c96f221fc739c5dc590369a0a94c87db7bc8f49993"
     },
     {
-      "bytes": 20396,
+      "bytes": 20826,
       "path": "gh-300/index.html",
-      "sha256": "aeadeb1b79cd2d94168c72eafce87ac6f3a7400bee3ac69cd73d4f115b77db3c"
+      "sha256": "e586792528e5cfd8bfe53dd7c40586211d75e22f9433d1df8e7f39f0c681e969"
     },
     {
-      "bytes": 15780,
+      "bytes": 16808,
       "path": "gh-300/privacy-and-safeguards.html",
-      "sha256": "1eddeb0815b30a93a36e079e891bcbf9159fb1748ac512dad6be357599a199af"
+      "sha256": "12cfe5b07221fda6e472c9af33688ef79479313c9162de290e649a19c3a0cdc1"
     },
     {
-      "bytes": 13863,
+      "bytes": 14887,
       "path": "gh-300/prompt-engineering.html",
-      "sha256": "f8ed8cac3e51e61100681da8386870db56327ed02edd0c32f8d4b8437ff4a3e5"
+      "sha256": "7175313fbf6eb2cd36ffdbf22d45497765eba721d3f4064ae77f39531e8dd8b2"
     },
     {
-      "bytes": 18309,
+      "bytes": 18584,
       "path": "gh-300/responsible-ai.html",
-      "sha256": "71fee2f96af609e73258cdf7b9e1aafdbcd4b3a193de51964a24773fc9892690"
+      "sha256": "ee42c633a59a1c9698bd5e7853d800fcf3c471260e2e3d54088b77098aef4dd1"
     },
     {
-      "bytes": 26572,
+      "bytes": 19877,
       "path": "index.html",
-      "sha256": "0ecc0b965770479fdc1b75d649e80f6c2e990d81c89304070ee0aedbbdc73ec0"
+      "sha256": "9a75aa0768132483371a6beba79252bb99eafde011708553575410ca38b5f6cb"
     },
     {
-      "bytes": 10199,
+      "bytes": 10548,
       "path": "js/main.js",
-      "sha256": "02b7be47cc23e49e7bd4adeffdabf917cfdeb5ce0cd3c7bcdf541fd244500990"
+      "sha256": "f826b51d0dd715aa0cf99373d6b9bdd390abb317ff0b72b830846ba1d7c3b93d"
     },
     {
-      "bytes": 4179,
+      "bytes": 4540,
       "path": "llms.txt",
-      "sha256": "2debd9008181020f9d82def795445b138655f31d7dc34ea83f46c5b59cb90630"
+      "sha256": "f0ff818c222c3219a62ba360b836d09093543c9b7588576e576f236c3080c748"
     },
     {
-      "bytes": 5877,
+      "bytes": 7479,
       "path": "methodology/acceptance-criteria.html",
-      "sha256": "b5c9598b1ae4400a686ef168e158281707d04a94ae056da2874a710e6a7352ca"
+      "sha256": "8d80e3fc82b354ac923434ac43072ca6400e0c4d36b2283724c445431ba702b5"
     },
     {
-      "bytes": 6019,
+      "bytes": 7621,
       "path": "methodology/agent-model.html",
-      "sha256": "7f1a6f316c735acc77808071b7b7eceb6c1450af9dc65b3d69ea2f6e34b67cc4"
+      "sha256": "c6f07cc49e16a6fe0af350e934b7272bc5a9bb812349f77e77601704b4e6813d"
     },
     {
-      "bytes": 5866,
+      "bytes": 7468,
       "path": "methodology/autonomy-boundaries.html",
-      "sha256": "63246ab29c02796654e2704c50caf6584f12aab7b397488cbed10e3a1465b58d"
+      "sha256": "25a80bf47fec8d285452eadafae65635532f966997c54cc8d3596a7a46dbd993"
     },
     {
-      "bytes": 6227,
+      "bytes": 7829,
       "path": "methodology/bugs-and-evidence.html",
-      "sha256": "fbbb1c5b9d2024dc260cf8c11beb014e76ea774cd6b2d7a8be995790eb86803f"
+      "sha256": "ee4ff3802562fa3b3d54669cf006764b1d8bfe6ba19c5b676098f9d3d86e4e42"
     },
     {
-      "bytes": 6040,
+      "bytes": 7642,
       "path": "methodology/context-and-harness.html",
-      "sha256": "44d22f9ee8c4f08fc010ec5b331fa18754eb3929702d166affe45f46c1c73af6"
+      "sha256": "3aa1706d13763a1ff3c3ba940577afd7f8245f5ff28cbaf2047632fe5f89b6d4"
     },
     {
-      "bytes": 6419,
+      "bytes": 8021,
       "path": "methodology/controlled-iteration.html",
-      "sha256": "3999460509090e9d393885b363144b6efe8acca650803a6350c44eaa5e268f3d"
+      "sha256": "fde76eda5b94b3f1da847cbc803c08934a45e1661d2f5f769ecb8c5f91ad31e7"
     },
     {
-      "bytes": 5997,
+      "bytes": 7599,
       "path": "methodology/define-delegate-build-verify.html",
-      "sha256": "670cfccd360262916fb5e486fb31a443b59b373383a8512acd5de78b52c6befa"
+      "sha256": "e5407f5726b86a2e62668caa4f8eb1bec751c6a152a4e2fd6adf9241b6356b27"
     },
     {
-      "bytes": 6622,
+      "bytes": 8224,
       "path": "methodology/human-led-model.html",
-      "sha256": "8a8a0ee77c1d1cf9d7d28dc00882df82a27c855591a545d65b4fa62e59285625"
+      "sha256": "9706deb140f3261d1656bc41992d9ea0b9d6c4e0e78de2a7dfba46ff3a2993f3"
     },
     {
-      "bytes": 6754,
+      "bytes": 8356,
       "path": "methodology/implementation-checkpoint.html",
-      "sha256": "3938b1180c4dce860035f579b098868560cb0028576a20f8f5e3ea20f0022d3b"
+      "sha256": "2162ada6653c78b9ccd2dd07ef3f8af83ab1201d8c6dbc23bed4e39181fd8de1"
     },
     {
-      "bytes": 10023,
+      "bytes": 11572,
       "path": "methodology/implementation.html",
-      "sha256": "e84cd686d76c29bd4e894263f6ba950d394bfb5ae417aae3de1158dc54632072"
+      "sha256": "03e52ee383b7e837dd870f63dba263533d615f38327cd7bf3269571336798a0e"
     },
     {
-      "bytes": 4944,
+      "bytes": 6491,
       "path": "methodology/index.html",
-      "sha256": "537975d303c8e2ce2b0c01eb340a5f3953197b64d1dd78b81c169f346a7352dd"
+      "sha256": "d7959b0d2f14d5642f6f6a2cb741522f8b924ab3d3dc9d2e72dad51c0ff1d20d"
     },
     {
-      "bytes": 4989,
+      "bytes": 6929,
       "path": "methodology/methodology.css",
-      "sha256": "49d1efcfb822fb33b24338181c3f5f21a70786269f0b5620282e95d41d89b8e0"
+      "sha256": "d2dc5bd20cb83c9003c73a48d9cffce09f545d71f50a14db66487c2dd7ac4efe"
     },
     {
-      "bytes": 6146,
+      "bytes": 7748,
       "path": "methodology/native-runtime-execution.html",
-      "sha256": "7c4241c5dc374736b58a3c5ca32a0c4cfe244ddbf217c98b4437d0e6c8a94126"
+      "sha256": "a571312fe5a11eef3e7d109de21e2f1c0368b16bf03f957c83591d84f745a4b8"
     },
     {
-      "bytes": 6281,
+      "bytes": 7883,
       "path": "methodology/next-bounded-change.html",
-      "sha256": "c532331c4df92910425c93a339e3cae47ad38c6c84cb5b53a1e92c748541b3e2"
+      "sha256": "aaa9f7a039e05e0a463988f37616ce0ab33f6f717adbc0f49068ec7636562409"
     },
     {
-      "bytes": 5829,
+      "bytes": 7431,
       "path": "methodology/plan-review.html",
-      "sha256": "f79b4790f40714faeca98ee6a57595bd6388c995d95e00bf22bbfa0328c9b95a"
+      "sha256": "47879c529b767bd33d0b81556b2019385e25125735553cc2a13c5bf9e5a0ed9c"
     },
     {
-      "bytes": 7818,
+      "bytes": 9367,
       "path": "methodology/plan.html",
-      "sha256": "62f8291198409d0819f2ce20878c2157533c802272da13445d7688b32ae2c068"
+      "sha256": "ef156feb212f013be5b6806abba11127363ff66f9da3957633948e701b247250"
     },
     {
-      "bytes": 7319,
+      "bytes": 8868,
       "path": "methodology/prd.html",
-      "sha256": "bf2d5587bea2e18183fd59653d13db7e68909a880642803ff69e541948c29f2b"
+      "sha256": "784d79233f3e888513a0771487c9f2ef89459c4c8dde63ac049282ab4d8856fd"
     },
     {
-      "bytes": 6134,
+      "bytes": 7736,
       "path": "methodology/refresh-and-revalidate.html",
-      "sha256": "ccb663a27cda11d24f9add354f94399e2068100beadc92219e3b4e0d608d8dc2"
+      "sha256": "ef79b1500eda8d6c44bb4f0e6f7eb16da425d5a2953b0bc9d9810ea5ee580886"
     },
     {
-      "bytes": 6685,
+      "bytes": 8287,
       "path": "methodology/runtime-adaptation.html",
-      "sha256": "9224bbf7372b72fd2949cee304cdcaf07e6e6fae65d1c6fb65eec73097717eda"
+      "sha256": "4233b961373008107cca6f697dfb2b85b34447add7a49fcd5c0cddc25513a69d"
     },
     {
-      "bytes": 5919,
+      "bytes": 7521,
       "path": "methodology/scoped-correction.html",
-      "sha256": "ec15858edd48387463b12452d1e08fb04169480d02255aadc7edf4a96e9589b8"
+      "sha256": "ceab8ea3864b5ab8b0aea4712e0db23947db5f0533ee0d49aef794e43b749b50"
     },
     {
       "bytes": 2799,
@@ -326,29 +336,29 @@
       "sha256": "0e5de57d85e77533e5b1e5ed05d7cde9189b65232355cfdf5a976801135f82e5"
     },
     {
-      "bytes": 5912,
+      "bytes": 7514,
       "path": "methodology/task-handoff.html",
-      "sha256": "0a0055e457a2e34cc3d2944a9624c93c63ea63f198343a7a81843f10e6db0a6f"
+      "sha256": "1b631b19d527cc03d00a9f54fb3eab988feb42e569ba9df1ea177b1aa01b866f"
     },
     {
-      "bytes": 7435,
+      "bytes": 8984,
       "path": "methodology/task.html",
-      "sha256": "a812cb79822a19ed69297a45800c2ab18d645974d9dc0a22ba06105aba033196"
+      "sha256": "aaeaddad39fbbd96418ad9061f20cd2086f59ca6b64653749fb3974c62f236a5"
     },
     {
-      "bytes": 6943,
+      "bytes": 8545,
       "path": "methodology/wider-process-context.html",
-      "sha256": "8bbcf054148438fae3c415d1b4b1c8e22f84e8aed6599f58d303204d792d59db"
+      "sha256": "1b30a0809ab8ba6df631b5f261e7f2ee4ee7ddb840d885adf6213d57b4289c82"
     },
     {
-      "bytes": 5622,
+      "bytes": 7224,
       "path": "methodology/work-items.html",
-      "sha256": "8a5c25ea1852b2df733d9fe6e4dc0a2729617e0f7b36ea5568927fe186c5ebef"
+      "sha256": "13119f11f5d45db5b9d2073d0a9a8b96713eac43c2c3cbe0093b9e48828b1aec"
     },
     {
-      "bytes": 6016,
+      "bytes": 7618,
       "path": "methodology/work-types.html",
-      "sha256": "99fa3b0118811be6eb719d90926da4e2dab917d518776507a7229a962e74b8aa"
+      "sha256": "9e30ac358ff4dd09557af21c4a5e6f7e7f32797969fc0ee4d001d551e58e7685"
     },
     {
       "bytes": 341,
@@ -356,11 +366,11 @@
       "sha256": "995c756df17615582ae0389eb777b093b0a447a1493ed2819e2565ad04f32101"
     },
     {
-      "bytes": 2380,
+      "bytes": 2654,
       "path": "sitemap.xml",
-      "sha256": "3f184197dd1fa692a4bc2328e75870ca794ca214e3dc9120477e30ef3e9b5b21"
+      "sha256": "2cc3c22277f771efcda0fb7ea105a9ebde0df306adc09c36b8702572e5a01381"
     }
   ],
   "schema_version": 1,
-  "sha256": "9d664057ea2a01b93d4bf14a44e3f04b4ce5e0720c320033e7aaeb450e580ec1"
+  "sha256": "6ce599ebbd07a18a704c36876e618e6e95b664b01237e989e58defd097f21768"
 }
