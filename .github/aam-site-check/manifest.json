@@ -6,14 +6,14 @@
       "sha256": "488c1a543819c13d2d32ace99eb4fc424f85961e2c0e71085cb48bed541bba2f"
     },
     {
-      "bytes": 13608,
+      "bytes": 14257,
       "path": "about/index.html",
-      "sha256": "b57b032d265f085f92ef13191a811d444bef1bf647c51983a0a1277c5ae07398"
+      "sha256": "57a00beb8fd22d05b2ef8eef4e1383050c906354c232b960636a46d76cd4c660"
     },
     {
-      "bytes": 19405,
+      "bytes": 20098,
       "path": "agent-workflow/index.html",
-      "sha256": "6d703cdd7b5adbc578c7a6d78a9c4ca0c51a0845725a5c50411ec61df080c13c"
+      "sha256": "e9fe2adeebadf7a1be66d5e3f80a32a0727152495cd6724008f99f4e152ee1c2"
     },
     {
       "bytes": 4407,
@@ -111,14 +111,14 @@
       "sha256": "e81d5b5836fc69a37b9ac0265edd19942b365b5b82efd700cde0ce03acdf33aa"
     },
     {
-      "bytes": 13758,
+      "bytes": 14422,
       "path": "courses/index.html",
-      "sha256": "521a93bda86c30bdd811bce93e82e0c8e318b20df198db98b6038dd6c863a0d7"
+      "sha256": "447ee99f9c75840c893bff1f364d18fd8b89dfb79baadd3ada8ede78a9153e42"
     },
     {
-      "bytes": 30920,
+      "bytes": 31949,
       "path": "css/style.css",
-      "sha256": "b003a010d08bd38497944764cf23897372dd896c191aa128058e445e6f0f2386"
+      "sha256": "17bb4662c004bf581dbe9204895a05bbfa2c4a3cd80eb29a5d971ddc6d2ad4c0"
     },
     {
       "bytes": 55869,
@@ -171,59 +171,59 @@
       "sha256": "e2611e0b04c8cbfbb43cd3dcc6bdc36df41f9f4ad22805161ea8b69fac4909c6"
     },
     {
-      "bytes": 11742,
+      "bytes": 12435,
       "path": "free-resources/index.html",
-      "sha256": "56abcec92c73e625eb7042748ca8f220042725707b42e643a4a413b8af50aac5"
+      "sha256": "a894f88c256fe01bc48cc89a69cf8907cded0aff67884dee9ff3078b0ccf72c8"
     },
     {
-      "bytes": 3932,
+      "bytes": 4650,
       "path": "get-started/index.html",
-      "sha256": "2d497e9bcd227eaeedf1b03a502b0db43468491e8f7d099ad91719d07ab5ce15"
+      "sha256": "25683280e3ff2901100e41f577a3299abc8a06746738168663129bd7ec5dbdaa"
     },
     {
-      "bytes": 25852,
+      "bytes": 26545,
       "path": "gh-300/copilot-features.html",
-      "sha256": "182addaa48aafc854226d0e3a5b97313647a60de93bc545a9148420e94c5ebb7"
+      "sha256": "13fbd9beecd71bb6e9e9cc921b16ba8c2ab52812e1cfbf6105ae44a2db7b4544"
     },
     {
-      "bytes": 15194,
+      "bytes": 15887,
       "path": "gh-300/data-and-architecture.html",
-      "sha256": "4688256d208adae900ec53affc17d9981b5bd00a2d5b368d9b4f219f95cd3b8b"
+      "sha256": "702a2e13071374f106ca29024892151d43b2c242445ba6054aeeb7a02f64bf44"
     },
     {
-      "bytes": 15063,
+      "bytes": 15756,
       "path": "gh-300/developer-productivity.html",
-      "sha256": "bbe07c2fa6c5a962f1bef7c96f221fc739c5dc590369a0a94c87db7bc8f49993"
+      "sha256": "853ff34283ef57d3787148c6bd97d6f3a1d84d8b9c4128259b4735db265b6e17"
     },
     {
-      "bytes": 20826,
+      "bytes": 21519,
       "path": "gh-300/index.html",
-      "sha256": "e586792528e5cfd8bfe53dd7c40586211d75e22f9433d1df8e7f39f0c681e969"
+      "sha256": "397f8f5d444282992956a084f6df4b2f3cc6f90a2364d72837f736e8f09ff1cf"
     },
     {
-      "bytes": 16808,
+      "bytes": 17501,
       "path": "gh-300/privacy-and-safeguards.html",
-      "sha256": "12cfe5b07221fda6e472c9af33688ef79479313c9162de290e649a19c3a0cdc1"
+      "sha256": "275eabac7546ba2e78c6680e70dfd440975ec6497e7a00cf868424c038fd106e"
     },
     {
-      "bytes": 14887,
+      "bytes": 15580,
       "path": "gh-300/prompt-engineering.html",
-      "sha256": "7175313fbf6eb2cd36ffdbf22d45497765eba721d3f4064ae77f39531e8dd8b2"
+      "sha256": "90dfaae09159508864a36fa7a6c98a12587035e6e50c00334dc381c0d0997be5"
     },
     {
-      "bytes": 18584,
+      "bytes": 19277,
       "path": "gh-300/responsible-ai.html",
-      "sha256": "ee42c633a59a1c9698bd5e7853d800fcf3c471260e2e3d54088b77098aef4dd1"
+      "sha256": "096f6ff05d42601509c6327337e247ba515a869ccff90172efa4379ecdc9411b"
     },
     {
-      "bytes": 19877,
+      "bytes": 20591,
       "path": "index.html",
-      "sha256": "9a75aa0768132483371a6beba79252bb99eafde011708553575410ca38b5f6cb"
+      "sha256": "b9e46b965ad3b1681d8c5406849783b3e10be7fffeae0b1a0f4884ca9234f298"
     },
     {
-      "bytes": 10548,
+      "bytes": 16233,
       "path": "js/main.js",
-      "sha256": "f826b51d0dd715aa0cf99373d6b9bdd390abb317ff0b72b830846ba1d7c3b93d"
+      "sha256": "762bc45482bbfdc7f3b4c0d8b8028eef1abd2c98ccbafa25fc19deb0abf20ca5"
     },
     {
       "bytes": 4540,
@@ -372,5 +372,5 @@
     }
   ],
   "schema_version": 1,
-  "sha256": "6ce599ebbd07a18a704c36876e618e6e95b664b01237e989e58defd097f21768"
+  "sha256": "802fe4032bf220f09d9e6509184b88aba5439d7e2423897da89c51f064f4769c"
 }

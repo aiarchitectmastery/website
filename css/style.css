@@ -989,6 +989,29 @@ img.video-facade-thumb {
   color: var(--color-text);
 }
 .site-footer p { margin: 4px 0; }
+.footer-link-button {
+  display: inline-flex; align-items: center; min-height: 44px;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font: inherit; color: var(--color-text);
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.footer-link-button:hover, .footer-link-button:focus { color: var(--color-link-hover); }
+
+/* ---------- Cookie consent banner (created by js/main.js) ---------- */
+.cookie-banner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;
+  background: var(--color-page-bg);
+  border-top: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-soft);
+  max-height: 70vh; overflow-y: auto;
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 12px 24px; padding-top: 14px; padding-bottom: 14px;
+}
+.cookie-inner p { margin: 0; flex: 1 1 28em; min-width: 0; font-size: 0.95rem; color: var(--color-text); }
+.cookie-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
 .byline {
   font-size: 0.95rem;

@@ -6,10 +6,137 @@
    - Footer year
     - GA4 conversion and outbound link tracking
     - Free-resource checkbox pre-tick in LM-FORM and C-FORM (no telemetry)
+    - Cookie consent banner (Consent Mode v2, basic): gtag.js loads only after Accept
 */
 
 (function () {
   'use strict';
+
+  // ----- Cookie consent (Consent Mode v2, basic; roadmap R4 / OQ-04) -----
+  // The page <head> sets every Google consent type to denied and queues the GA4
+  // config. gtag.js is loaded only here, after the visitor accepts; until then
+  // nothing is sent to Google. The choice is kept in localStorage for 12 months.
+  // "Cookie settings" in the footer reopens the banner. ad_personalization stays
+  // denied: no remarketing or personalized ads.
+  // Adding a tag (e.g. Google Ads AW-…) or a new purpose: update the banner text
+  // and bump CONSENT_VERSION here and in the <head> snippet so everyone is asked again.
+  const GA4_ID = 'G-T8SXT2JQ2D';
+  const CONSENT_KEY = 'aam_consent';
+  const CONSENT_VERSION = 1;
+  const CONSENT_MAX_AGE = 31536000000; // 365 days
+  const CONSENT_GRANTED = { ad_storage: 'granted', ad_user_data: 'granted', analytics_storage: 'granted' };
+  const CONSENT_DENIED = { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' };
+  const CONSENT_TEXT = 'With your consent, we use Google Analytics cookies (_ga, _ga_*, up to 2 years) to see which ' +
+    'pages help developers and to measure our Google Ads. No remarketing or personalized ads. Decline, and nothing ' +
+    'is loaded. Change your choice anytime under “Cookie settings” in the footer.';
+
+  function storedConsent() {
+    try {
+      const c = JSON.parse(window.localStorage.getItem(CONSENT_KEY) || 'null');
+      if (c && c.v === CONSENT_VERSION && (c.analytics === 'granted' || c.analytics === 'denied') &&
+          typeof c.t === 'number' && c.t > Date.now() - CONSENT_MAX_AGE) return c.analytics;
+    } catch (_) { /* storage blocked: ask again */ }
+    return null;
+  }
+
+  function saveConsent(value) {
+    try {
+      window.localStorage.setItem(CONSENT_KEY, JSON.stringify({ v: CONSENT_VERSION, analytics: value, t: Date.now() }));
+    } catch (_) { /* storage blocked: the choice lasts for this page only */ }
+  }
+
+  // gtag.js only accepts Arguments objects, so push them directly. This also works
+  // when window.gtag has been replaced.
+  function consentUpdate() { window.dataLayer.push(arguments); }
+
+  let googleTagLoaded = false;
+  function loadGoogleTag() {
+    if (googleTagLoaded) return;
+    googleTagLoaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+    document.head.appendChild(script);
+  }
+
+  function clearGoogleCookies() {
+    const host = window.location.hostname;
+    const domains = ['', '; domain=' + host, '; domain=.' + host.replace(/^www\./, '')];
+    document.cookie.split(';').forEach(function (part) {
+      const name = part.split('=')[0].trim();
+      if (!/^(_ga|_ga_.+|_gid|_gat.*|_gcl_.+)$/.test(name)) return;
+      domains.forEach(function (domain) {
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + domain;
+      });
+    });
+  }
+
+  function setupConsent() {
+    // Only pages that carry the consent-mode <head> snippet (never methodology pages).
+    if (!Array.isArray(window.dataLayer) || typeof document.createElement !== 'function' || !document.body) return;
+
+    const banner = document.createElement('section');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.hidden = true;
+    const inner = document.createElement('div');
+    inner.className = 'container cookie-inner';
+    const text = document.createElement('p');
+    text.textContent = CONSENT_TEXT;
+    const actions = document.createElement('div');
+    actions.className = 'cookie-actions';
+    [['granted', 'Accept'], ['denied', 'Decline']].forEach(function (choice) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'btn btn-small btn-ghost';
+      button.setAttribute('data-consent', choice[0]);
+      button.textContent = choice[1];
+      actions.appendChild(button);
+    });
+    inner.appendChild(text);
+    inner.appendChild(actions);
+    banner.appendChild(inner);
+    document.body.appendChild(banner);
+
+    let opener = null;
+    banner.addEventListener('click', function (e) {
+      const button = e.target instanceof Element ? e.target.closest('[data-consent]') : null;
+      if (!button) return;
+      const value = button.getAttribute('data-consent') === 'granted' ? 'granted' : 'denied';
+      saveConsent(value);
+      if (value === 'granted') {
+        consentUpdate('consent', 'update', CONSENT_GRANTED);
+        loadGoogleTag();
+      } else {
+        consentUpdate('consent', 'update', CONSENT_DENIED);
+        clearGoogleCookies();
+      }
+      banner.hidden = true;
+      if (opener) { opener.focus(); opener = null; }
+    });
+
+    const footerLinks = document.querySelector('.footer-links');
+    if (footerLinks) {
+      const item = document.createElement('li');
+      const settings = document.createElement('button');
+      settings.type = 'button';
+      settings.className = 'footer-link-button';
+      settings.textContent = 'Cookie settings';
+      settings.addEventListener('click', function () {
+        opener = settings;
+        banner.hidden = false;
+        banner.querySelector('[data-consent]').focus();
+      });
+      item.appendChild(settings);
+      footerLinks.appendChild(item);
+    }
+
+    const choice = storedConsent();
+    if (choice === 'granted') loadGoogleTag();
+    else if (choice === null) banner.hidden = false;
+  }
+
+  try { setupConsent(); } catch (_) { /* consent stays denied; gtag.js is not loaded */ }
 
   // ----- Mobile nav -----
   const toggle = document.querySelector('.nav-toggle');

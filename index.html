@@ -98,11 +98,21 @@
   }
   </script>
 
-  <!-- Google tag (gtag.js) — GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8SXT2JQ2D"></script>
+  <!-- Google tag (GA4) with Consent Mode v2 (basic): every consent type is denied by default.
+       gtag.js is loaded by js/main.js only after the visitor accepts the cookie banner.
+       Keep the stored-choice check in sync with CONSENT_VERSION in js/main.js. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+    (function () {
+      try {
+        var c = JSON.parse(localStorage.getItem('aam_consent') || 'null');
+        if (c && c.v === 1 && c.analytics === 'granted' && c.t > Date.now() - 31536000000) {
+          gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', analytics_storage: 'granted'});
+        }
+      } catch (e) { /* storage blocked: stay denied */ }
+    })();
     gtag('js', new Date());
     gtag('config', 'G-T8SXT2JQ2D');
   </script>
@@ -272,7 +282,7 @@
 
     <!-- ============ 5. LIST ============ -->
     <!-- COPY: HOME-LIST, using the copy-deck OPEN QUESTION fallback lead: LM-FORM has no cheat-sheet group yet,
-         so the cheat sheet is linked as text (C-FORM on /gh-300/#cheat-sheet). Keep #starterpack for old links. -->
+         so the cheat sheet is linked as text (C-FORM on /gh-300/#cheat-sheet). Keep the old anchor id on the h2 below for old links. -->
     <section id="contact" class="section">
       <div class="container">
         <h2 id="starterpack" class="section-title" tabindex="-1">Free cheat sheet and the founding price</h2>
