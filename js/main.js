@@ -4,6 +4,7 @@
    - Smooth scroll offset for sticky header
    - YouTube facade (lazy load player on click)
    - Footer year
+   - Testimonial carousel buttons (user-controlled, no auto-rotation)
     - GA4 conversion and outbound link tracking
     - Free-resource checkbox pre-tick in LM-FORM and C-FORM (no telemetry)
     - Cookie consent banner (Consent Mode v2, basic): gtag.js loads only after Accept
@@ -26,9 +27,13 @@
   const CONSENT_MAX_AGE = 31536000000; // 365 days
   const CONSENT_GRANTED = { ad_storage: 'granted', ad_user_data: 'granted', analytics_storage: 'granted' };
   const CONSENT_DENIED = { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' };
-  const CONSENT_TEXT = 'With your consent, we use Google Analytics cookies (_ga, _ga_*, up to 2 years) to see which ' +
-    'pages help developers and to measure our Google Ads. No remarketing or personalized ads. Decline, and nothing ' +
-    'is loaded. Change your choice anytime under “Cookie settings” in the footer.';
+  // Banner text as [bold?, text] runs; kept free of technical detail (Ari 2026-11-25).
+  const CONSENT_TEXT = [
+    [true, 'May we use analytics cookies?'],
+    [false, ' Google Analytics shows us which pages help developers and measures our Google Ads. '],
+    [true, 'No remarketing, no personalized ads.'],
+    [false, ' Decline, and nothing is loaded. You can change your choice anytime under “Cookie settings” in the footer.']
+  ];
 
   function storedConsent() {
     try {
@@ -82,7 +87,15 @@
     const inner = document.createElement('div');
     inner.className = 'container cookie-inner';
     const text = document.createElement('p');
-    text.textContent = CONSENT_TEXT;
+    CONSENT_TEXT.forEach(function (run) {
+      if (run[0]) {
+        const strong = document.createElement('strong');
+        strong.textContent = run[1];
+        text.appendChild(strong);
+      } else {
+        text.appendChild(document.createTextNode(run[1]));
+      }
+    });
     const actions = document.createElement('div');
     actions.className = 'cookie-actions';
     [['granted', 'Accept'], ['denied', 'Decline']].forEach(function (choice) {
@@ -165,6 +178,55 @@
   // ----- Footer year -----
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  // ----- Testimonial carousel -----
+  // User-controlled only (swipe, scroll, keyboard, buttons); no auto-rotation
+  // (WCAG 2.2.2). Without JS the track still scrolls and the buttons stay hidden.
+  document.querySelectorAll('.testimonial-carousel').forEach(function (carousel) {
+    const track = carousel.querySelector('.testimonial-track');
+    const controls = carousel.querySelector('.carousel-controls');
+    const status = carousel.querySelector('.carousel-status');
+    if (!track || !controls) return;
+    const slides = Array.prototype.slice.call(track.children);
+    if (slides.length < 2) return;
+
+    function offsetOf(slide) { return slide.offsetLeft - slides[0].offsetLeft; }
+    function perView() {
+      const width = slides[0].getBoundingClientRect().width;
+      return width > 0 ? Math.max(1, Math.round(track.clientWidth / width)) : 1;
+    }
+    function currentIndex() {
+      let best = 0;
+      slides.forEach(function (slide, i) {
+        if (Math.abs(offsetOf(slide) - track.scrollLeft) < Math.abs(offsetOf(slides[best]) - track.scrollLeft)) best = i;
+      });
+      return best;
+    }
+    function updateStatus() {
+      if (status) status.textContent = (currentIndex() + 1) + ' / ' + slides.length;
+    }
+    function go(step) {
+      const lastStart = Math.max(0, slides.length - perView());
+      let next = currentIndex() + step;
+      if (next > lastStart) next = 0;
+      else if (next < 0) next = lastStart;
+      track.scrollTo({ left: offsetOf(slides[next]) });
+    }
+
+    controls.addEventListener('click', function (e) {
+      const button = e.target instanceof Element ? e.target.closest('[data-carousel]') : null;
+      if (button) go(button.getAttribute('data-carousel') === 'prev' ? -1 : 1);
+    });
+    let pending = false;
+    track.addEventListener('scroll', function () {
+      if (pending) return;
+      pending = true;
+      window.requestAnimationFrame(function () { pending = false; updateStatus(); });
+    }, { passive: true });
+    window.addEventListener('resize', updateStatus);
+    controls.hidden = false;
+    updateStatus();
+  });
 
   // ----- YouTube facade (privacy + perf) -----
   document.querySelectorAll('.video-facade').forEach(function (btn) {

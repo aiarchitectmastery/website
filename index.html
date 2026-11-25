@@ -154,10 +154,9 @@
         <ul>
           <li><a href="/courses/">Courses</a></li>
           <li><a href="/methodology/">Methodology</a></li>
-          <li><a href="/gh-300/">GH-300 Study Guide</a></li>
+          <li><a href="#offer" class="nav-cta" data-track="cta-gh300-nav">GitHub Copilot Course (GH-300)</a></li>
           <li><a href="/agent-workflow/">Agent Workflow (BETA)</a></li>
           <li><a href="/about/">About</a></li>
-          <li><a href="#offer" class="nav-cta" data-track="cta-gh300-nav">GH-300 Course</a></li>
         </ul>
       </nav>
     </div>
@@ -177,6 +176,28 @@
         </div>
         <p class="hero-proof"><span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span> "I successfully passed my exam and couldn't have done it without this course." — Udemy student review</p>
         <p><a href="/gh-300/" class="text-link">Try the free study guide first →</a></p>
+      </div>
+    </section>
+
+    <!-- ============ 1b. WHAT + HOW (replaces the former FAQ; restores the v1 What/How cards) ============ -->
+    <section id="what-and-how" class="section section-what-how" aria-labelledby="what-and-how-title">
+      <div class="container">
+        <h2 id="what-and-how-title" class="section-title">What is AI Driven Development?</h2>
+        <p class="section-sub what-how-lead">A human-led way to build software with AI agents: you own the intent and the decisions, AI agents do bounded, reviewable work.</p>
+        <div class="hero-tracks">
+          <a href="/methodology/" class="hero-track">
+            <span class="hero-track-tag">What — the method</span>
+            <h3>AI Driven Development Methodology</h3>
+            <p>Human-led principles and one workflow: PRD → PLAN → TASK → IMPLEMENTATION, with evidence and human judgment at every step.</p>
+            <span class="read-more">See the methodology →</span>
+          </a>
+          <a href="#offer" class="hero-track">
+            <span class="hero-track-tag">How — the tool</span>
+            <h3>GitHub Copilot (GH-300)</h3>
+            <p>GitHub Copilot is one environment for applying the methodology. Build certification-level Copilot skills and prepare for the GH-300 exam.</p>
+            <span class="read-more">See the GH-300 course →</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -216,33 +237,52 @@
           </ul>
           <p class="offer-facts">Updated November 2026 against the official August 7, 2026 skills outline. Subtitles in 13 languages.</p>
 
-          <div class="testimonial-screenshots" aria-label="Student reviews">
-            <div class="testimonial-grid">
-              <figure class="testimonial-figure">
-                <img src="assets/images/c008-testimonial-001.png"
-                     width="1675" height="939"
-                     alt="5-star Udemy review from Arash R.: Outstanding GH-300 preparation — I successfully passed my exam and couldn't have done it without this course"
+          <!-- Review carousel: user-controlled (swipe, scroll, arrow buttons), no auto-rotation (WCAG 2.2.2).
+               Without JS the track still scrolls horizontally; js/main.js reveals the buttons. -->
+          <div class="testimonial-carousel" role="region" aria-roledescription="carousel" aria-label="Student reviews">
+            <ul class="testimonial-track" tabindex="0">
+              <li class="testimonial-figure">
+                <img src="assets/images/c008-testimonial-004.png"
+                     width="1286" height="614"
+                     alt="5-star Udemy review from Ankit K.: Great course for GH-300 preparation. The content is clear, practical, and easy to understand. Very helpful for exam preparation and highly recommended."
                      loading="lazy" class="testimonial-img" />
-              </figure>
-              <figure class="testimonial-figure">
-                <img src="assets/images/c008-testimonial-002.png"
-                     width="2000" height="708"
-                     alt="5-star Udemy review from Jim G.: Well structured and clear, covers all topics in sufficient depth"
+              </li>
+              <li class="testimonial-figure">
+                <img src="assets/images/c008-testimonial-007.png"
+                     width="1290" height="740"
+                     alt="5-star Udemy review from Samir J.: The content is concise and clear and reduced down to the fundamentals, the instructor is well positioned to give this course, this is what I look for for a certification exam course."
                      loading="lazy" class="testimonial-img" />
-              </figure>
-              <figure class="testimonial-figure">
-                <img src="assets/images/c008-testimonial-003.png"
-                     width="2000" height="668"
-                     alt="5-star Udemy review from Inna C.: I passed the exam, thank you! Learned a lot of new things too!"
+              </li>
+              <li class="testimonial-figure">
+                <img src="assets/images/c008-testimonial-008.png"
+                     width="1288" height="610"
+                     alt="5-star Udemy review from Antti P.: Just listen to him talk and you'll notice that he is a real expert on the subject. Everything is formulated in a clear, understandable way."
                      loading="lazy" class="testimonial-img" />
-              </figure>
+              </li>
+              <li class="testimonial-figure">
+                <img src="assets/images/c008-testimonial-006.png"
+                     width="1286" height="556"
+                     alt="5-star Udemy review from Brian P.: Great content and great exam prep features!"
+                     loading="lazy" class="testimonial-img" />
+              </li>
+              <li class="testimonial-figure">
+                <img src="assets/images/c008-testimonial-005.png"
+                     width="1286" height="608"
+                     alt="5-star Udemy review from Yasar: Excellent course, this course alone plus more practice tests is enough to pass GH-300."
+                     loading="lazy" class="testimonial-img" />
+              </li>
+            </ul>
+            <div class="carousel-controls" hidden>
+              <button type="button" class="carousel-btn" data-carousel="prev" aria-label="Previous review">←</button>
+              <p class="carousel-status" aria-live="polite"></p>
+              <button type="button" class="carousel-btn" data-carousel="next" aria-label="Next review">→</button>
             </div>
           </div>
 
           <div class="course-cta">
-            <a href="https://www.udemy.com/course/github-copilot-gh-300-certification-prep/?couponCode=BESTPRICE60923" class="btn btn-primary" target="_blank" rel="noopener" data-track="cta-gh300-offer-home">Check the course offer →</a>
+            <a href="https://www.udemy.com/course/github-copilot-gh-300-certification-prep/?couponCode=BESTPRICE60923" class="btn btn-primary" target="_blank" rel="noopener" data-track="cta-gh300-offer-home">Check the course offer on Udemy →</a>
           </div>
-          <p class="offer-microcopy">Check the current price on Udemy. No mailing list required.</p>
+          <p class="offer-microcopy">See the current price there. No mailing list required.</p>
         </article>
       </div>
     </section>
@@ -251,15 +291,21 @@
     <!-- COPY: HOME-PATH (heading keeps the legacy #courses anchor; step 2 keeps #methodology) -->
     <section id="path" class="section section-alt" aria-labelledby="courses">
       <div class="container">
-        <h2 id="courses" class="section-title">Where this leads</h2>
+        <h2 id="courses" class="section-title section-title-center">Where this leads</h2>
         <ol class="path-steps">
           <li>
-            <h3>Step 1 — Master the tool.</h3>
-            <p>GH-300 certification prep. <em>Available now.</em></p>
+            <a href="#offer" class="path-step-link">
+              <h3>Step 1 — Master the tool.</h3>
+              <p>GH-300 certification prep. <em>Available now.</em></p>
+              <span class="read-more">See the GH-300 course →</span>
+            </a>
           </li>
           <li id="methodology">
-            <h3>Step 2 — Master the method.</h3>
-            <p><em>Mastering AI Driven Development</em> — coming soon. PRD → PLAN → TASK → IMPLEMENTATION, with you as the architect and AI agents as the builders.</p>
+            <a href="/courses/#mastering-ai-driven-development" class="path-step-link">
+              <h3>Step 2 — Master the method.</h3>
+              <p><em>Mastering AI Driven Development</em> — coming soon. PRD → PLAN → TASK → IMPLEMENTATION, with you as the architect and AI agents as the builders.</p>
+              <span class="read-more">See what's coming →</span>
+            </a>
           </li>
         </ol>
 
@@ -273,27 +319,32 @@
           </div>
         </div>
 
-        <p><a href="/methodology/" class="text-link">How the methodology works →</a></p>
-        <div class="hero-actions">
+        <div class="path-actions">
           <a href="#contact" class="btn btn-ghost" data-track="cta-home-early-access">Get the founding price first →</a>
+          <a href="/methodology/" class="text-link">How the methodology works →</a>
         </div>
       </div>
     </section>
 
     <!-- ============ 5. LIST ============ -->
-    <!-- COPY: HOME-LIST, using the copy-deck OPEN QUESTION fallback lead: LM-FORM has no cheat-sheet group yet,
-         so the cheat sheet is linked as text (C-FORM on /gh-300/#cheat-sheet). Keep the old anchor id on the h2 below for old links. -->
+    <!-- COPY: HOME-LIST (copy deck v1.3: "Stay in the loop" with the free resources listed under it).
+         LM-FORM has no cheat-sheet group yet, so the cheat sheet is linked as text (C-FORM on /gh-300/#cheat-sheet).
+         Keep the old anchor id on the h2 below for old links. -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 id="starterpack" class="section-title" tabindex="-1">Free cheat sheet and the founding price</h2>
-        <p class="section-sub form-intro">Be the first to get the founding price when <em>Mastering AI Driven Development</em> opens, and get practical tips by email. Unsubscribe with one click.</p>
-        <p class="section-sub form-intro">Preparing for GH-300? <a href="/gh-300/#cheat-sheet">Get the free cheat sheet →</a></p>
+        <h2 id="starterpack" class="section-title" tabindex="-1">Stay in the loop</h2>
+        <p class="section-sub form-intro">Short, practical emails on AI Driven Development with GitHub Copilot and AI agents. Unsubscribe with one click.</p>
+        <p class="loop-benefits-title">What you can get by email, free:</p>
+        <ul class="loop-benefits">
+          <li><strong>AAM Prompt Pack</strong> — every prompt in the AAM Agent Workflow, with human checkpoints built in. Tick it in the form.</li>
+          <li><strong>Founding price</strong> — be the first to hear when <em>Mastering AI Driven Development</em> opens. Tick it in the form.</li>
+          <li><strong>GH-300 Exam Cheat Sheet</strong> — preparing for the exam? <a href="/gh-300/#cheat-sheet">Get the cheat sheet →</a></li>
+        </ul>
         <!-- LM-FORM embed (pzf8Rl, generate_lead form_id=lm_form): no resource pre-ticked on the homepage. Keep the consent text directly below the embed. -->
         <div class="mailerlite-wrap">
           <div class="ml-embedded" data-form="pzf8Rl"></div>
-          <p class="form-consent">By submitting this form, you join the AI Architect Mastery email list. If you ask for a free resource or the founding price offer, that email arrives first. After that, you'll get practical insights on the AI Driven Development Methodology and news about AAM courses. You can unsubscribe at any time with one click.</p>
+          <p class="form-consent"><em>By submitting this form, you join the <strong>AI Architect Mastery email list</strong>. If you ask for a free resource or the founding price offer, <strong>that email arrives first</strong>. After that, you'll get practical insights on the AI Driven Development Methodology and news about AAM courses. You can <strong>unsubscribe at any time with one click</strong>. <strong>Email not arriving? Check Promotions and Spam, or email <a href="mailto:info@aiarchitectmastery.com">info@aiarchitectmastery.com</a> and I'll add you to the list.</strong></em></p>
         </div>
-        <p class="section-sub">Email not arriving? Check Promotions and Spam, or email <a href="mailto:info@aiarchitectmastery.com">info@aiarchitectmastery.com</a> and I'll add you to the list.</p>
       </div>
     </section>
 
@@ -302,39 +353,24 @@
     <section id="instructor" class="section section-alt">
       <div class="container instructor-inner">
         <div class="instructor-photo">
-          <img src="assets/images/instructor-ari.jpg" alt="Ari Vilkman, AI Architect and founder of AI Architect Mastery" width="1024" height="1024" loading="lazy" />
+          <img src="assets/images/instructor-ari.jpg" alt="AI Architect Ari (Ari Vilkman), founder of AI Architect Mastery" width="1024" height="1024" loading="lazy" />
         </div>
         <div class="instructor-text">
           <h2 class="section-title">Who's behind AI Architect Mastery</h2>
-          <p>I'm Ari Vilkman, an AI Architect with 25+ years in IT and hundreds of real-world projects. I founded AI Architect Mastery to teach how to build software with AI agents while humans own the decisions.</p>
-          <p><a href="/about/" class="text-link">More about Ari →</a></p>
+          <p class="instructor-role">AI Architect Ari</p>
+          <p>I'm <a href="https://www.linkedin.com/in/arivilkman/" rel="noopener" data-track="social-linkedin">Ari Vilkman</a>, an AI Architect with 25+ years in IT and hundreds of real-world projects. I founded AI Architect Mastery to teach how to build software with AI agents while humans own the decisions.</p>
+          <p><a href="/about/" class="text-link">More about AI Architect Ari →</a></p>
         </div>
       </div>
     </section>
 
-    <!-- ============ 7. FAQ ============ -->
-    <!-- COPY: HOME-FAQ (visible Q&A; no FAQPage markup on the homepage) -->
-    <section id="faq" class="section">
-      <div class="container faq-list">
-        <h2 class="section-title">Questions</h2>
-        <h3>Is the course only useful for the exam?</h3>
-        <p>No. The six domains are the everyday skills of professional Copilot use.</p>
-        <h3>Will I pass?</h3>
-        <p>It depends on your preparation; students have passed, and the practice test shows where you stand. No course can honestly guarantee a result.</p>
-        <h3>Is it up to date?</h3>
-        <p>Yes. Updated November 2026 against the official August 7, 2026 skills outline.</p>
-        <h3>Is AI Architect Mastery just a Copilot channel?</h3>
-        <p>No. Copilot is one environment for applying the AI Driven Development Methodology, which comes next.</p>
-      </div>
-    </section>
-
-    <!-- ============ 8. END + EXPLORE ============ -->
-    <!-- COPY: HOME-END -->
-    <section id="explore" class="section section-alt">
+    <!-- ============ 7. END + EXPLORE ============ -->
+    <!-- COPY: HOME-END (HOME-FAQ removed in copy deck v1.3; its "just a Copilot channel?" answer now lives in #what-and-how) -->
+    <section id="explore" class="section">
       <div class="container">
-        <h2 class="section-title">Start with the tool. Then master the method.</h2>
+        <h2 class="section-title section-title-center">Start with the tool. Then master the method.</h2>
         <div class="course-cta">
-          <a href="https://www.udemy.com/course/github-copilot-gh-300-certification-prep/?couponCode=BESTPRICE60923" class="btn btn-primary" target="_blank" rel="noopener" data-track="cta-gh300-offer-home-end">Check the course offer →</a>
+          <a href="https://www.udemy.com/course/github-copilot-gh-300-certification-prep/?couponCode=BESTPRICE60923" class="btn btn-primary" target="_blank" rel="noopener" data-track="cta-gh300-offer-home-end">Check the course offer on Udemy →</a>
         </div>
         <ul class="explore-grid">
           <li><a href="/methodology/"><strong>Methodology reference</strong> The vendor-neutral methodology definition.</a></li>

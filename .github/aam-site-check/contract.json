@@ -192,6 +192,41 @@
         "public_status": "public"
       },
       {
+        "asset_id": "AAM-A038",
+        "indexing_intent": "index",
+        "kind": "testimonial-image",
+        "path": "assets/images/c008-testimonial-004.png",
+        "public_status": "public"
+      },
+      {
+        "asset_id": "AAM-A039",
+        "indexing_intent": "index",
+        "kind": "testimonial-image",
+        "path": "assets/images/c008-testimonial-005.png",
+        "public_status": "public"
+      },
+      {
+        "asset_id": "AAM-A040",
+        "indexing_intent": "index",
+        "kind": "testimonial-image",
+        "path": "assets/images/c008-testimonial-006.png",
+        "public_status": "public"
+      },
+      {
+        "asset_id": "AAM-A041",
+        "indexing_intent": "index",
+        "kind": "testimonial-image",
+        "path": "assets/images/c008-testimonial-007.png",
+        "public_status": "public"
+      },
+      {
+        "asset_id": "AAM-A042",
+        "indexing_intent": "index",
+        "kind": "testimonial-image",
+        "path": "assets/images/c008-testimonial-008.png",
+        "public_status": "public"
+      },
+      {
         "asset_id": "AAM-A025",
         "indexing_intent": "index",
         "kind": "image",
@@ -1247,6 +1282,11 @@
     "assets/images/c008-testimonial-001.png",
     "assets/images/c008-testimonial-002.png",
     "assets/images/c008-testimonial-003.png",
+    "assets/images/c008-testimonial-004.png",
+    "assets/images/c008-testimonial-005.png",
+    "assets/images/c008-testimonial-006.png",
+    "assets/images/c008-testimonial-007.png",
+    "assets/images/c008-testimonial-008.png",
     "assets/images/instructor-ari.jpg",
     "assets/images/logo.png",
     "assets/images/methodology-implementation-social.jpg",
